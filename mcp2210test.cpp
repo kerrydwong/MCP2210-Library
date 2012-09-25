@@ -1,8 +1,19 @@
-/* 
- * File:   mcp2210test.cpp
- * Author: root
+/**
+ *    Copyright 2012, Kerry D. Wong
+ * 
+ *      http://www.kerrywong.com
  *
- * Created on September 24, 2012, 11:47 AM
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
  */
 
 #include <cstdlib>
@@ -10,9 +21,6 @@
 
 using namespace std;
 
-/*
- * 
- */
 int main(int argc, char** argv) {
     byte buf[64];
     byte rBuf[64];
@@ -46,6 +54,7 @@ int main(int argc, char** argv) {
     r = SetGPIOCurrentPinDirection(handle, def6);
     def6 = GetGPIOCurrentPinValue(handle);
  
+    ///< Generate a square wave by toggling GP0.
     while (1)
     {
         def6.GP[0].GPIOOutput = 1-def6.GP[0].GPIOOutput;
