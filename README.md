@@ -5,4 +5,10 @@ This is a C/C++ library for Microchip's USB-to-SPI protocol converter chip <a hr
 
 The library uses <a href="https://github.com/signal11/hidapi">signal11's hidapi</a>. You can find the library documentations in the doc directory.
 
+<ul>
+<li>
+<a href="http://www.kerrywong.com/2012/09/27/mcp2210-library/">MCP2210 Library</a>
+</li>
+</ul>
+
 More examples will be available on my <a href="http://www.kerrywong.com">blog</a>.
