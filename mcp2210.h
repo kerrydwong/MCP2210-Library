@@ -31,7 +31,11 @@
 
 typedef uint8_t byte;
 
-/** Response bit value for 
+#define MCP2210_VID 0x04d8
+#define MCP2210_PID 0x00de
+
+/** 
+ * Response bit value for 
  * CMD_SET_NVRAM_PARAM 0x60, CMD_GET_NVRAM_PARAM 0x61
  * CMDSUB_POWERUP_CHIP_SETTINGS 0x20
  */
@@ -360,6 +364,14 @@ struct GPPinDef {
 };
 
 /**
+ * Enumerate the connected MCP2210's
+ * 
+ * @return 
+ *      a pointer to hid_device_info
+ */
+hid_device_info* EnumerateMCP2210();
+
+/**
  * Initialize MCP2210
  *      Vendor ID:  0x04d8
  *      Product ID: 0x00de
@@ -367,7 +379,20 @@ struct GPPinDef {
  * @return 
  *      The handle to the MCP2210 device
  */
-hid_device* InitHID();
+hid_device* InitMCP2210();
+
+/**
+ * Initialize MCP2210 (if more than one is present)
+ *      Vendor ID:  0x04d8
+ *      Product ID: 0x00de
+ *
+ *      @param serialNumber
+ *              The serialNumber of the MCP2210 device
+ *      
+ * @return 
+ *      The handle to the MCP2210 device
+ */
+hid_device* InitMCP2210(wchar_t* serialNumber )
 
 /**
  * Release the device handle and close the device
@@ -375,7 +400,7 @@ hid_device* InitHID();
  * @param handle
  *      The handle to the MCP2210 device
  */
-void ReleaseHID(hid_device *handle);
+void ReleaseMCP2210(hid_device *handle);
 
 /**
  * Send a USB command

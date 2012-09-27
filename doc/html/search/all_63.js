@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cancelcurrentspitransfer',['CancelCurrentSPITransfer',['../mcp2210_8cpp.html#af0eb95c085b599049a76034b8ce3a852',1,'CancelCurrentSPITransfer(hid_device *handle):&#160;mcp2210.cpp'],['../mcp2210_8h.html#af0eb95c085b599049a76034b8ce3a852',1,'CancelCurrentSPITransfer(hid_device *handle):&#160;mcp2210.cpp']]],
+  ['cancelspitransfer',['CancelSPITransfer',['../mcp2210_8cpp.html#abf54ce25e056b5fa2e0df30d632aa850',1,'CancelSPITransfer(hid_device *handle):&#160;mcp2210.cpp'],['../mcp2210_8h.html#abf54ce25e056b5fa2e0df30d632aa850',1,'CancelSPITransfer(hid_device *handle):&#160;mcp2210.cpp']]],
   ['chip_5fsettings_5flocked',['CHIP_SETTINGS_LOCKED',['../mcp2210_8h.html#a39922b384d2c8efae381858baa78b125',1,'mcp2210.h']]],
   ['chip_5fsettings_5fnot_5fprotected',['CHIP_SETTINGS_NOT_PROTECTED',['../mcp2210_8h.html#a13bce5417b47276090ef55d09907bdbd',1,'mcp2210.h']]],
   ['chip_5fsettings_5fprotected_5fby_5fpwd',['CHIP_SETTINGS_PROTECTED_BY_PWD',['../mcp2210_8h.html#ab9fe8507c48440ad48410da2119976f9',1,'mcp2210.h']]],

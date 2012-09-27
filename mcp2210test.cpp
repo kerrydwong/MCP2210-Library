@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 
     hid_device *handle;
 
-    handle = InitHID();
+    handle = InitMCP2210();
 
     SPITransferSettingsDef def1 = GetSPITransferSettings(handle);
     ChipSettingsDef def2 = GetChipSettings(handle);
@@ -61,7 +61,7 @@ int main(int argc, char** argv) {
         r = SetGPIOPinVal(handle, def6);
     }
 
-    ReleaseHID(handle);
+    ReleaseMCP2210(handle);
 
     return 0;
     

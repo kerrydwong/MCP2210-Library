@@ -534,11 +534,21 @@ int SetGPIOPinVal(hid_device *handle, GPPinDef def) {
     return SendUSBCmd(handle, cmd, rsp);
 }
 
-hid_device* InitHID() {
-    return hid_open(0x04d8, 0x00de, NULL);
+hid_device_info* EnumerateMCP2210()
+{
+    return hid_enumerate(MCP2210_VID, MCP2210_PID);
 }
 
-void ReleaseHID(hid_device *handle) {
+hid_device* InitMCP2210(wchar_t* serialNumber ) {
+    return hid_open(MCP2210_VID, MCP2210_PID, serialNumber);
+}
+
+hid_device* InitMCP2210() {
+    return hid_open(MCP2210_VID, MCP2210_PID, NULL);
+}
+
+void ReleaseMCP2210(hid_device *handle) {
     hid_close(handle);
     hid_exit();
 }
+

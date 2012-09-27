@@ -120,13 +120,15 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_chip_settings_def.html">ChipSettingsDef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_u_s_b_manufacturer_product_name_def.html">USBManufacturerProductNameDef</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_external_interrupt_pin_status_def.html">ExternalInterruptPinStatusDef</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a48c00ece206fdfe72edfb18ef6c72769">MCP2210_VID</a>&#160;&#160;&#160;0x04d8</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a1fcd3059a678640e1ea1f7f83a4dc9e9">MCP2210_PID</a>&#160;&#160;&#160;0x00de</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a4b4eebf230a61a69257570c1c511b9ab">GP_PIN_DESIGNATION_GPIO</a>&#160;&#160;&#160;0x0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a4db8c0b9f67bc098ea64f40d264476ab">GP_PIN_DESIGNATION_CS</a>&#160;&#160;&#160;0x1</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a49a91a96db0edf5d80e2cb72deb7c3c7">GP_PIN_DESIGNATION_DEDICATED</a>&#160;&#160;&#160;0x2</td></tr>
@@ -180,8 +182,9 @@ Typedefs</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#aaec649f7ffc96407e6ce339f806b86d1">InitHID</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a23dac85e78524ab9b03d8a2e595ccabb">ReleaseHID</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhid__device__info.html">hid_device_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a0b3fb01a244efdc3126f2646553aeb3d">EnumerateMCP2210</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a73f677a660068a18a713c94bd6a76e60">InitMCP2210</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a67a08527b2edd282874b3f2aea1815f9">InitMCP2210</a> (wchar_t *serialNumber) void <a class="el" href="mcp2210_8cpp.html#afca69dafd7a0768a60da2cf80525c6b5">ReleaseMCP2210</a>(<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#ad2035535d0aeeaafe45fb9da0722cfad">SendUSBCmd</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *cmdBuf, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *responseBuf)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#ac204d847f8e7a40352ddeba810219608">GetSPITransferSettings</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, bool isVolatile=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a13dd2cef2a3a1bb759a1feec17fb3419">SetSPITransferSettings</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a> def, bool isVolatile=true)</td></tr>
@@ -189,20 +192,20 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a15b8d2894190ebcc0568873046971716">SetPowerUpDefaultChipSettings</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_chip_settings_def.html">ChipSettingsDef</a> def, bool isVolatile=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a75c695b47cd5705afb8aad13a4e5751f">GetUSBKeyParameters</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a1379e6de32f81df8121a95b19afc77bf">SetUSBKeyParameters</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a> def)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_u_s_b_manufacturer_product_name_def.html">USBManufacturerProductNameDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a26e931c2a0533b67cfd1c81c86907206">GetUSBManufacturerProductName</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, unsigned int subCmdCode)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#abce4f6b0f1306324c0b8f0e2f1ebe120">SetUSBManufacturerProductName</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, unsigned int subCmdCode, <a class="el" href="struct_u_s_b_manufacturer_product_name_def.html">USBManufacturerProductNameDef</a> def)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a394bb8317789fff387a1e338121a145b">GetManufacturerProductName</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, unsigned int subCmdCode)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#ae0440fcfdc1adbe1a76ea6d53ae400f7">SetManufacturerProductName</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, unsigned int subCmdCode, <a class="el" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a> def)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a7de4c7ae20fcf6acbef30424395a7986">SendAccessPassword</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, char *pwd, int pwdLength)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a8ccc5483803201158f79ebe9b01d204d">ReadEEPROM</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> addr, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *val)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a67f5920bb156bf436f7afbf92528dc37">WriteEEPROM</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> addr, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> val)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#adfb0cd492ab9c674d4ad5a5aeabbf365">RequestSPIBusRelease</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> val)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a7d64b0e934db7345efb94af6a316e487">GetChipStatus</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#af0eb95c085b599049a76034b8ce3a852">CancelCurrentSPITransfer</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#abf54ce25e056b5fa2e0df30d632aa850">CancelSPITransfer</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#aa2cfbe9757c7be3421fcef7d0bdb82eb">SPIDataTransfer</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *data, int length)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_external_interrupt_pin_status_def.html">ExternalInterruptPinStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#af4f479adbc61b93bd180a1eb541ca6ef">GetNumOfEventsFromInterruptPin</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> resetCounter)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a520af2a5c1f4f2fcc2b7cc9eadfb3d69">GetGPIOCurrentPinDirection</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a519eee95162de7d42daed1cbf2d4fdb3">SetGPIOCurrentPinDirection</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> def)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a8ac0362b7edbc71ec537f11afb60bc47">GetGPIOCurrentPinValue</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a6ada952022cd7b361e50bb2e4b6e39be">SetGPIOCurrentPinVal</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> def)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a4fa41d03c61fe4ac4c68ab1653b7f0b4">GetGPIOPinDirection</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a587186e5ac054e4239f014d6081b424f">SetGPIOPinDirection</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> def)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a3acf8cc5387dfe9b1fe8dbb5fecfb867">GetGPIOPinValue</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a84c0182b5a8740b40b484fbd82267af3">SetGPIOPinVal</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> def)</td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
 <a class="anchor" id="a39922b384d2c8efae381858baa78b125"></a><!-- doxytag: member="mcp2210.h::CHIP_SETTINGS_LOCKED" ref="a39922b384d2c8efae381858baa78b125" args="" -->
@@ -752,6 +755,32 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1fcd3059a678640e1ea1f7f83a4dc9e9"></a><!-- doxytag: member="mcp2210.h::MCP2210_PID" ref="a1fcd3059a678640e1ea1f7f83a4dc9e9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="mcp2210_8h.html#a1fcd3059a678640e1ea1f7f83a4dc9e9">MCP2210_PID</a>&#160;&#160;&#160;0x00de</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a48c00ece206fdfe72edfb18ef6c72769"></a><!-- doxytag: member="mcp2210.h::MCP2210_VID" ref="a48c00ece206fdfe72edfb18ef6c72769" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="mcp2210_8h.html#a48c00ece206fdfe72edfb18ef6c72769">MCP2210_VID</a>&#160;&#160;&#160;0x04d8</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af22176336124f881aa4a568504b7830d"></a><!-- doxytag: member="mcp2210.h::NO_INTERRUPT_COUNTING" ref="af22176336124f881aa4a568504b7830d" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -850,12 +879,12 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="af0eb95c085b599049a76034b8ce3a852"></a><!-- doxytag: member="mcp2210.h::CancelCurrentSPITransfer" ref="af0eb95c085b599049a76034b8ce3a852" args="(hid_device *handle)" -->
+<a class="anchor" id="abf54ce25e056b5fa2e0df30d632aa850"></a><!-- doxytag: member="mcp2210.h::CancelSPITransfer" ref="abf54ce25e056b5fa2e0df30d632aa850" args="(hid_device *handle)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a> <a class="el" href="mcp2210_8h.html#af0eb95c085b599049a76034b8ce3a852">CancelCurrentSPITransfer</a> </td>
+          <td class="memname"><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a> <a class="el" href="mcp2210_8h.html#abf54ce25e056b5fa2e0df30d632aa850">CancelSPITransfer</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
           <td class="paramname"><em>handle</em></td><td>)</td>
@@ -873,6 +902,24 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0b3fb01a244efdc3126f2646553aeb3d"></a><!-- doxytag: member="mcp2210.h::EnumerateMCP2210" ref="a0b3fb01a244efdc3126f2646553aeb3d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structhid__device__info.html">hid_device_info</a>* <a class="el" href="mcp2210_8h.html#a0b3fb01a244efdc3126f2646553aeb3d">EnumerateMCP2210</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Enumerate the connected MCP2210's</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a pointer to <a class="el" href="structhid__device__info.html">hid_device_info</a> </dd></dl>
 
 </div>
 </div>
@@ -939,12 +986,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a520af2a5c1f4f2fcc2b7cc9eadfb3d69"></a><!-- doxytag: member="mcp2210.h::GetGPIOCurrentPinDirection" ref="a520af2a5c1f4f2fcc2b7cc9eadfb3d69" args="(hid_device *handle)" -->
+<a class="anchor" id="a4fa41d03c61fe4ac4c68ab1653b7f0b4"></a><!-- doxytag: member="mcp2210.h::GetGPIOPinDirection" ref="a4fa41d03c61fe4ac4c68ab1653b7f0b4" args="(hid_device *handle)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> <a class="el" href="mcp2210_8h.html#a520af2a5c1f4f2fcc2b7cc9eadfb3d69">GetGPIOCurrentPinDirection</a> </td>
+          <td class="memname"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> <a class="el" href="mcp2210_8h.html#a4fa41d03c61fe4ac4c68ab1653b7f0b4">GetGPIOPinDirection</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
           <td class="paramname"><em>handle</em></td><td>)</td>
@@ -965,12 +1012,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8ac0362b7edbc71ec537f11afb60bc47"></a><!-- doxytag: member="mcp2210.h::GetGPIOCurrentPinValue" ref="a8ac0362b7edbc71ec537f11afb60bc47" args="(hid_device *handle)" -->
+<a class="anchor" id="a3acf8cc5387dfe9b1fe8dbb5fecfb867"></a><!-- doxytag: member="mcp2210.h::GetGPIOPinValue" ref="a3acf8cc5387dfe9b1fe8dbb5fecfb867" args="(hid_device *handle)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> <a class="el" href="mcp2210_8h.html#a8ac0362b7edbc71ec537f11afb60bc47">GetGPIOCurrentPinValue</a> </td>
+          <td class="memname"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> <a class="el" href="mcp2210_8h.html#a3acf8cc5387dfe9b1fe8dbb5fecfb867">GetGPIOPinValue</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
           <td class="paramname"><em>handle</em></td><td>)</td>
@@ -988,6 +1035,44 @@ Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> note, only the value member variable is affected. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a394bb8317789fff387a1e338121a145b"></a><!-- doxytag: member="mcp2210.h::GetManufacturerProductName" ref="a394bb8317789fff387a1e338121a145b" args="(hid_device *handle, unsigned int subCmdCode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a> <a class="el" href="mcp2210_8h.html#a394bb8317789fff387a1e338121a145b">GetManufacturerProductName</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>subCmdCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set USB manufacturer name or product name </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>The handle to the MCP2210 device </td></tr>
+    <tr><td class="paramname">subCmdCode</td><td>The sub command code which determines whether the action is to set manufacturer name or product name:</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>CMDSUB_USB_MANUFACTURER_NAME: set manufacturer name CMDSUB_USB_PRODUCT_NAME: set product name </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd>USBManufacturerProductNameDef </dd></dl>
 
 </div>
 </div>
@@ -1092,50 +1177,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a26e931c2a0533b67cfd1c81c86907206"></a><!-- doxytag: member="mcp2210.h::GetUSBManufacturerProductName" ref="a26e931c2a0533b67cfd1c81c86907206" args="(hid_device *handle, unsigned int subCmdCode)" -->
+<a class="anchor" id="a73f677a660068a18a713c94bd6a76e60"></a><!-- doxytag: member="mcp2210.h::InitMCP2210" ref="a73f677a660068a18a713c94bd6a76e60" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_u_s_b_manufacturer_product_name_def.html">USBManufacturerProductNameDef</a> <a class="el" href="mcp2210_8h.html#a26e931c2a0533b67cfd1c81c86907206">GetUSBManufacturerProductName</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>subCmdCode</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set USB manufacturer name or product name </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">handle</td><td>The handle to the MCP2210 device </td></tr>
-    <tr><td class="paramname">subCmdCode</td><td>The sub command code which determines whether the action is to set manufacturer name or product name:</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>CMDSUB_USB_MANUFACTURER_NAME: set manufacturer name CMDSUB_USB_PRODUCT_NAME: set product name </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="struct_u_s_b_manufacturer_product_name_def.html">USBManufacturerProductNameDef</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="aaec649f7ffc96407e6ce339f806b86d1"></a><!-- doxytag: member="mcp2210.h::InitHID" ref="aaec649f7ffc96407e6ce339f806b86d1" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a>* <a class="el" href="mcp2210_8h.html#aaec649f7ffc96407e6ce339f806b86d1">InitHID</a> </td>
+          <td class="memname"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a>* <a class="el" href="mcp2210_8h.html#a67a08527b2edd282874b3f2aea1815f9">InitMCP2210</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1145,6 +1192,37 @@ Functions</h2></td></tr>
 <div class="memdoc">
 <p>Initialize MCP2210 Vendor ID: 0x04d8 Product ID: 0x00de</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The handle to the MCP2210 device </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a67a08527b2edd282874b3f2aea1815f9"></a><!-- doxytag: member="mcp2210.h::InitMCP2210" ref="a67a08527b2edd282874b3f2aea1815f9" args="(wchar_t *serialNumber) void ReleaseMCP2210(hid_device *handle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a>* <a class="el" href="mcp2210_8h.html#a67a08527b2edd282874b3f2aea1815f9">InitMCP2210</a> </td>
+          <td>(</td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>serialNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Initialize MCP2210 (if more than one is present) Vendor ID: 0x04d8 Product ID: 0x00de</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serialNumber</td><td>The serialNumber of the MCP2210 device</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The handle to the MCP2210 device Release the device handle and close the device</dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>The handle to the MCP2210 device </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1188,30 +1266,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>0: Operation was successful &lt;0: Other device errors (see error codes) </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a23dac85e78524ab9b03d8a2e595ccabb"></a><!-- doxytag: member="mcp2210.h::ReleaseHID" ref="a23dac85e78524ab9b03d8a2e595ccabb" args="(hid_device *handle)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="mcp2210_8h.html#a23dac85e78524ab9b03d8a2e595ccabb">ReleaseHID</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
-          <td class="paramname"><em>handle</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Release the device handle and close the device</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">handle</td><td>The handle to the MCP2210 device </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -1337,12 +1391,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a519eee95162de7d42daed1cbf2d4fdb3"></a><!-- doxytag: member="mcp2210.h::SetGPIOCurrentPinDirection" ref="a519eee95162de7d42daed1cbf2d4fdb3" args="(hid_device *handle, GPPinDef def)" -->
+<a class="anchor" id="a587186e5ac054e4239f014d6081b424f"></a><!-- doxytag: member="mcp2210.h::SetGPIOPinDirection" ref="a587186e5ac054e4239f014d6081b424f" args="(hid_device *handle, GPPinDef def)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="mcp2210_8h.html#a519eee95162de7d42daed1cbf2d4fdb3">SetGPIOCurrentPinDirection</a> </td>
+          <td class="memname">int <a class="el" href="mcp2210_8h.html#a587186e5ac054e4239f014d6081b424f">SetGPIOPinDirection</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
@@ -1374,12 +1428,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6ada952022cd7b361e50bb2e4b6e39be"></a><!-- doxytag: member="mcp2210.h::SetGPIOCurrentPinVal" ref="a6ada952022cd7b361e50bb2e4b6e39be" args="(hid_device *handle, GPPinDef def)" -->
+<a class="anchor" id="a84c0182b5a8740b40b484fbd82267af3"></a><!-- doxytag: member="mcp2210.h::SetGPIOPinVal" ref="a84c0182b5a8740b40b484fbd82267af3" args="(hid_device *handle, GPPinDef def)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="mcp2210_8h.html#a6ada952022cd7b361e50bb2e4b6e39be">SetGPIOCurrentPinVal</a> </td>
+          <td class="memname">int <a class="el" href="mcp2210_8h.html#a84c0182b5a8740b40b484fbd82267af3">SetGPIOPinVal</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
@@ -1408,6 +1462,56 @@ Functions</h2></td></tr>
 </dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> note, only the value member variable is used. </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>0: Operation was successful &lt;0: Other device errors (see error codes) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae0440fcfdc1adbe1a76ea6d53ae400f7"></a><!-- doxytag: member="mcp2210.h::SetManufacturerProductName" ref="ae0440fcfdc1adbe1a76ea6d53ae400f7" args="(hid_device *handle, unsigned int subCmdCode, ManufacturerProductNameDef def)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="mcp2210_8h.html#ae0440fcfdc1adbe1a76ea6d53ae400f7">SetManufacturerProductName</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>subCmdCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a>&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Set USB manufacturer name or product name</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>The handle to the MCP2210 device </td></tr>
+    <tr><td class="paramname">subCmdCode</td><td>The sub command code which determines whether the action is to set manufacturer name or product name:</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>CMDSUB_USB_MANUFACTURER_NAME: set manufacturer name CMDSUB_USB_PRODUCT_NAME: set product name </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">def</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>See also:</b></dt><dd>USBManufacturerProductNameDef </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0: Operation was successful 0xFB: The provided password does not match the one stored in the chip or the settings are permanently locked. &lt;0: Other device errors (see error codes) </dd></dl>
 
 </div>
 </div>
@@ -1548,56 +1652,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abce4f6b0f1306324c0b8f0e2f1ebe120"></a><!-- doxytag: member="mcp2210.h::SetUSBManufacturerProductName" ref="abce4f6b0f1306324c0b8f0e2f1ebe120" args="(hid_device *handle, unsigned int subCmdCode, USBManufacturerProductNameDef def)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="mcp2210_8h.html#abce4f6b0f1306324c0b8f0e2f1ebe120">SetUSBManufacturerProductName</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>subCmdCode</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_u_s_b_manufacturer_product_name_def.html">USBManufacturerProductNameDef</a>&#160;</td>
-          <td class="paramname"><em>def</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set USB manufacturer name or product name</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">handle</td><td>The handle to the MCP2210 device </td></tr>
-    <tr><td class="paramname">subCmdCode</td><td>The sub command code which determines whether the action is to set manufacturer name or product name:</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>CMDSUB_USB_MANUFACTURER_NAME: set manufacturer name CMDSUB_USB_PRODUCT_NAME: set product name </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">def</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="struct_u_s_b_manufacturer_product_name_def.html">USBManufacturerProductNameDef</a> </dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>0: Operation was successful 0xFB: The provided password does not match the one stored in the chip or the settings are permanently locked. &lt;0: Other device errors (see error codes) </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="aa2cfbe9757c7be3421fcef7d0bdb82eb"></a><!-- doxytag: member="mcp2210.h::SPIDataTransfer" ref="aa2cfbe9757c7be3421fcef7d0bdb82eb" args="(hid_device *handle, byte *data, int length)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1705,7 +1759,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="mcp2210_8h.html">mcp2210.h</a>      </li>
 
-    <li class="footer">Generated on Mon Sep 24 2012 21:45:21 for MCP2210 Library by
+    <li class="footer">Generated on Wed Sep 26 2012 20:55:41 for MCP2210 Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
