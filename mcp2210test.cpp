@@ -22,14 +22,19 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    byte buf[64];
-    byte rBuf[64];
     int r = 0;
 
     hid_device *handle;
 
+    /**
+     * initializing the MCP2210 device.
+     */
     handle = InitMCP2210();
 
+    /**
+     * running a few tests, you can see the values returned by setting
+     * break points and run through the debugger.
+     */
     SPITransferSettingsDef def1 = GetSPITransferSettings(handle);
     ChipSettingsDef def2 = GetChipSettings(handle);
     USBKeyParametersDef def3 = GetUSBKeyParameters(handle);
@@ -49,9 +54,14 @@ int main(int argc, char** argv) {
     ChipStatusDef def5 = GetChipStatus(handle);
     def5 = CancelSPITransfer(handle);
 
+    
+    /**
+     * Configure GPIO0 direction to output
+     */
     GPPinDef def6 = GetGPIOPinDirection(handle);
     def6.GP[0].GPIODirection = 0;
     r = SetGPIOPinDirection(handle, def6);
+    
     def6 = GetGPIOPinValue(handle);
  
     ///< Generate a square wave by toggling GP0.
@@ -63,7 +73,6 @@ int main(int argc, char** argv) {
 
     ReleaseMCP2210(handle);
 
-    return 0;
-    
+    return 0;    
 }
 
