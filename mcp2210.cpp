@@ -240,8 +240,8 @@ int SetUSBKeyParameters(hid_device *handle, USBKeyParametersDef def) {
     ;
 }
 
-USBManufacturerProductNameDef GetUSBManufacturerProductName(hid_device *handle, unsigned int subCmdCode) {
-    USBManufacturerProductNameDef def;
+ManufacturerProductNameDef GetManufacturerProductName(hid_device *handle, unsigned int subCmdCode) {
+    ManufacturerProductNameDef def;
 
     byte cmd[COMMAND_BUFFER_LENGTH];
     byte rsp[RESPONSE_BUFFER_LENGTH];
@@ -267,7 +267,7 @@ USBManufacturerProductNameDef GetUSBManufacturerProductName(hid_device *handle, 
     return def;
 }
 
-int SetUSBManufacturerProductName(hid_device *handle, unsigned int subCmdCode, USBManufacturerProductNameDef def) {
+int SetManufacturerProductName(hid_device *handle, unsigned int subCmdCode, ManufacturerProductNameDef def) {
     byte cmd[COMMAND_BUFFER_LENGTH];
     byte rsp[RESPONSE_BUFFER_LENGTH];
 
@@ -373,7 +373,7 @@ ChipStatusDef GetChipStatus(hid_device *handle) {
     return def;
 }
 
-ChipStatusDef CancelCurrentSPITransfer(hid_device *handle) {
+ChipStatusDef CancelSPITransfer(hid_device *handle) {
     ChipStatusDef def;
 
     byte cmd[COMMAND_BUFFER_LENGTH];
@@ -449,7 +449,7 @@ ExternalInterruptPinStatusDef GetNumOfEventsFromInterruptPin(hid_device *handle,
     return def;
 }
 
-GPPinDef GetGPIOCurrentPinDirection(hid_device *handle) {
+GPPinDef GetGPIOPinDirection(hid_device *handle) {
     GPPinDef def;
 
     byte cmd[COMMAND_BUFFER_LENGTH];
@@ -474,7 +474,7 @@ GPPinDef GetGPIOCurrentPinDirection(hid_device *handle) {
     return def;
 }
 
-int SetGPIOCurrentPinDirection(hid_device *handle, GPPinDef def) {
+int SetGPIOPinDirection(hid_device *handle, GPPinDef def) {
     byte cmd[COMMAND_BUFFER_LENGTH];
     byte rsp[RESPONSE_BUFFER_LENGTH];
 
@@ -491,7 +491,7 @@ int SetGPIOCurrentPinDirection(hid_device *handle, GPPinDef def) {
     return SendUSBCmd(handle, cmd, rsp);
 }
 
-GPPinDef GetGPIOCurrentPinValue(hid_device *handle) {
+GPPinDef GetGPIOPinValue(hid_device *handle) {
     GPPinDef def;
 
     byte cmd[COMMAND_BUFFER_LENGTH];
@@ -516,7 +516,7 @@ GPPinDef GetGPIOCurrentPinValue(hid_device *handle) {
     return def;
 }
 
-int SetGPIOCurrentPinVal(hid_device *handle, GPPinDef def) {
+int SetGPIOPinVal(hid_device *handle, GPPinDef def) {
     byte cmd[COMMAND_BUFFER_LENGTH];
     byte rsp[RESPONSE_BUFFER_LENGTH];
 

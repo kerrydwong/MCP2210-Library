@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     SPITransferSettingsDef def1 = GetSPITransferSettings(handle);
     ChipSettingsDef def2 = GetChipSettings(handle);
     USBKeyParametersDef def3 = GetUSBKeyParameters(handle);
-    USBManufacturerProductNameDef def4 = GetUSBManufacturerProductName(handle, CMDSUB_USB_PRODUCT_NAME);
+    ManufacturerProductNameDef def4 = GetManufacturerProductName(handle, CMDSUB_USB_PRODUCT_NAME);
 
     for (int i = 0; i < def4.USBStringDescriptorLength; i += 2)
         printf("%c", def4.ManufacturerProductName[i]);
@@ -47,18 +47,18 @@ int main(int argc, char** argv) {
     r = RequestSPIBusRelease(handle, 1);
 
     ChipStatusDef def5 = GetChipStatus(handle);
-    def5 = CancelCurrentSPITransfer(handle);
+    def5 = CancelSPITransfer(handle);
 
-    GPPinDef def6 = GetGPIOCurrentPinDirection(handle);
+    GPPinDef def6 = GetGPIOPinDirection(handle);
     def6.GP[0].GPIODirection = 0;
-    r = SetGPIOCurrentPinDirection(handle, def6);
-    def6 = GetGPIOCurrentPinValue(handle);
+    r = SetGPIOPinDirection(handle, def6);
+    def6 = GetGPIOPinValue(handle);
  
     ///< Generate a square wave by toggling GP0.
     while (1)
     {
         def6.GP[0].GPIOOutput = 1-def6.GP[0].GPIOOutput;
-        r = SetGPIOCurrentPinVal(handle, def6);
+        r = SetGPIOPinVal(handle, def6);
     }
 
     ReleaseHID(handle);

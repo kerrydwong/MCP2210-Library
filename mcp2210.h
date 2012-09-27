@@ -233,7 +233,7 @@ struct USBKeyParametersDef {
 /**
  * USB manufacturer name/product name definition
  */
-struct USBManufacturerProductNameDef {
+struct ManufacturerProductNameDef {
     /**
      * Total USB string descriptor length
      * 
@@ -495,7 +495,7 @@ int SetUSBKeyParameters(hid_device *handle, USBKeyParametersDef def);
  * @return 
  *      @see USBManufacturerProductNameDef
  */
-USBManufacturerProductNameDef GetUSBManufacturerProductName(hid_device *handle, unsigned int subCmdCode);
+ManufacturerProductNameDef GetManufacturerProductName(hid_device *handle, unsigned int subCmdCode);
 
 /**
  * Set USB manufacturer name or product name
@@ -516,7 +516,7 @@ USBManufacturerProductNameDef GetUSBManufacturerProductName(hid_device *handle, 
  *            or the settings are permanently locked.
  *      <0:  Other device errors (see error codes) 
  */
-int SetUSBManufacturerProductName(hid_device *handle, unsigned int subCmdCode, USBManufacturerProductNameDef def);
+int SetManufacturerProductName(hid_device *handle, unsigned int subCmdCode, ManufacturerProductNameDef def);
 
 /**
  * Send access password
@@ -606,7 +606,7 @@ ChipStatusDef GetChipStatus(hid_device *handle);
  * @return 
  *      @see ChipStatusDef
  */
-ChipStatusDef CancelCurrentSPITransfer(hid_device *handle);
+ChipStatusDef CancelSPITransfer(hid_device *handle);
 
 /**
  * SPI Data Transfer
@@ -650,7 +650,7 @@ ExternalInterruptPinStatusDef GetNumOfEventsFromInterruptPin(hid_device *handle,
  *      @see GPPinDef
  *      note, only the direction member variable is affected.
  */
-GPPinDef GetGPIOCurrentPinDirection(hid_device *handle);
+GPPinDef GetGPIOPinDirection(hid_device *handle);
 
 /**
  * Set GPIO current pin direction in volatile memory
@@ -664,7 +664,7 @@ GPPinDef GetGPIOCurrentPinDirection(hid_device *handle);
  *      0:    Operation was successful
  *      <0:  Other device errors (see error codes) 
  */
-int SetGPIOCurrentPinDirection(hid_device *handle, GPPinDef def);
+int SetGPIOPinDirection(hid_device *handle, GPPinDef def);
 
 /**
  * Get GPIO current pin value 
@@ -675,7 +675,7 @@ int SetGPIOCurrentPinDirection(hid_device *handle, GPPinDef def);
  *      @see GPPinDef
  *      note, only the value member variable is affected.
  */
-GPPinDef GetGPIOCurrentPinValue(hid_device *handle);
+GPPinDef GetGPIOPinValue(hid_device *handle);
 
 /**
  * Set GPIO current pin value
@@ -688,6 +688,6 @@ GPPinDef GetGPIOCurrentPinValue(hid_device *handle);
  *      0:    Operation was successful
  *      <0:  Other device errors (see error codes) 
  */
-int SetGPIOCurrentPinVal(hid_device *handle, GPPinDef def);
+int SetGPIOPinVal(hid_device *handle, GPPinDef def);
 
 #endif
