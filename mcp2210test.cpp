@@ -53,7 +53,6 @@ int main(int argc, char** argv) {
 
     ChipStatusDef def5 = GetChipStatus(handle);
     def5 = CancelSPITransfer(handle);
-
     
     /**
      * Configure GPIO0 direction to output
@@ -71,6 +70,9 @@ int main(int argc, char** argv) {
         r = SetGPIOPinVal(handle, def6);
     }
 
+    /**
+     * release the handle
+     */
     ReleaseMCP2210(handle);
 
     return 0;    
