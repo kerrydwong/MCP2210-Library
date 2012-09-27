@@ -34,6 +34,12 @@ typedef uint8_t byte;
 #define MCP2210_VID 0x04d8
 #define MCP2210_PID 0x00de
 
+/**
+ * GPIO pin directions
+ */
+#define GPIO_DIRECTION_OUTPUT 0
+#define GPIO_DIRECTION_INPUT 1
+
 /** 
  * Response bit value for 
  * CMD_SET_NVRAM_PARAM 0x60, CMD_GET_NVRAM_PARAM 0x61
@@ -392,7 +398,7 @@ hid_device* InitMCP2210();
  * @return 
  *      The handle to the MCP2210 device
  */
-hid_device* InitMCP2210(wchar_t* serialNumber )
+hid_device* InitMCP2210(wchar_t* serialNumber );
 
 /**
  * Release the device handle and close the device

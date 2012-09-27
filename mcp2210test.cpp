@@ -58,7 +58,7 @@ int main(int argc, char** argv) {
      * Configure GPIO0 direction to output
      */
     GPPinDef def6 = GetGPIOPinDirection(handle);
-    def6.GP[0].GPIODirection = 0;
+    def6.GP[0].GPIODirection = GPIO_DIRECTION_OUTPUT;
     r = SetGPIOPinDirection(handle, def6);
     
     def6 = GetGPIOPinValue(handle);
