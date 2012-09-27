@@ -16,7 +16,6 @@
  *  limitations under the License.
  */
 
-#include <cstdlib>
 #include "mcp2210.h"
 
 using namespace std;
@@ -63,7 +62,7 @@ int main(int argc, char** argv) {
     
     def6 = GetGPIOPinValue(handle);
  
-    ///< Generate a square wave by toggling GP0.
+    ///< Generate a rectangular wave by toggling GP0.
     while (1)
     {
         def6.GP[0].GPIOOutput = 1-def6.GP[0].GPIOOutput;
