@@ -11,4 +11,6 @@ The library uses <a href="https://github.com/signal11/hidapi">signal11's hidapi<
 </li>
 </ul>
 
+Note, the compiled code needs root access to the device and need to be run using "sudo". Alternatively, please refer to signal11's instructions on how to change the device rules.
+
 More examples will be available on my <a href="http://www.kerrywong.com">blog</a>.
