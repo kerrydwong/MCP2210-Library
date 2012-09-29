@@ -660,7 +660,7 @@ hid_device * HID_API_EXPORT hid_open_path(const char *path)
 int HID_API_EXPORT hid_write(hid_device *dev, const unsigned char *data, size_t length)
 {
 	int bytes_written;
-
+        
 	bytes_written = write(dev->device_handle, data, length);
 
 	return bytes_written;

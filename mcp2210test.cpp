@@ -20,6 +20,12 @@
 
 using namespace std;
 
+void TestSPI(hid_device *handle) {
+    byte data[4];
+
+    SPIDataTransferStatusDef r = SPIDataTransfer(handle, data, 4);
+}
+
 int main(int argc, char** argv) {
     int r = 0;
 
@@ -30,6 +36,11 @@ int main(int argc, char** argv) {
      */
     handle = InitMCP2210();
 
+    if (handle == 0) {
+        printf("ERROR opening device. Try using sudo.\n");
+        exit(-1);
+    }
+    
     /**
      * running a few tests, you can see the values returned by setting
      * break points and run through the debugger.
@@ -52,20 +63,20 @@ int main(int argc, char** argv) {
 
     ChipStatusDef def5 = GetChipStatus(handle);
     def5 = CancelSPITransfer(handle);
-    
+
     /**
      * Configure GPIO0 direction to output
      */
     GPPinDef def6 = GetGPIOPinDirection(handle);
+
     def6.GP[0].GPIODirection = GPIO_DIRECTION_OUTPUT;
     r = SetGPIOPinDirection(handle, def6);
-    
+
     def6 = GetGPIOPinValue(handle);
- 
+
     ///< Generate a rectangular wave by toggling GP0.
-    while (1)
-    {
-        def6.GP[0].GPIOOutput = 1-def6.GP[0].GPIOOutput;
+    while (1) {
+        def6.GP[0].GPIOOutput = 1 - def6.GP[0].GPIOOutput;
         r = SetGPIOPinVal(handle, def6);
     }
 
@@ -74,6 +85,6 @@ int main(int argc, char** argv) {
      */
     ReleaseMCP2210(handle);
 
-    return 0;    
+    return 0;
 }
 
