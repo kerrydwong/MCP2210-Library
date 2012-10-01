@@ -7,7 +7,7 @@ The library uses <a href="https://github.com/signal11/hidapi">signal11's hidapi<
 
 <ul>
 <li>
-<a href="http://www.kerrywong.com/2012/09/27/mcp2210-library/">MCP2210 Library</a>
+<a href="http://www.kerrywong.com/2012/09/27/mcp2210-library/">MCP2210 Library -- Setup and GPIO</a>
 </li>
 </ul>
 
