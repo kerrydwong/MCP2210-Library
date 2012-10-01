@@ -145,11 +145,12 @@ ChipSettingsDef GetChipSettings(hid_device *handle, bool isVolatile) {
 
     if (r == 0) {
         for (int i = 0; i < 8; i++) {
-            def.GP[i].PinDesignation = rsp[i + 4];
+            def.GP[i].PinDesignation = rsp[i + 4] & 0x3;
             def.GP[i].GPIOOutput = (rsp[13] >> i) & 0x1;
             def.GP[i].GPIODirection = (rsp[15] >> i) & 0x1;
         }
-        def.GP[8].PinDesignation = rsp[12];
+
+        def.GP[8].PinDesignation = rsp[12] & 0x3;
         def.GP[8].GPIOOutput = rsp[14] & 0x1;
         def.GP[8].GPIODirection = rsp[16] & 0x1;
 
@@ -157,12 +158,18 @@ ChipSettingsDef GetChipSettings(hid_device *handle, bool isVolatile) {
         def.DedicatedFunctionInterruptPinMode = (rsp[17] & 0xE) >> 1;
         def.SPIBusReleaseMode = rsp[17] & 0x1;
         def.NVRamChipParamAccessControl = rsp[18];
+
+        if (def.NVRamChipParamAccessControl == CHIP_SETTINGS_PROTECTED_BY_PWD) {
+            for (int i = 0; i < 8; i++) {
+                def.password[i] = rsp[19 + i];
+            }
+        }
     }
 
     return def;
 }
 
-int SetPowerUpDefaultChipSettings(hid_device *handle, ChipSettingsDef def, bool isVolatile) {
+int SetChipSettings(hid_device *handle, ChipSettingsDef def, bool isVolatile) {
     byte cmd[COMMAND_BUFFER_LENGTH];
     byte rsp[RESPONSE_BUFFER_LENGTH];
 
@@ -176,6 +183,9 @@ int SetPowerUpDefaultChipSettings(hid_device *handle, ChipSettingsDef def, bool 
         cmd[1] = CMDSUB_POWERUP_CHIP_SETTINGS;
     }
 
+    cmd[13] = 0;
+    cmd[15] = 0;
+
     for (int i = 0; i < 8; i++) {
         cmd[i + 4] = def.GP[i].PinDesignation;
         cmd[13] |= def.GP[i].GPIOOutput << i;
@@ -185,6 +195,13 @@ int SetPowerUpDefaultChipSettings(hid_device *handle, ChipSettingsDef def, bool 
     cmd[12] = def.GP[8].PinDesignation;
     cmd[14] = def.GP[8].GPIOOutput;
     cmd[16] = def.GP[8].GPIODirection;
+    cmd[17] = def.RemoteWakeUpEnabled << 4 | def.DedicatedFunctionInterruptPinMode < 1 | def.SPIBusReleaseMode;
+    cmd[18] = def.NVRamChipParamAccessControl;
+
+    if (def.NVRamChipParamAccessControl == CHIP_SETTINGS_PROTECTED_BY_PWD) {
+        for (int i = 0; i < 8; i++)
+            cmd[19 + i] = def.password[0];
+    } //if not password protected, the default is 0.
 
     return SendUSBCmd(handle, cmd, rsp);
 }
@@ -427,6 +444,16 @@ SPIDataTransferStatusDef SPIDataTransfer(hid_device *handle, byte* data, int len
     return def;
 }
 
+SPIDataTransferStatusDef SPISendReceive(hid_device *handle, byte* data, int length) {
+    SPIDataTransferStatusDef def = SPIDataTransfer(handle, data, length);
+
+    while (def.SPIEngineStatus != 0x10) {
+        def = SPIDataTransfer(handle, data, 1);
+    }
+
+    return def;
+}
+
 ExternalInterruptPinStatusDef GetNumOfEventsFromInterruptPin(hid_device *handle, byte resetCounter) {
     ExternalInterruptPinStatusDef def;
 
@@ -483,6 +510,7 @@ int SetGPIOPinDirection(hid_device *handle, GPPinDef def) {
 
     cmd[0] = CMD_SET_GPIO_PIN_DIR;
 
+    cmd[4] = 0;
     for (int i = 0; i < 8; i++)
         cmd[4] |= def.GP[i].GPIODirection << i;
 
@@ -525,21 +553,21 @@ int SetGPIOPinVal(hid_device *handle, GPPinDef def) {
 
     cmd[0] = CMD_SET_GPIO_PIN_VAL;
 
+    cmd[4] = 0;
     for (int i = 0; i < 8; i++)
         cmd[4] |= def.GP[i].GPIOOutput << i;
 
     cmd[5] = def.GP[8].GPIOOutput;
 
-     
+
     return SendUSBCmd(handle, cmd, rsp);
 }
 
-hid_device_info* EnumerateMCP2210()
-{
+hid_device_info* EnumerateMCP2210() {
     return hid_enumerate(MCP2210_VID, MCP2210_PID);
 }
 
-hid_device* InitMCP2210(wchar_t* serialNumber ) {
+hid_device* InitMCP2210(wchar_t* serialNumber) {
     return hid_open(MCP2210_VID, MCP2210_PID, serialNumber);
 }
 
@@ -551,4 +579,3 @@ void ReleaseMCP2210(hid_device *handle) {
     hid_close(handle);
     hid_exit();
 }
-

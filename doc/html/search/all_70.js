@@ -1,6 +1,7 @@
 var searchData=
 [
   ['parse_5fuevent_5finfo',['parse_uevent_info',['../hid_8c.html#a8231475fac4a08db9dd6da86a5355acf',1,'hid.c']]],
+  ['password',['password',['../struct_chip_settings_def.html#a0e9e9123c42b18bdd6294d0ae7935582',1,'ChipSettingsDef']]],
   ['passwordguessed',['PasswordGuessed',['../struct_chip_status_def.html#ae83bf4d444de30c1a451f9aef7ce4d6f',1,'ChipStatusDef']]],
   ['path',['path',['../structhid__device__info.html#a6384b5bf4d9583598e5f5a889f240921',1,'hid_device_info']]],
   ['pid',['PID',['../struct_u_s_b_key_parameters_def.html#af2a7b529b80b82c0933cc8ce38723e1e',1,'USBKeyParametersDef']]],

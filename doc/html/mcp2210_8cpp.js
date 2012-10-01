@@ -17,12 +17,13 @@ var mcp2210_8cpp =
     [ "RequestSPIBusRelease", "mcp2210_8cpp.html#adfb0cd492ab9c674d4ad5a5aeabbf365", null ],
     [ "SendAccessPassword", "mcp2210_8cpp.html#a7de4c7ae20fcf6acbef30424395a7986", null ],
     [ "SendUSBCmd", "mcp2210_8cpp.html#ad2035535d0aeeaafe45fb9da0722cfad", null ],
+    [ "SetChipSettings", "mcp2210_8cpp.html#ac141e9fbe79612eaf745ce9814ac66ee", null ],
     [ "SetGPIOPinDirection", "mcp2210_8cpp.html#a587186e5ac054e4239f014d6081b424f", null ],
     [ "SetGPIOPinVal", "mcp2210_8cpp.html#a84c0182b5a8740b40b484fbd82267af3", null ],
     [ "SetManufacturerProductName", "mcp2210_8cpp.html#ae0440fcfdc1adbe1a76ea6d53ae400f7", null ],
-    [ "SetPowerUpDefaultChipSettings", "mcp2210_8cpp.html#a0abb542b489e992d821d9917fa73db63", null ],
     [ "SetSPITransferSettings", "mcp2210_8cpp.html#a7c7fa077ea51968ef7f6d0fa8ee2fec7", null ],
     [ "SetUSBKeyParameters", "mcp2210_8cpp.html#a1379e6de32f81df8121a95b19afc77bf", null ],
     [ "SPIDataTransfer", "mcp2210_8cpp.html#aa2cfbe9757c7be3421fcef7d0bdb82eb", null ],
+    [ "SPISendReceive", "mcp2210_8cpp.html#aef764467c999d43a3b7de9541a37bd85", null ],
     [ "WriteEEPROM", "mcp2210_8cpp.html#a67f5920bb156bf436f7afbf92528dc37", null ]
 ];

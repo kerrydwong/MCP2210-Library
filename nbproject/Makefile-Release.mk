@@ -36,7 +36,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/mcp2210test.o \
-	${OBJECTDIR}/expmcp23s08.o \
 	${OBJECTDIR}/hid.o \
 	${OBJECTDIR}/mcp2210.o
 
@@ -69,11 +68,6 @@ ${OBJECTDIR}/mcp2210test.o: mcp2210test.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/mcp2210test.o mcp2210test.cpp
-
-${OBJECTDIR}/expmcp23s08.o: expmcp23s08.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/expmcp23s08.o expmcp23s08.cpp
 
 ${OBJECTDIR}/hid.o: hid.c 
 	${MKDIR} -p ${OBJECTDIR}

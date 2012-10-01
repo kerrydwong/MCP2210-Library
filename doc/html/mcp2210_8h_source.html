@@ -162,168 +162,168 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00087"></a><a class="code" href="mcp2210_8h.html#a901bcd6946338af5d40fff5a8a0ebb5d">00087</a> <span class="preprocessor"></span><span class="preprocessor">#define CMDSUB_USB_PRODUCT_NAME 0x40</span>
 <a name="l00088"></a><a class="code" href="mcp2210_8h.html#ad7a5e5045218249fcfa138fa023a27a2">00088</a> <span class="preprocessor"></span><span class="preprocessor">#define CMDSUB_USB_MANUFACTURER_NAME 0x50</span>
 <a name="l00089"></a>00089 <span class="preprocessor"></span>
-<a name="l00090"></a><a class="code" href="mcp2210_8h.html#a595777a119edd1c6b7a5db08897c8b26">00090</a> <span class="preprocessor">#define GPIO_DES_GPIO 0x00</span>
-<a name="l00091"></a><a class="code" href="mcp2210_8h.html#a565bb2119c8d516355456fc09777b1d3">00091</a> <span class="preprocessor"></span><span class="preprocessor">#define GPIO_DES_CS 0x01</span>
-<a name="l00092"></a><a class="code" href="mcp2210_8h.html#ac83341b8d2fc7cdfe7484fc3b3e43bef">00092</a> <span class="preprocessor"></span><span class="preprocessor">#define GPIO_DES_DEDICATED 0x2</span>
-<a name="l00093"></a>00093 <span class="preprocessor"></span>
-<a name="l00094"></a><a class="code" href="mcp2210_8h.html#af5a2e173b812bdbc8a1bc505534bb705">00094</a> <span class="preprocessor">#define OPERATION_SUCCESSFUL 0</span>
-<a name="l00095"></a><a class="code" href="mcp2210_8h.html#a4deeabd750e9bdd57f4770f89793e37e">00095</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_UNABLE_TO_OPEN_DEVICE -1</span>
-<a name="l00096"></a><a class="code" href="mcp2210_8h.html#aaad991bdf4e465eb65a7a075dc0f8ab6">00096</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_UNABLE_TO_WRITE_TO_DEVICE -2</span>
-<a name="l00097"></a><a class="code" href="mcp2210_8h.html#a4cc9cd91d1a74df9224d931fcca8f7fa">00097</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_UNABLE_TO_READ_FROM_DEVICE -3</span>
-<a name="l00098"></a><a class="code" href="mcp2210_8h.html#a60ec41154df53aafaee186316dc51146">00098</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_INVALID_DEVICE_HANDLE -99</span>
-<a name="l00099"></a>00099 <span class="preprocessor"></span>
-<a name="l00100"></a><a class="code" href="mcp2210_8h.html#aeae55aa39effa47d478a4337398fdbe1">00100</a> <span class="preprocessor">#define COMMAND_BUFFER_LENGTH 64</span>
-<a name="l00101"></a><a class="code" href="mcp2210_8h.html#ae418247dcaca196cfa54fc77a19d591f">00101</a> <span class="preprocessor"></span><span class="preprocessor">#define RESPONSE_BUFFER_LENGTH 64</span>
-<a name="l00102"></a>00102 <span class="preprocessor"></span>
-<a name="l00106"></a><a class="code" href="struct_g_p_pin.html">00106</a> <span class="keyword">struct </span><a class="code" href="struct_g_p_pin.html">GPPin</a> {
-<a name="l00113"></a><a class="code" href="struct_g_p_pin.html#a3d0225b44b50d426354e47851f246ab9">00113</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_g_p_pin.html#a3d0225b44b50d426354e47851f246ab9">PinDesignation</a>;  
-<a name="l00114"></a>00114     
-<a name="l00120"></a><a class="code" href="struct_g_p_pin.html#a1fffec9bada958b64937f51655c569e4">00120</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_g_p_pin.html#a1fffec9bada958b64937f51655c569e4">GPIOOutput</a>;
-<a name="l00121"></a>00121     
-<a name="l00127"></a><a class="code" href="struct_g_p_pin.html#a67735613380d11c71a1a447c7459bc6d">00127</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_g_p_pin.html#a67735613380d11c71a1a447c7459bc6d">GPIODirection</a>;
-<a name="l00128"></a>00128 };
-<a name="l00129"></a>00129 
-<a name="l00133"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html">00133</a> <span class="keyword">struct </span><a class="code" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a> {
-<a name="l00137"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a63e79a7391c75e2f16ff51a73fd23638">00137</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a63e79a7391c75e2f16ff51a73fd23638">BitRate</a>; 
-<a name="l00138"></a>00138     
-<a name="l00142"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a2f469778bc45bfaae06c0779c53457a9">00142</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a2f469778bc45bfaae06c0779c53457a9">IdleChipSelectValue</a>;
-<a name="l00143"></a>00143     
-<a name="l00147"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a32134013c1180fc4ddcfa42b9e1aeed0">00147</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a32134013c1180fc4ddcfa42b9e1aeed0">ActiveChipSelectValue</a>;
-<a name="l00148"></a>00148     
-<a name="l00153"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a0e6381f4d265cb73a9589f5e1ba695cf">00153</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a0e6381f4d265cb73a9589f5e1ba695cf">CSToDataDelay</a>;
-<a name="l00154"></a>00154     
-<a name="l00159"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a5c05d83e86f6d4cb9437d00a4c7a38a2">00159</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a5c05d83e86f6d4cb9437d00a4c7a38a2">LastDataByteToCSDelay</a>;
-<a name="l00160"></a>00160     
-<a name="l00165"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a7692386eb70c3fd674c1a0fdbe7a62c2">00165</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a7692386eb70c3fd674c1a0fdbe7a62c2">SubsequentDataByteDelay</a>;
-<a name="l00166"></a>00166     
-<a name="l00170"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a7f24f8717153d307d02780a27f5bf5dd">00170</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a7f24f8717153d307d02780a27f5bf5dd">BytesPerSPITransfer</a>;
-<a name="l00171"></a>00171     
-<a name="l00179"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a362c078515ae312b89face990d02d6c6">00179</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a362c078515ae312b89face990d02d6c6">SPIMode</a>;
-<a name="l00180"></a>00180     
-<a name="l00184"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a06e000b94a109cb22dd362ec768eedc7">00184</a>     <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a06e000b94a109cb22dd362ec768eedc7">ErrorCode</a>;
-<a name="l00185"></a>00185 };
-<a name="l00186"></a>00186 
-<a name="l00187"></a><a class="code" href="struct_chip_settings_def.html">00187</a> <span class="keyword">struct </span><a class="code" href="struct_chip_settings_def.html">ChipSettingsDef</a> {
-<a name="l00188"></a><a class="code" href="struct_chip_settings_def.html#aea8065ee4c940dcbde93dd1633c63f38">00188</a>     <a class="code" href="struct_g_p_pin.html">GPPin</a> <a class="code" href="struct_chip_settings_def.html#aea8065ee4c940dcbde93dd1633c63f38">GP</a>[9];
-<a name="l00189"></a><a class="code" href="struct_chip_settings_def.html#a5a29397e3fd6793de5d8d348b3b11d22">00189</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#a5a29397e3fd6793de5d8d348b3b11d22">RemoteWakeUpEnabled</a>;
-<a name="l00190"></a><a class="code" href="struct_chip_settings_def.html#af61e2aaa5bcf3284abd4554d2be88002">00190</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#af61e2aaa5bcf3284abd4554d2be88002">DedicatedFunctionInterruptPinMode</a>;
-<a name="l00191"></a><a class="code" href="struct_chip_settings_def.html#abeaf6785170c987a19025a506cf14a8d">00191</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#abeaf6785170c987a19025a506cf14a8d">SPIBusReleaseMode</a>;
-<a name="l00192"></a><a class="code" href="struct_chip_settings_def.html#a56bcb330a04c9b6b108ee63ce635c92d">00192</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#a56bcb330a04c9b6b108ee63ce635c92d">NVRamChipParamAccessControl</a>;
-<a name="l00193"></a><a class="code" href="struct_chip_settings_def.html#a711cd7ddde92dcfefaba6863b303ab3d">00193</a>     <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#a711cd7ddde92dcfefaba6863b303ab3d">ErrorCode</a>;
-<a name="l00194"></a>00194 };
-<a name="l00195"></a>00195 
-<a name="l00199"></a><a class="code" href="struct_u_s_b_key_parameters_def.html">00199</a> <span class="keyword">struct </span><a class="code" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a> {
-<a name="l00203"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#a35d04341dee0696d60990dfe9b066835">00203</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#a35d04341dee0696d60990dfe9b066835">VID</a>;
-<a name="l00204"></a>00204     
-<a name="l00208"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#af2a7b529b80b82c0933cc8ce38723e1e">00208</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#af2a7b529b80b82c0933cc8ce38723e1e">PID</a>;
-<a name="l00209"></a>00209     
-<a name="l00215"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#a49d44f9a0d7bd72369090932dee48323">00215</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#a49d44f9a0d7bd72369090932dee48323">HostPowered</a>;
-<a name="l00216"></a>00216     
-<a name="l00222"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#aace169dc444713da0e0c0f5672d64bd0">00222</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#aace169dc444713da0e0c0f5672d64bd0">SelfPowered</a>;
-<a name="l00223"></a>00223     
-<a name="l00229"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#ab03b4a5fd9b6f7c1e8b5b10a02a2496d">00229</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#ab03b4a5fd9b6f7c1e8b5b10a02a2496d">RemoteWakeupCapable</a>;
-<a name="l00230"></a>00230     
-<a name="l00235"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#a37e6e0ff7720d067ea185fd9b19d0ba8">00235</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#a37e6e0ff7720d067ea185fd9b19d0ba8">RequestedCurrentAmountFromHost</a>;
-<a name="l00236"></a>00236     
-<a name="l00240"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#aaaf11b677e036ff4847cc42bf891e786">00240</a>     <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#aaaf11b677e036ff4847cc42bf891e786">ErrorCode</a>;
-<a name="l00241"></a>00241 };
-<a name="l00242"></a>00242 
-<a name="l00246"></a><a class="code" href="struct_manufacturer_product_name_def.html">00246</a> <span class="keyword">struct </span><a class="code" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a> {
-<a name="l00253"></a><a class="code" href="struct_manufacturer_product_name_def.html#a78178464ccb77610a03691701cca017e">00253</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_manufacturer_product_name_def.html#a78178464ccb77610a03691701cca017e">USBStringDescriptorLength</a>;
-<a name="l00254"></a>00254     
-<a name="l00259"></a><a class="code" href="struct_manufacturer_product_name_def.html#a338f0d675fb05fabd7654239ca9b878d">00259</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_manufacturer_product_name_def.html#a338f0d675fb05fabd7654239ca9b878d">USBStringDescriptorID</a>;
-<a name="l00260"></a>00260     
-<a name="l00264"></a><a class="code" href="struct_manufacturer_product_name_def.html#ae0bc4c8cdce9488bdb26da7850e7fe84">00264</a>     <span class="keywordtype">char</span> <a class="code" href="struct_manufacturer_product_name_def.html#ae0bc4c8cdce9488bdb26da7850e7fe84">ManufacturerProductName</a>[59];
-<a name="l00265"></a>00265     
-<a name="l00269"></a><a class="code" href="struct_manufacturer_product_name_def.html#a826000ba27e897acf51b987c78d62861">00269</a>     <span class="keywordtype">int</span> <a class="code" href="struct_manufacturer_product_name_def.html#a826000ba27e897acf51b987c78d62861">ErrorCode</a>;
-<a name="l00270"></a>00270 };
-<a name="l00271"></a>00271 
-<a name="l00275"></a><a class="code" href="struct_chip_status_def.html">00275</a> <span class="keyword">struct </span><a class="code" href="struct_chip_status_def.html">ChipStatusDef</a> {
-<a name="l00281"></a><a class="code" href="struct_chip_status_def.html#ac1422f04b7345187a77b5d506dc8a492">00281</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#ac1422f04b7345187a77b5d506dc8a492">SPIBusReleaseExtReqStat</a>;
-<a name="l00282"></a>00282     
-<a name="l00289"></a><a class="code" href="struct_chip_status_def.html#ac8d8808a7cf921e77831dc4e30e8d096">00289</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#ac8d8808a7cf921e77831dc4e30e8d096">SPIBusCurrentOwner</a>;
-<a name="l00290"></a>00290     
-<a name="l00295"></a><a class="code" href="struct_chip_status_def.html#a775f8cb07137f324ce59e7bbc961fd55">00295</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#a775f8cb07137f324ce59e7bbc961fd55">AttemptedPWDAccesses</a>;
-<a name="l00296"></a>00296     
-<a name="l00302"></a><a class="code" href="struct_chip_status_def.html#ae83bf4d444de30c1a451f9aef7ce4d6f">00302</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#ae83bf4d444de30c1a451f9aef7ce4d6f">PasswordGuessed</a>;
-<a name="l00303"></a>00303     
-<a name="l00307"></a><a class="code" href="struct_chip_status_def.html#ab359484a0244ec153c49f0af23c2d29b">00307</a>     <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#ab359484a0244ec153c49f0af23c2d29b">ErrorCode</a>;
-<a name="l00308"></a>00308 };
-<a name="l00309"></a>00309 
-<a name="l00310"></a>00310 
-<a name="l00314"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html">00314</a> <span class="keyword">struct </span><a class="code" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a> {
-<a name="l00318"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html#a98b49f5e7b7da8d8785c3d4a98a67449">00318</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_data_transfer_status_def.html#a98b49f5e7b7da8d8785c3d4a98a67449">NumberOfBytesReceived</a>;
-<a name="l00319"></a>00319     
-<a name="l00327"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html#a4a2227f2a2c87291d918a9a3f39c5d55">00327</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_data_transfer_status_def.html#a4a2227f2a2c87291d918a9a3f39c5d55">SPIEngineStatus</a>;
-<a name="l00328"></a>00328     
-<a name="l00333"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html#a6376a62c46b37059a74995cc4ba567b3">00333</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_s_p_i_data_transfer_status_def.html#a6376a62c46b37059a74995cc4ba567b3">DataReceived</a>[60];
-<a name="l00334"></a>00334     
-<a name="l00338"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html#a202e947d5055ae583859ab2b1dddaede">00338</a>     <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_data_transfer_status_def.html#a202e947d5055ae583859ab2b1dddaede">ErrorCode</a>;
-<a name="l00339"></a>00339 };
-<a name="l00340"></a>00340 
-<a name="l00344"></a><a class="code" href="struct_external_interrupt_pin_status_def.html">00344</a> <span class="keyword">struct </span><a class="code" href="struct_external_interrupt_pin_status_def.html">ExternalInterruptPinStatusDef</a> {
-<a name="l00348"></a><a class="code" href="struct_external_interrupt_pin_status_def.html#a2aeec5fdeb39f15ad2a15cc7a229de9e">00348</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_external_interrupt_pin_status_def.html#a2aeec5fdeb39f15ad2a15cc7a229de9e">InterruptEventCounter</a>;
-<a name="l00349"></a>00349     
-<a name="l00353"></a><a class="code" href="struct_external_interrupt_pin_status_def.html#a94be603e5e321af81780d4a0583cea46">00353</a>     <span class="keywordtype">int</span> <a class="code" href="struct_external_interrupt_pin_status_def.html#a94be603e5e321af81780d4a0583cea46">ErrorCode</a>;
-<a name="l00354"></a>00354 };
-<a name="l00355"></a>00355 
-<a name="l00359"></a><a class="code" href="struct_g_p_pin_def.html">00359</a> <span class="keyword">struct </span><a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> {
-<a name="l00364"></a><a class="code" href="struct_g_p_pin_def.html#a5274d0e49d1ec54865a419b2ef722d32">00364</a>     <a class="code" href="struct_g_p_pin.html">GPPin</a> <a class="code" href="struct_g_p_pin_def.html#a5274d0e49d1ec54865a419b2ef722d32">GP</a>[9];
-<a name="l00365"></a>00365     
-<a name="l00369"></a><a class="code" href="struct_g_p_pin_def.html#aec1b783e71959f2715543127bf6ed164">00369</a>     <span class="keywordtype">int</span> <a class="code" href="struct_g_p_pin_def.html#aec1b783e71959f2715543127bf6ed164">ErrorCode</a>;
-<a name="l00370"></a>00370 };
-<a name="l00371"></a>00371 
-<a name="l00378"></a>00378 <a class="code" href="structhid__device__info.html">hid_device_info</a>* <a class="code" href="mcp2210_8cpp.html#a0b3fb01a244efdc3126f2646553aeb3d">EnumerateMCP2210</a>();
-<a name="l00379"></a>00379 
-<a name="l00388"></a>00388 <a class="code" href="structhid__device__.html">hid_device</a>* <a class="code" href="mcp2210_8cpp.html#ab81541af956be15df79c95f49b1803c3">InitMCP2210</a>();
-<a name="l00389"></a>00389 
-<a name="l00401"></a>00401 <a class="code" href="structhid__device__.html">hid_device</a>* <a class="code" href="mcp2210_8cpp.html#ab81541af956be15df79c95f49b1803c3">InitMCP2210</a>(<span class="keywordtype">wchar_t</span>* serialNumber );
-<a name="l00402"></a>00402 
-<a name="l00409"></a>00409 <span class="keywordtype">void</span> <a class="code" href="mcp2210_8cpp.html#afca69dafd7a0768a60da2cf80525c6b5">ReleaseMCP2210</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
-<a name="l00410"></a>00410 
-<a name="l00424"></a>00424 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#ad2035535d0aeeaafe45fb9da0722cfad">SendUSBCmd</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *cmdBuf, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *responseBuf);
-<a name="l00425"></a>00425 
-<a name="l00438"></a>00438 <a class="code" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a> <a class="code" href="mcp2210_8cpp.html#a28a3a304193aa5b16165a52b6be89d8e">GetSPITransferSettings</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">bool</span> isVolatile = <span class="keyword">true</span>);
-<a name="l00439"></a>00439 
-<a name="l00457"></a>00457 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a7c7fa077ea51968ef7f6d0fa8ee2fec7">SetSPITransferSettings</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a> def, <span class="keywordtype">bool</span> isVolatile = <span class="keyword">true</span>);
-<a name="l00458"></a>00458 
-<a name="l00469"></a>00469 <a class="code" href="struct_chip_settings_def.html">ChipSettingsDef</a> <a class="code" href="mcp2210_8cpp.html#a7a1ba0035d04e9e72b4db2cf5ad21220">GetChipSettings</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">bool</span> isVolatile = <span class="keyword">true</span>);
-<a name="l00470"></a>00470 
-<a name="l00489"></a>00489 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a0abb542b489e992d821d9917fa73db63">SetPowerUpDefaultChipSettings</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_chip_settings_def.html">ChipSettingsDef</a> def, <span class="keywordtype">bool</span> isVolatile = <span class="keyword">true</span>);
-<a name="l00490"></a>00490 
-<a name="l00499"></a>00499 <a class="code" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a> <a class="code" href="mcp2210_8cpp.html#a75c695b47cd5705afb8aad13a4e5751f">GetUSBKeyParameters</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
-<a name="l00500"></a>00500 
-<a name="l00514"></a>00514 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a1379e6de32f81df8121a95b19afc77bf">SetUSBKeyParameters</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a> def);
-<a name="l00515"></a>00515 
-<a name="l00529"></a>00529 <a class="code" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a> <a class="code" href="mcp2210_8cpp.html#a394bb8317789fff387a1e338121a145b">GetManufacturerProductName</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> subCmdCode);
-<a name="l00530"></a>00530 
-<a name="l00550"></a>00550 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#ae0440fcfdc1adbe1a76ea6d53ae400f7">SetManufacturerProductName</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> subCmdCode, <a class="code" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a> def);
-<a name="l00551"></a>00551 
-<a name="l00573"></a>00573 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a7de4c7ae20fcf6acbef30424395a7986">SendAccessPassword</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">char</span> *pwd, <span class="keywordtype">int</span> pwdLength);
-<a name="l00574"></a>00574 
-<a name="l00588"></a>00588 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a8ccc5483803201158f79ebe9b01d204d">ReadEEPROM</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> addr, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a>* val);
-<a name="l00589"></a>00589 
-<a name="l00605"></a>00605 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a67f5920bb156bf436f7afbf92528dc37">WriteEEPROM</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> addr, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> val);
-<a name="l00606"></a>00606 
-<a name="l00620"></a>00620 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#adfb0cd492ab9c674d4ad5a5aeabbf365">RequestSPIBusRelease</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> val);
-<a name="l00621"></a>00621 
-<a name="l00630"></a>00630 <a class="code" href="struct_chip_status_def.html">ChipStatusDef</a> <a class="code" href="mcp2210_8cpp.html#a7d64b0e934db7345efb94af6a316e487">GetChipStatus</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
-<a name="l00631"></a>00631 
-<a name="l00640"></a>00640 <a class="code" href="struct_chip_status_def.html">ChipStatusDef</a> <a class="code" href="mcp2210_8cpp.html#abf54ce25e056b5fa2e0df30d632aa850">CancelSPITransfer</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
-<a name="l00641"></a>00641 
-<a name="l00657"></a>00657 <a class="code" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a> <a class="code" href="mcp2210_8cpp.html#aa2cfbe9757c7be3421fcef7d0bdb82eb">SPIDataTransfer</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a>* data, <span class="keywordtype">int</span> length);
-<a name="l00658"></a>00658 
-<a name="l00673"></a>00673 <a class="code" href="struct_external_interrupt_pin_status_def.html">ExternalInterruptPinStatusDef</a> <a class="code" href="mcp2210_8cpp.html#af4f479adbc61b93bd180a1eb541ca6ef">GetNumOfEventsFromInterruptPin</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> resetCounter);
-<a name="l00674"></a>00674 
-<a name="l00684"></a>00684 <a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> <a class="code" href="mcp2210_8cpp.html#a4fa41d03c61fe4ac4c68ab1653b7f0b4">GetGPIOPinDirection</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
-<a name="l00685"></a>00685 
-<a name="l00698"></a>00698 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a587186e5ac054e4239f014d6081b424f">SetGPIOPinDirection</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> def);
-<a name="l00699"></a>00699 
-<a name="l00709"></a>00709 <a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> <a class="code" href="mcp2210_8cpp.html#a3acf8cc5387dfe9b1fe8dbb5fecfb867">GetGPIOPinValue</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
-<a name="l00710"></a>00710 
-<a name="l00722"></a>00722 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a84c0182b5a8740b40b484fbd82267af3">SetGPIOPinVal</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> def);
-<a name="l00723"></a>00723 
-<a name="l00724"></a>00724 <span class="preprocessor">#endif</span>
+<a name="l00090"></a><a class="code" href="mcp2210_8h.html#af5a2e173b812bdbc8a1bc505534bb705">00090</a> <span class="preprocessor">#define OPERATION_SUCCESSFUL 0</span>
+<a name="l00091"></a><a class="code" href="mcp2210_8h.html#a4deeabd750e9bdd57f4770f89793e37e">00091</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_UNABLE_TO_OPEN_DEVICE -1</span>
+<a name="l00092"></a><a class="code" href="mcp2210_8h.html#aaad991bdf4e465eb65a7a075dc0f8ab6">00092</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_UNABLE_TO_WRITE_TO_DEVICE -2</span>
+<a name="l00093"></a><a class="code" href="mcp2210_8h.html#a4cc9cd91d1a74df9224d931fcca8f7fa">00093</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_UNABLE_TO_READ_FROM_DEVICE -3</span>
+<a name="l00094"></a><a class="code" href="mcp2210_8h.html#a60ec41154df53aafaee186316dc51146">00094</a> <span class="preprocessor"></span><span class="preprocessor">#define ERROR_INVALID_DEVICE_HANDLE -99</span>
+<a name="l00095"></a>00095 <span class="preprocessor"></span>
+<a name="l00096"></a><a class="code" href="mcp2210_8h.html#aeae55aa39effa47d478a4337398fdbe1">00096</a> <span class="preprocessor">#define COMMAND_BUFFER_LENGTH 64</span>
+<a name="l00097"></a><a class="code" href="mcp2210_8h.html#ae418247dcaca196cfa54fc77a19d591f">00097</a> <span class="preprocessor"></span><span class="preprocessor">#define RESPONSE_BUFFER_LENGTH 64</span>
+<a name="l00098"></a>00098 <span class="preprocessor"></span>
+<a name="l00102"></a><a class="code" href="struct_g_p_pin.html">00102</a> <span class="keyword">struct </span><a class="code" href="struct_g_p_pin.html">GPPin</a> {
+<a name="l00109"></a><a class="code" href="struct_g_p_pin.html#a3d0225b44b50d426354e47851f246ab9">00109</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_g_p_pin.html#a3d0225b44b50d426354e47851f246ab9">PinDesignation</a>;  
+<a name="l00110"></a>00110     
+<a name="l00116"></a><a class="code" href="struct_g_p_pin.html#a1fffec9bada958b64937f51655c569e4">00116</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_g_p_pin.html#a1fffec9bada958b64937f51655c569e4">GPIOOutput</a>;
+<a name="l00117"></a>00117     
+<a name="l00123"></a><a class="code" href="struct_g_p_pin.html#a67735613380d11c71a1a447c7459bc6d">00123</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_g_p_pin.html#a67735613380d11c71a1a447c7459bc6d">GPIODirection</a>;
+<a name="l00124"></a>00124 };
+<a name="l00125"></a>00125 
+<a name="l00129"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html">00129</a> <span class="keyword">struct </span><a class="code" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a> {
+<a name="l00133"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a63e79a7391c75e2f16ff51a73fd23638">00133</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a63e79a7391c75e2f16ff51a73fd23638">BitRate</a>; 
+<a name="l00134"></a>00134     
+<a name="l00138"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a2f469778bc45bfaae06c0779c53457a9">00138</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a2f469778bc45bfaae06c0779c53457a9">IdleChipSelectValue</a>;
+<a name="l00139"></a>00139     
+<a name="l00143"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a32134013c1180fc4ddcfa42b9e1aeed0">00143</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a32134013c1180fc4ddcfa42b9e1aeed0">ActiveChipSelectValue</a>;
+<a name="l00144"></a>00144     
+<a name="l00149"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a0e6381f4d265cb73a9589f5e1ba695cf">00149</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a0e6381f4d265cb73a9589f5e1ba695cf">CSToDataDelay</a>;
+<a name="l00150"></a>00150     
+<a name="l00155"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a5c05d83e86f6d4cb9437d00a4c7a38a2">00155</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a5c05d83e86f6d4cb9437d00a4c7a38a2">LastDataByteToCSDelay</a>;
+<a name="l00156"></a>00156     
+<a name="l00161"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a7692386eb70c3fd674c1a0fdbe7a62c2">00161</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a7692386eb70c3fd674c1a0fdbe7a62c2">SubsequentDataByteDelay</a>;
+<a name="l00162"></a>00162     
+<a name="l00166"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a7f24f8717153d307d02780a27f5bf5dd">00166</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a7f24f8717153d307d02780a27f5bf5dd">BytesPerSPITransfer</a>;
+<a name="l00167"></a>00167     
+<a name="l00175"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a362c078515ae312b89face990d02d6c6">00175</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a362c078515ae312b89face990d02d6c6">SPIMode</a>;
+<a name="l00176"></a>00176     
+<a name="l00180"></a><a class="code" href="struct_s_p_i_transfer_settings_def.html#a06e000b94a109cb22dd362ec768eedc7">00180</a>     <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_transfer_settings_def.html#a06e000b94a109cb22dd362ec768eedc7">ErrorCode</a>;
+<a name="l00181"></a>00181 };
+<a name="l00182"></a>00182 
+<a name="l00183"></a><a class="code" href="struct_chip_settings_def.html">00183</a> <span class="keyword">struct </span><a class="code" href="struct_chip_settings_def.html">ChipSettingsDef</a> {
+<a name="l00184"></a><a class="code" href="struct_chip_settings_def.html#aea8065ee4c940dcbde93dd1633c63f38">00184</a>     <a class="code" href="struct_g_p_pin.html">GPPin</a> <a class="code" href="struct_chip_settings_def.html#aea8065ee4c940dcbde93dd1633c63f38">GP</a>[9];
+<a name="l00185"></a><a class="code" href="struct_chip_settings_def.html#a5a29397e3fd6793de5d8d348b3b11d22">00185</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#a5a29397e3fd6793de5d8d348b3b11d22">RemoteWakeUpEnabled</a>;
+<a name="l00186"></a><a class="code" href="struct_chip_settings_def.html#af61e2aaa5bcf3284abd4554d2be88002">00186</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#af61e2aaa5bcf3284abd4554d2be88002">DedicatedFunctionInterruptPinMode</a>;
+<a name="l00187"></a><a class="code" href="struct_chip_settings_def.html#abeaf6785170c987a19025a506cf14a8d">00187</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#abeaf6785170c987a19025a506cf14a8d">SPIBusReleaseMode</a>;
+<a name="l00188"></a><a class="code" href="struct_chip_settings_def.html#a56bcb330a04c9b6b108ee63ce635c92d">00188</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#a56bcb330a04c9b6b108ee63ce635c92d">NVRamChipParamAccessControl</a>;
+<a name="l00189"></a><a class="code" href="struct_chip_settings_def.html#a0e9e9123c42b18bdd6294d0ae7935582">00189</a>     <span class="keywordtype">char</span> <a class="code" href="struct_chip_settings_def.html#a0e9e9123c42b18bdd6294d0ae7935582">password</a>[8];
+<a name="l00190"></a><a class="code" href="struct_chip_settings_def.html#a711cd7ddde92dcfefaba6863b303ab3d">00190</a>     <span class="keywordtype">int</span> <a class="code" href="struct_chip_settings_def.html#a711cd7ddde92dcfefaba6863b303ab3d">ErrorCode</a>;
+<a name="l00191"></a>00191 };
+<a name="l00192"></a>00192 
+<a name="l00196"></a><a class="code" href="struct_u_s_b_key_parameters_def.html">00196</a> <span class="keyword">struct </span><a class="code" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a> {
+<a name="l00200"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#a35d04341dee0696d60990dfe9b066835">00200</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#a35d04341dee0696d60990dfe9b066835">VID</a>;
+<a name="l00201"></a>00201     
+<a name="l00205"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#af2a7b529b80b82c0933cc8ce38723e1e">00205</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#af2a7b529b80b82c0933cc8ce38723e1e">PID</a>;
+<a name="l00206"></a>00206     
+<a name="l00212"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#a49d44f9a0d7bd72369090932dee48323">00212</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#a49d44f9a0d7bd72369090932dee48323">HostPowered</a>;
+<a name="l00213"></a>00213     
+<a name="l00219"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#aace169dc444713da0e0c0f5672d64bd0">00219</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#aace169dc444713da0e0c0f5672d64bd0">SelfPowered</a>;
+<a name="l00220"></a>00220     
+<a name="l00226"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#ab03b4a5fd9b6f7c1e8b5b10a02a2496d">00226</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#ab03b4a5fd9b6f7c1e8b5b10a02a2496d">RemoteWakeupCapable</a>;
+<a name="l00227"></a>00227     
+<a name="l00232"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#a37e6e0ff7720d067ea185fd9b19d0ba8">00232</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#a37e6e0ff7720d067ea185fd9b19d0ba8">RequestedCurrentAmountFromHost</a>;
+<a name="l00233"></a>00233     
+<a name="l00237"></a><a class="code" href="struct_u_s_b_key_parameters_def.html#aaaf11b677e036ff4847cc42bf891e786">00237</a>     <span class="keywordtype">int</span> <a class="code" href="struct_u_s_b_key_parameters_def.html#aaaf11b677e036ff4847cc42bf891e786">ErrorCode</a>;
+<a name="l00238"></a>00238 };
+<a name="l00239"></a>00239 
+<a name="l00243"></a><a class="code" href="struct_manufacturer_product_name_def.html">00243</a> <span class="keyword">struct </span><a class="code" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a> {
+<a name="l00250"></a><a class="code" href="struct_manufacturer_product_name_def.html#a78178464ccb77610a03691701cca017e">00250</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_manufacturer_product_name_def.html#a78178464ccb77610a03691701cca017e">USBStringDescriptorLength</a>;
+<a name="l00251"></a>00251     
+<a name="l00256"></a><a class="code" href="struct_manufacturer_product_name_def.html#a338f0d675fb05fabd7654239ca9b878d">00256</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_manufacturer_product_name_def.html#a338f0d675fb05fabd7654239ca9b878d">USBStringDescriptorID</a>;
+<a name="l00257"></a>00257     
+<a name="l00261"></a><a class="code" href="struct_manufacturer_product_name_def.html#ae0bc4c8cdce9488bdb26da7850e7fe84">00261</a>     <span class="keywordtype">char</span> <a class="code" href="struct_manufacturer_product_name_def.html#ae0bc4c8cdce9488bdb26da7850e7fe84">ManufacturerProductName</a>[59];
+<a name="l00262"></a>00262     
+<a name="l00266"></a><a class="code" href="struct_manufacturer_product_name_def.html#a826000ba27e897acf51b987c78d62861">00266</a>     <span class="keywordtype">int</span> <a class="code" href="struct_manufacturer_product_name_def.html#a826000ba27e897acf51b987c78d62861">ErrorCode</a>;
+<a name="l00267"></a>00267 };
+<a name="l00268"></a>00268 
+<a name="l00272"></a><a class="code" href="struct_chip_status_def.html">00272</a> <span class="keyword">struct </span><a class="code" href="struct_chip_status_def.html">ChipStatusDef</a> {
+<a name="l00278"></a><a class="code" href="struct_chip_status_def.html#ac1422f04b7345187a77b5d506dc8a492">00278</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#ac1422f04b7345187a77b5d506dc8a492">SPIBusReleaseExtReqStat</a>;
+<a name="l00279"></a>00279     
+<a name="l00286"></a><a class="code" href="struct_chip_status_def.html#ac8d8808a7cf921e77831dc4e30e8d096">00286</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#ac8d8808a7cf921e77831dc4e30e8d096">SPIBusCurrentOwner</a>;
+<a name="l00287"></a>00287     
+<a name="l00292"></a><a class="code" href="struct_chip_status_def.html#a775f8cb07137f324ce59e7bbc961fd55">00292</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#a775f8cb07137f324ce59e7bbc961fd55">AttemptedPWDAccesses</a>;
+<a name="l00293"></a>00293     
+<a name="l00299"></a><a class="code" href="struct_chip_status_def.html#ae83bf4d444de30c1a451f9aef7ce4d6f">00299</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#ae83bf4d444de30c1a451f9aef7ce4d6f">PasswordGuessed</a>;
+<a name="l00300"></a>00300     
+<a name="l00304"></a><a class="code" href="struct_chip_status_def.html#ab359484a0244ec153c49f0af23c2d29b">00304</a>     <span class="keywordtype">int</span> <a class="code" href="struct_chip_status_def.html#ab359484a0244ec153c49f0af23c2d29b">ErrorCode</a>;
+<a name="l00305"></a>00305 };
+<a name="l00306"></a>00306 
+<a name="l00307"></a>00307 
+<a name="l00311"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html">00311</a> <span class="keyword">struct </span><a class="code" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a> {
+<a name="l00315"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html#a98b49f5e7b7da8d8785c3d4a98a67449">00315</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_data_transfer_status_def.html#a98b49f5e7b7da8d8785c3d4a98a67449">NumberOfBytesReceived</a>;
+<a name="l00316"></a>00316     
+<a name="l00317"></a>00317     
+<a name="l00325"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html#a4a2227f2a2c87291d918a9a3f39c5d55">00325</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_data_transfer_status_def.html#a4a2227f2a2c87291d918a9a3f39c5d55">SPIEngineStatus</a>;
+<a name="l00326"></a>00326     
+<a name="l00331"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html#a6376a62c46b37059a74995cc4ba567b3">00331</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct_s_p_i_data_transfer_status_def.html#a6376a62c46b37059a74995cc4ba567b3">DataReceived</a>[60];
+<a name="l00332"></a>00332     
+<a name="l00336"></a><a class="code" href="struct_s_p_i_data_transfer_status_def.html#a202e947d5055ae583859ab2b1dddaede">00336</a>     <span class="keywordtype">int</span> <a class="code" href="struct_s_p_i_data_transfer_status_def.html#a202e947d5055ae583859ab2b1dddaede">ErrorCode</a>;
+<a name="l00337"></a>00337 };
+<a name="l00338"></a>00338 
+<a name="l00342"></a><a class="code" href="struct_external_interrupt_pin_status_def.html">00342</a> <span class="keyword">struct </span><a class="code" href="struct_external_interrupt_pin_status_def.html">ExternalInterruptPinStatusDef</a> {
+<a name="l00346"></a><a class="code" href="struct_external_interrupt_pin_status_def.html#a2aeec5fdeb39f15ad2a15cc7a229de9e">00346</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_external_interrupt_pin_status_def.html#a2aeec5fdeb39f15ad2a15cc7a229de9e">InterruptEventCounter</a>;
+<a name="l00347"></a>00347     
+<a name="l00351"></a><a class="code" href="struct_external_interrupt_pin_status_def.html#a94be603e5e321af81780d4a0583cea46">00351</a>     <span class="keywordtype">int</span> <a class="code" href="struct_external_interrupt_pin_status_def.html#a94be603e5e321af81780d4a0583cea46">ErrorCode</a>;
+<a name="l00352"></a>00352 };
+<a name="l00353"></a>00353 
+<a name="l00357"></a><a class="code" href="struct_g_p_pin_def.html">00357</a> <span class="keyword">struct </span><a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> {
+<a name="l00362"></a><a class="code" href="struct_g_p_pin_def.html#a5274d0e49d1ec54865a419b2ef722d32">00362</a>     <a class="code" href="struct_g_p_pin.html">GPPin</a> <a class="code" href="struct_g_p_pin_def.html#a5274d0e49d1ec54865a419b2ef722d32">GP</a>[9];
+<a name="l00363"></a>00363     
+<a name="l00367"></a><a class="code" href="struct_g_p_pin_def.html#aec1b783e71959f2715543127bf6ed164">00367</a>     <span class="keywordtype">int</span> <a class="code" href="struct_g_p_pin_def.html#aec1b783e71959f2715543127bf6ed164">ErrorCode</a>;
+<a name="l00368"></a>00368 };
+<a name="l00369"></a>00369 
+<a name="l00376"></a>00376 <a class="code" href="structhid__device__info.html">hid_device_info</a>* <a class="code" href="mcp2210_8cpp.html#a0b3fb01a244efdc3126f2646553aeb3d">EnumerateMCP2210</a>();
+<a name="l00377"></a>00377 
+<a name="l00386"></a>00386 <a class="code" href="structhid__device__.html">hid_device</a>* <a class="code" href="mcp2210_8cpp.html#ab81541af956be15df79c95f49b1803c3">InitMCP2210</a>();
+<a name="l00387"></a>00387 
+<a name="l00399"></a>00399 <a class="code" href="structhid__device__.html">hid_device</a>* <a class="code" href="mcp2210_8cpp.html#ab81541af956be15df79c95f49b1803c3">InitMCP2210</a>(<span class="keywordtype">wchar_t</span>* serialNumber );
+<a name="l00400"></a>00400 
+<a name="l00407"></a>00407 <span class="keywordtype">void</span> <a class="code" href="mcp2210_8cpp.html#afca69dafd7a0768a60da2cf80525c6b5">ReleaseMCP2210</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
+<a name="l00408"></a>00408 
+<a name="l00422"></a>00422 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#ad2035535d0aeeaafe45fb9da0722cfad">SendUSBCmd</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *cmdBuf, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *responseBuf);
+<a name="l00423"></a>00423 
+<a name="l00436"></a>00436 <a class="code" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a> <a class="code" href="mcp2210_8cpp.html#a28a3a304193aa5b16165a52b6be89d8e">GetSPITransferSettings</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">bool</span> isVolatile = <span class="keyword">true</span>);
+<a name="l00437"></a>00437 
+<a name="l00455"></a>00455 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a7c7fa077ea51968ef7f6d0fa8ee2fec7">SetSPITransferSettings</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_s_p_i_transfer_settings_def.html">SPITransferSettingsDef</a> def, <span class="keywordtype">bool</span> isVolatile = <span class="keyword">true</span>);
+<a name="l00456"></a>00456 
+<a name="l00467"></a>00467 <a class="code" href="struct_chip_settings_def.html">ChipSettingsDef</a> <a class="code" href="mcp2210_8cpp.html#a7a1ba0035d04e9e72b4db2cf5ad21220">GetChipSettings</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">bool</span> isVolatile = <span class="keyword">true</span>);
+<a name="l00468"></a>00468 
+<a name="l00487"></a>00487 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#ac141e9fbe79612eaf745ce9814ac66ee">SetChipSettings</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_chip_settings_def.html">ChipSettingsDef</a> def, <span class="keywordtype">bool</span> isVolatile = <span class="keyword">true</span>);
+<a name="l00488"></a>00488 
+<a name="l00497"></a>00497 <a class="code" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a> <a class="code" href="mcp2210_8cpp.html#a75c695b47cd5705afb8aad13a4e5751f">GetUSBKeyParameters</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
+<a name="l00498"></a>00498 
+<a name="l00512"></a>00512 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a1379e6de32f81df8121a95b19afc77bf">SetUSBKeyParameters</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_u_s_b_key_parameters_def.html">USBKeyParametersDef</a> def);
+<a name="l00513"></a>00513 
+<a name="l00527"></a>00527 <a class="code" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a> <a class="code" href="mcp2210_8cpp.html#a394bb8317789fff387a1e338121a145b">GetManufacturerProductName</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> subCmdCode);
+<a name="l00528"></a>00528 
+<a name="l00548"></a>00548 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#ae0440fcfdc1adbe1a76ea6d53ae400f7">SetManufacturerProductName</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> subCmdCode, <a class="code" href="struct_manufacturer_product_name_def.html">ManufacturerProductNameDef</a> def);
+<a name="l00549"></a>00549 
+<a name="l00571"></a>00571 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a7de4c7ae20fcf6acbef30424395a7986">SendAccessPassword</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <span class="keywordtype">char</span> *pwd, <span class="keywordtype">int</span> pwdLength);
+<a name="l00572"></a>00572 
+<a name="l00586"></a>00586 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a8ccc5483803201158f79ebe9b01d204d">ReadEEPROM</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> addr, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a>* val);
+<a name="l00587"></a>00587 
+<a name="l00603"></a>00603 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a67f5920bb156bf436f7afbf92528dc37">WriteEEPROM</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> addr, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> val);
+<a name="l00604"></a>00604 
+<a name="l00618"></a>00618 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#adfb0cd492ab9c674d4ad5a5aeabbf365">RequestSPIBusRelease</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> val);
+<a name="l00619"></a>00619 
+<a name="l00628"></a>00628 <a class="code" href="struct_chip_status_def.html">ChipStatusDef</a> <a class="code" href="mcp2210_8cpp.html#a7d64b0e934db7345efb94af6a316e487">GetChipStatus</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
+<a name="l00629"></a>00629 
+<a name="l00638"></a>00638 <a class="code" href="struct_chip_status_def.html">ChipStatusDef</a> <a class="code" href="mcp2210_8cpp.html#abf54ce25e056b5fa2e0df30d632aa850">CancelSPITransfer</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
+<a name="l00639"></a>00639 
+<a name="l00655"></a>00655 <a class="code" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a> <a class="code" href="mcp2210_8cpp.html#aa2cfbe9757c7be3421fcef7d0bdb82eb">SPIDataTransfer</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a>* data, <span class="keywordtype">int</span> length);
+<a name="l00656"></a>00656 
+<a name="l00678"></a>00678 <a class="code" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a> <a class="code" href="mcp2210_8cpp.html#aef764467c999d43a3b7de9541a37bd85">SPISendReceive</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a>* data, <span class="keywordtype">int</span> length);
+<a name="l00679"></a>00679 
+<a name="l00694"></a>00694 <a class="code" href="struct_external_interrupt_pin_status_def.html">ExternalInterruptPinStatusDef</a> <a class="code" href="mcp2210_8cpp.html#af4f479adbc61b93bd180a1eb541ca6ef">GetNumOfEventsFromInterruptPin</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> resetCounter);
+<a name="l00695"></a>00695 
+<a name="l00705"></a>00705 <a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> <a class="code" href="mcp2210_8cpp.html#a4fa41d03c61fe4ac4c68ab1653b7f0b4">GetGPIOPinDirection</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
+<a name="l00706"></a>00706 
+<a name="l00719"></a>00719 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a587186e5ac054e4239f014d6081b424f">SetGPIOPinDirection</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> def);
+<a name="l00720"></a>00720 
+<a name="l00730"></a>00730 <a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> <a class="code" href="mcp2210_8cpp.html#a3acf8cc5387dfe9b1fe8dbb5fecfb867">GetGPIOPinValue</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle);
+<a name="l00731"></a>00731 
+<a name="l00743"></a>00743 <span class="keywordtype">int</span> <a class="code" href="mcp2210_8cpp.html#a84c0182b5a8740b40b484fbd82267af3">SetGPIOPinVal</a>(<a class="code" href="structhid__device__.html">hid_device</a> *handle, <a class="code" href="struct_g_p_pin_def.html">GPPinDef</a> def);
+<a name="l00744"></a>00744 
+<a name="l00745"></a>00745 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -344,7 +344,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="mcp2210_8h.html">mcp2210.h</a>      </li>
 
-    <li class="footer">Generated on Thu Sep 27 2012 16:38:08 for MCP2210 Library by
+    <li class="footer">Generated on Mon Oct 1 2012 10:49:43 for MCP2210 Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
