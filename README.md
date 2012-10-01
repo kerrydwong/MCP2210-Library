@@ -9,6 +9,9 @@ The library uses <a href="https://github.com/signal11/hidapi">signal11's hidapi<
 <li>
 <a href="http://www.kerrywong.com/2012/09/27/mcp2210-library/">MCP2210 Library -- Setup and GPIO</a>
 </li>
+<li>
+<a href="http://www.kerrywong.com/2012/10/01/mcp2210-library-spi-example-using-mcp23s08/">SPI Example Using MCP23S08</a>
+</li>
 </ul>
 
 Note, the compiled code needs root access to the device and need to be run using "sudo". You may need to add the provided udev rule (99-hid.rules) to the /etc/udev/rules.d directory. 
