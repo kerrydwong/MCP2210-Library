@@ -21,6 +21,59 @@
 using namespace std;
 
 /**
+ * Test the TC77 temperature sensor
+ */
+void TestTC77(hid_device* handle) {
+    ChipSettingsDef chipDef;
+
+    //set GPIO pins to be CS
+    chipDef = GetChipSettings(handle);
+
+    for (int i = 0; i < 9; i++) {
+        chipDef.GP[i].PinDesignation = GP_PIN_DESIGNATION_CS;
+        chipDef.GP[i].GPIODirection = GPIO_DIRECTION_OUTPUT;
+        chipDef.GP[i].GPIOOutput = 1;
+    }
+    int r = SetChipSettings(handle, chipDef);
+
+    //configure SPI
+    SPITransferSettingsDef def;
+    def = GetSPITransferSettings(handle);
+
+    //chip select is GP7
+    def.ActiveChipSelectValue = 0xff7f;
+    def.IdleChipSelectValue = 0xffff;
+    def.BitRate = 6000000l;
+    def.BytesPerSPITransfer = 2;
+
+    r = SetSPITransferSettings(handle, def);
+
+    if (r != 0) {
+        printf("Errror setting SPI parameters.\n");
+        return;
+    }
+
+    byte buf[2];
+    
+    SPIDataTransferStatusDef def1 = SPISendReceive(handle, buf, 2);
+   
+    int tempVal = 0;
+    int sign = def1.DataReceived[0] & 0x80;
+    
+    //13 bit 2's complement left aligned (last three bits are all 1's)
+    if (sign == 0) 
+        tempVal = (def1.DataReceived[0] << 8 | def1.DataReceived[1]) >> 3;
+    else
+        ((def1.DataReceived[0] & 0x7f) << 8 | def1.DataReceived[1]) >> 3 - 4096;
+    
+    float tempC = (float) tempVal * 0.0625;
+    float tempF = 1.8* (float) tempC + 32.0f;
+    
+    printf("temp (C) = %3.1f\n", tempC);
+    printf("temp (F) = %3.1f\n", tempF);
+}
+
+/**
  * Test MCP23S08 (parameters used are for the evaluation board)
  */
 void TestMCP23S08(hid_device* handle) {
@@ -40,6 +93,7 @@ void TestMCP23S08(hid_device* handle) {
     SPITransferSettingsDef def;
     def = GetSPITransferSettings(handle);
 
+    //chip select is GP4
     def.ActiveChipSelectValue = 0xffef;
     def.IdleChipSelectValue = 0xffff;
     def.BitRate = 6000000l;
@@ -156,8 +210,9 @@ int main(int argc, char** argv) {
         exit(-1);
     }
 
-    TestGPIO(handle);
-    //TestMCP23s08(handle);
+    //TestGPIO(handle);
+    //TestMCP23S08(handle);
+    TestTC77(handle);
 
     /**
      * release the handle
@@ -166,4 +221,3 @@ int main(int argc, char** argv) {
 
     return 0;
 }
-
