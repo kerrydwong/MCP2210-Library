@@ -447,7 +447,7 @@ SPIDataTransferStatusDef SPIDataTransfer(hid_device *handle, byte* data, int len
 SPIDataTransferStatusDef SPISendReceive(hid_device *handle, byte* data, int length) {
     SPIDataTransferStatusDef def = SPIDataTransfer(handle, data, length);
 
-    while (def.SPIEngineStatus != 0x10) {
+    while (def.SPIEngineStatus == 0x20) {
         def = SPIDataTransfer(handle, data, 1);
     }
 
