@@ -1,0 +1,88 @@
+\hypertarget{hidapi_8h}{\section{hidapi.\-h \-File \-Reference}
+\label{hidapi_8h}\index{hidapi.\-h@{hidapi.\-h}}
+}
+{\ttfamily \#include $<$wchar.\-h$>$}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T}
+\item 
+\#define \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L}
+\item 
+\#define \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L}~\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structhid__device__}{hid\-\_\-device\-\_\-} \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga142ffc1b0b7a7fa412d3862b2a17164b}{hid\-\_\-init} (void)
+\begin{DoxyCompactList}\small\item\em \-Initialize the \-H\-I\-D\-A\-P\-I library. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gacf5da9ce37132eba69fc259f17f13023}{hid\-\_\-exit} (void)
+\begin{DoxyCompactList}\small\item\em \-Finalize the \-H\-I\-D\-A\-P\-I library. \end{DoxyCompactList}\item 
+struct \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} \*
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} $\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}{hid\-\_\-enumerate} (unsigned short vendor\-\_\-id, unsigned short product\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Enumerate the \-H\-I\-D \-Devices. \end{DoxyCompactList}\item 
+void \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gafc2d2adf71db3784b783b9a554527aa4}{hid\-\_\-free\-\_\-enumeration} (struct \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} $\ast$devs)
+\begin{DoxyCompactList}\small\item\em \-Free an enumeration \-Linked \-List. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} \*
+$\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open} (unsigned short vendor\-\_\-id, unsigned short product\-\_\-id, const wchar\-\_\-t $\ast$serial\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Open a \-H\-I\-D device using a \-Vendor \-I\-D (\-V\-I\-D), \-Product \-I\-D (\-P\-I\-D) and optionally a serial number. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} \*
+$\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga1e87518670f88540c920dc451df608ee}{hid\-\_\-open\-\_\-path} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em \-Open a \-H\-I\-D device by its path name. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gad14ea48e440cf5066df87cc6488493af}{hid\-\_\-write} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, const unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Write an \-Output report to a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gaa5c9ed5aa290688ffac03343989ad75a}{hid\-\_\-read\-\_\-timeout} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, unsigned char $\ast$data, size\-\_\-t length, int milliseconds)
+\begin{DoxyCompactList}\small\item\em \-Read an \-Input report from a \-H\-I\-D device with timeout. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga6b820f3e72097cf7f994e33715dc7af1}{hid\-\_\-read} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Read an \-Input report from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gaf9d54208d314047727598b506577bb87}{hid\-\_\-set\-\_\-nonblocking} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, int nonblock)
+\begin{DoxyCompactList}\small\item\em \-Set the device handle to be non-\/blocking. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gae43ab80f741786ac4374216658fd5ab3}{hid\-\_\-send\-\_\-feature\-\_\-report} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, const unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Send a \-Feature report to the device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga34d43ac6da0fb785b88fcc2edf13ed65}{hid\-\_\-get\-\_\-feature\-\_\-report} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Get a feature report from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+void \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga9b64828273b8dd052731e79ba9e1a516}{hid\-\_\-close} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device)
+\begin{DoxyCompactList}\small\item\em \-Close a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga2652b2ff0f3982a8c5791718e2a2e6cb}{hid\-\_\-get\-\_\-manufacturer\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Manufacturer \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gaa78526041c4bb470b2c1ad9eb0791c5f}{hid\-\_\-get\-\_\-product\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Product \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga73994b7820264d3604d6ee25de9c66be}{hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Serial \-Number \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga03810bc0be3c21e9229feff689a9de85}{hid\-\_\-get\-\_\-indexed\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, int string\-\_\-index, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get a string from a \-H\-I\-D device, based on its string index. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} const wchar\-\_\-t \*
+$\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga1b5c0ca1c785b8024f5eb46750a8f606}{hid\-\_\-error} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device)
+\begin{DoxyCompactList}\small\item\em \-Get a string describing the last error which occurred. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{hidapi_8h_af140a25716604e86096670a505a58ee0}{\index{hidapi.\-h@{hidapi.\-h}!\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L@{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L}}
+\index{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L@{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L}!hidapi.h@{hidapi.\-h}}
+\subsubsection[{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L}}}\label{hidapi_8h_af140a25716604e86096670a505a58ee0}
+\-A\-P\-I call macro \hypertarget{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\index{hidapi.\-h@{hidapi.\-h}!\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T@{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T@{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T}!hidapi.h@{hidapi.\-h}}
+\subsubsection[{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T}}}\label{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}
+\-A\-P\-I export macro \hypertarget{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\index{hidapi.\-h@{hidapi.\-h}!\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L@{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L}}
+\index{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L@{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L}!hidapi.h@{hidapi.\-h}}
+\subsubsection[{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L}~{\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L}}}\label{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}
+\-A\-P\-I export and call macro 
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{\index{hidapi.\-h@{hidapi.\-h}!hid\-\_\-device@{hid\-\_\-device}}
+\index{hid\-\_\-device@{hid\-\_\-device}!hidapi.h@{hidapi.\-h}}
+\subsubsection[{hid\-\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf hid\-\_\-device\-\_\-} {\bf hid\-\_\-device}}}\label{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}
+opaque hidapi structure 

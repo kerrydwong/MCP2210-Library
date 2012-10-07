@@ -1,0 +1,622 @@
+\hypertarget{mcp2210_8cpp}{\section{mcp2210.\-cpp \-File \-Reference}
+\label{mcp2210_8cpp}\index{mcp2210.\-cpp@{mcp2210.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}mcp2210.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mcp2210_8cpp_ad2035535d0aeeaafe45fb9da0722cfad}{\-Send\-U\-S\-B\-Cmd} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$cmd\-Buf, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$response\-Buf)
+\item 
+\hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def} \hyperlink{mcp2210_8cpp_a28a3a304193aa5b16165a52b6be89d8e}{\-Get\-S\-P\-I\-Transfer\-Settings} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, bool is\-Volatile)
+\item 
+int \hyperlink{mcp2210_8cpp_a7c7fa077ea51968ef7f6d0fa8ee2fec7}{\-Set\-S\-P\-I\-Transfer\-Settings} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def} def, bool is\-Volatile)
+\item 
+\hyperlink{struct_chip_settings_def}{\-Chip\-Settings\-Def} \hyperlink{mcp2210_8cpp_a7a1ba0035d04e9e72b4db2cf5ad21220}{\-Get\-Chip\-Settings} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, bool is\-Volatile)
+\item 
+int \hyperlink{mcp2210_8cpp_ac141e9fbe79612eaf745ce9814ac66ee}{\-Set\-Chip\-Settings} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_chip_settings_def}{\-Chip\-Settings\-Def} def, bool is\-Volatile)
+\item 
+\hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} \hyperlink{mcp2210_8cpp_a75c695b47cd5705afb8aad13a4e5751f}{\-Get\-U\-S\-B\-Key\-Parameters} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+int \hyperlink{mcp2210_8cpp_a1379e6de32f81df8121a95b19afc77bf}{\-Set\-U\-S\-B\-Key\-Parameters} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} def)
+\item 
+\hyperlink{struct_manufacturer_product_name_def}{\-Manufacturer\-Product\-Name\-Def} \hyperlink{mcp2210_8cpp_a394bb8317789fff387a1e338121a145b}{\-Get\-Manufacturer\-Product\-Name} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, unsigned int sub\-Cmd\-Code)
+\item 
+int \hyperlink{mcp2210_8cpp_ae0440fcfdc1adbe1a76ea6d53ae400f7}{\-Set\-Manufacturer\-Product\-Name} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, unsigned int sub\-Cmd\-Code, \hyperlink{struct_manufacturer_product_name_def}{\-Manufacturer\-Product\-Name\-Def} def)
+\item 
+int \hyperlink{mcp2210_8cpp_a7de4c7ae20fcf6acbef30424395a7986}{\-Send\-Access\-Password} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, char $\ast$pwd, int pwd\-Length)
+\item 
+int \hyperlink{mcp2210_8cpp_a8ccc5483803201158f79ebe9b01d204d}{\-Read\-E\-E\-P\-R\-O\-M} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} addr, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$val)
+\item 
+int \hyperlink{mcp2210_8cpp_a67f5920bb156bf436f7afbf92528dc37}{\-Write\-E\-E\-P\-R\-O\-M} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} addr, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} val)
+\item 
+int \hyperlink{mcp2210_8cpp_adfb0cd492ab9c674d4ad5a5aeabbf365}{\-Request\-S\-P\-I\-Bus\-Release} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} val)
+\item 
+\hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def} \hyperlink{mcp2210_8cpp_a7d64b0e934db7345efb94af6a316e487}{\-Get\-Chip\-Status} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+\hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def} \hyperlink{mcp2210_8cpp_abf54ce25e056b5fa2e0df30d632aa850}{\-Cancel\-S\-P\-I\-Transfer} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \hyperlink{mcp2210_8cpp_aa2cfbe9757c7be3421fcef7d0bdb82eb}{\-S\-P\-I\-Data\-Transfer} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$data, int length)
+\item 
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \hyperlink{mcp2210_8cpp_aef764467c999d43a3b7de9541a37bd85}{\-S\-P\-I\-Send\-Receive} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$data, int length)
+\item 
+\hyperlink{struct_external_interrupt_pin_status_def}{\-External\-Interrupt\-Pin\-Status\-Def} \hyperlink{mcp2210_8cpp_af4f479adbc61b93bd180a1eb541ca6ef}{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} reset\-Counter)
+\item 
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} \hyperlink{mcp2210_8cpp_a4fa41d03c61fe4ac4c68ab1653b7f0b4}{\-Get\-G\-P\-I\-O\-Pin\-Direction} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+int \hyperlink{mcp2210_8cpp_a587186e5ac054e4239f014d6081b424f}{\-Set\-G\-P\-I\-O\-Pin\-Direction} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} def)
+\item 
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} \hyperlink{mcp2210_8cpp_a3acf8cc5387dfe9b1fe8dbb5fecfb867}{\-Get\-G\-P\-I\-O\-Pin\-Value} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+int \hyperlink{mcp2210_8cpp_a84c0182b5a8740b40b484fbd82267af3}{\-Set\-G\-P\-I\-O\-Pin\-Val} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} def)
+\item 
+\hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} $\ast$ \hyperlink{mcp2210_8cpp_a0b3fb01a244efdc3126f2646553aeb3d}{\-Enumerate\-M\-C\-P2210} ()
+\item 
+\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{mcp2210_8cpp_ab81541af956be15df79c95f49b1803c3}{\-Init\-M\-C\-P2210} (wchar\-\_\-t $\ast$serial\-Number)
+\item 
+\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{mcp2210_8cpp_a73f677a660068a18a713c94bd6a76e60}{\-Init\-M\-C\-P2210} ()
+\item 
+void \hyperlink{mcp2210_8cpp_afca69dafd7a0768a60da2cf80525c6b5}{\-Release\-M\-C\-P2210} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{mcp2210_8cpp_abf54ce25e056b5fa2e0df30d632aa850}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Cancel\-S\-P\-I\-Transfer@{\-Cancel\-S\-P\-I\-Transfer}}
+\index{\-Cancel\-S\-P\-I\-Transfer@{\-Cancel\-S\-P\-I\-Transfer}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Cancel\-S\-P\-I\-Transfer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Chip\-Status\-Def} {\bf \-Cancel\-S\-P\-I\-Transfer} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_abf54ce25e056b5fa2e0df30d632aa850}
+\-Cancel the current \-S\-P\-I transfer
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_a0b3fb01a244efdc3126f2646553aeb3d}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Enumerate\-M\-C\-P2210@{\-Enumerate\-M\-C\-P2210}}
+\index{\-Enumerate\-M\-C\-P2210@{\-Enumerate\-M\-C\-P2210}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Enumerate\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device\-\_\-info}$\ast$ {\bf \-Enumerate\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a0b3fb01a244efdc3126f2646553aeb3d}
+\-Enumerate the connected \-M\-C\-P2210's
+
+\begin{DoxyReturn}{\-Returns}
+a pointer to \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a7a1ba0035d04e9e72b4db2cf5ad21220}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Get\-Chip\-Settings@{\-Get\-Chip\-Settings}}
+\index{\-Get\-Chip\-Settings@{\-Get\-Chip\-Settings}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Get\-Chip\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Chip\-Settings\-Def} {\bf \-Get\-Chip\-Settings} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{bool}]{is\-Volatile = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a7a1ba0035d04e9e72b4db2cf5ad21220}
+\-Get power-\/up settings
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em is\-Volatile} & (default true) \-Whether to make change permanently or in memory only. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_chip_settings_def}{\-Chip\-Settings\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_a7d64b0e934db7345efb94af6a316e487}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Get\-Chip\-Status@{\-Get\-Chip\-Status}}
+\index{\-Get\-Chip\-Status@{\-Get\-Chip\-Status}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Get\-Chip\-Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Chip\-Status\-Def} {\bf \-Get\-Chip\-Status} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a7d64b0e934db7345efb94af6a316e487}
+\-Get \-M\-C\-P2210 status
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_a4fa41d03c61fe4ac4c68ab1653b7f0b4}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Get\-G\-P\-I\-O\-Pin\-Direction@{\-Get\-G\-P\-I\-O\-Pin\-Direction}}
+\index{\-Get\-G\-P\-I\-O\-Pin\-Direction@{\-Get\-G\-P\-I\-O\-Pin\-Direction}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Get\-G\-P\-I\-O\-Pin\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-P\-Pin\-Def} {\bf \-Get\-G\-P\-I\-O\-Pin\-Direction} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a4fa41d03c61fe4ac4c68ab1653b7f0b4}
+\-Get \-G\-P\-I\-O current pin direction from volatile memory
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} note, only the direction member variable is affected. 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_a3acf8cc5387dfe9b1fe8dbb5fecfb867}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Get\-G\-P\-I\-O\-Pin\-Value@{\-Get\-G\-P\-I\-O\-Pin\-Value}}
+\index{\-Get\-G\-P\-I\-O\-Pin\-Value@{\-Get\-G\-P\-I\-O\-Pin\-Value}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Get\-G\-P\-I\-O\-Pin\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-P\-Pin\-Def} {\bf \-Get\-G\-P\-I\-O\-Pin\-Value} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a3acf8cc5387dfe9b1fe8dbb5fecfb867}
+\-Get \-G\-P\-I\-O current pin value
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} note, only the value member variable is affected. 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_a394bb8317789fff387a1e338121a145b}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Get\-Manufacturer\-Product\-Name@{\-Get\-Manufacturer\-Product\-Name}}
+\index{\-Get\-Manufacturer\-Product\-Name@{\-Get\-Manufacturer\-Product\-Name}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Get\-Manufacturer\-Product\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Manufacturer\-Product\-Name\-Def} {\bf \-Get\-Manufacturer\-Product\-Name} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{unsigned int}]{sub\-Cmd\-Code}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a394bb8317789fff387a1e338121a145b}
+\-Set \-U\-S\-B manufacturer name or product name 
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em sub\-Cmd\-Code} & \-The sub command code which determines whether the action is to set manufacturer name or product name\-:\\
+\hline
+\end{DoxyParams}
+\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E\-: set manufacturer name \-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E\-: set product name \begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\-U\-S\-B\-Manufacturer\-Product\-Name\-Def 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_af4f479adbc61b93bd180a1eb541ca6ef}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin@{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin}}
+\index{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin@{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-External\-Interrupt\-Pin\-Status\-Def} {\bf \-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte}}]{reset\-Counter}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_af4f479adbc61b93bd180a1eb541ca6ef}
+\-Get the current number of events from the interrupt pin
+
+\-Note, \-G\-P6 must be configured to have its dedicated function active.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em reset\-Counter} & 0x0\-: reads, then resets the event counter $>$0\-: the event counter is read, however the counter is not reset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a28a3a304193aa5b16165a52b6be89d8e}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Get\-S\-P\-I\-Transfer\-Settings@{\-Get\-S\-P\-I\-Transfer\-Settings}}
+\index{\-Get\-S\-P\-I\-Transfer\-Settings@{\-Get\-S\-P\-I\-Transfer\-Settings}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Get\-S\-P\-I\-Transfer\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-Transfer\-Settings\-Def} {\bf \-Get\-S\-P\-I\-Transfer\-Settings} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{bool}]{is\-Volatile = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a28a3a304193aa5b16165a52b6be89d8e}
+\-Get \-S\-P\-I power-\/up transfer settings 
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em is\-Volatile} & (default true) \-Whether to make change permanently or in memory only.\\
+\hline
+\end{DoxyParams}
+ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_a75c695b47cd5705afb8aad13a4e5751f}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Get\-U\-S\-B\-Key\-Parameters@{\-Get\-U\-S\-B\-Key\-Parameters}}
+\index{\-Get\-U\-S\-B\-Key\-Parameters@{\-Get\-U\-S\-B\-Key\-Parameters}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Get\-U\-S\-B\-Key\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-U\-S\-B\-Key\-Parameters\-Def} {\bf \-Get\-U\-S\-B\-Key\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a75c695b47cd5705afb8aad13a4e5751f}
+\-Get \-U\-S\-B power-\/up key parameters
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_ab81541af956be15df79c95f49b1803c3}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}}
+\index{\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Init\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device}$\ast$ {\bf \-Init\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t $\ast$}]{serial\-Number}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_ab81541af956be15df79c95f49b1803c3}
+\-Initialize \-M\-C\-P2210 (if more than one is present) \-Vendor \-I\-D\-: 0x04d8 \-Product \-I\-D\-: 0x00de
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em serial\-Number} & \-The serial\-Number of the \-M\-C\-P2210 device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The handle to the \-M\-C\-P2210 device 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a73f677a660068a18a713c94bd6a76e60}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}}
+\index{\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Init\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device}$\ast$ {\bf \-Init\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a73f677a660068a18a713c94bd6a76e60}
+\-Initialize \-M\-C\-P2210 \-Vendor \-I\-D\-: 0x04d8 \-Product \-I\-D\-: 0x00de
+
+\begin{DoxyReturn}{\-Returns}
+\-The handle to the \-M\-C\-P2210 device 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a8ccc5483803201158f79ebe9b01d204d}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Read\-E\-E\-P\-R\-O\-M@{\-Read\-E\-E\-P\-R\-O\-M}}
+\index{\-Read\-E\-E\-P\-R\-O\-M@{\-Read\-E\-E\-P\-R\-O\-M}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Read\-E\-E\-P\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Read\-E\-E\-P\-R\-O\-M} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte}}]{addr, }
+\item[{{\bf byte} $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a8ccc5483803201158f79ebe9b01d204d}
+\-Read \-E\-E\-P\-R\-O\-M \-Memory
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em addr} & \-The address to be accessed (0-\/255) \\
+\hline
+{\em val} & \-The byte read at the specified address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_afca69dafd7a0768a60da2cf80525c6b5}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Release\-M\-C\-P2210@{\-Release\-M\-C\-P2210}}
+\index{\-Release\-M\-C\-P2210@{\-Release\-M\-C\-P2210}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Release\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Release\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_afca69dafd7a0768a60da2cf80525c6b5}
+\-Release the device handle and close the device
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\hypertarget{mcp2210_8cpp_adfb0cd492ab9c674d4ad5a5aeabbf365}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Request\-S\-P\-I\-Bus\-Release@{\-Request\-S\-P\-I\-Bus\-Release}}
+\index{\-Request\-S\-P\-I\-Bus\-Release@{\-Request\-S\-P\-I\-Bus\-Release}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Request\-S\-P\-I\-Bus\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Request\-S\-P\-I\-Bus\-Release} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte}}]{val}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_adfb0cd492ab9c674d4ad5a5aeabbf365}
+\-Request \-S\-P\-I bus release
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em val} & \-The value of the \-S\-P\-I bus release \-A\-C\-K pin (only if \-G\-P7 is assigned to this dedicated function) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F8\-: \-S\-P\-I transfer in process (\-B\-U\-S not released) $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a7de4c7ae20fcf6acbef30424395a7986}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Send\-Access\-Password@{\-Send\-Access\-Password}}
+\index{\-Send\-Access\-Password@{\-Send\-Access\-Password}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Send\-Access\-Password}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Send\-Access\-Password} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{char $\ast$}]{pwd, }
+\item[{int}]{pwd\-Length}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a7de4c7ae20fcf6acbef30424395a7986}
+\-Send access password
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em pwd} & password \\
+\hline
+{\em pwd\-Length} & password length ($<$=8) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-Chip conditional access is on, the password does not match and the number of attempts is above the accepted threshold of 5. \-The \-Access \-Password mechanism is temporarily blocked and no further password will be accepted until the next power-\/up. 0x\-F\-C\-: \-Access rejected 0\-X\-F\-D\-: \-Chip conditional access is on, the password does not match and the number of attempts is less than the accepted threshold of 5. 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_ad2035535d0aeeaafe45fb9da0722cfad}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Send\-U\-S\-B\-Cmd@{\-Send\-U\-S\-B\-Cmd}}
+\index{\-Send\-U\-S\-B\-Cmd@{\-Send\-U\-S\-B\-Cmd}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Send\-U\-S\-B\-Cmd}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Send\-U\-S\-B\-Cmd} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte} $\ast$}]{cmd\-Buf, }
+\item[{{\bf byte} $\ast$}]{response\-Buf}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_ad2035535d0aeeaafe45fb9da0722cfad}
+\-Send a \-U\-S\-B command
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em cmd\-Buf} & command buffer (64 bytes), unused/reserved entries must be filled with zero. \\
+\hline
+{\em response\-Buf} & the buffer (64 bytes) that contains the response. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_ac141e9fbe79612eaf745ce9814ac66ee}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Set\-Chip\-Settings@{\-Set\-Chip\-Settings}}
+\index{\-Set\-Chip\-Settings@{\-Set\-Chip\-Settings}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Set\-Chip\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-Chip\-Settings} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-Chip\-Settings\-Def}}]{def, }
+\item[{bool}]{is\-Volatile = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_ac141e9fbe79612eaf745ce9814ac66ee}
+\-Set chip settings power-\/up default
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\-Chip\-Setting\-Def 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{\-Parameters}
+{\em is\-Volatile} & (default true) \-Whether to make change permanently or in memory only.\\
+\hline
+\end{DoxyParams}
+ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-The provided password does not match the one stored in the chip or the settings are permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a587186e5ac054e4239f014d6081b424f}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Set\-G\-P\-I\-O\-Pin\-Direction@{\-Set\-G\-P\-I\-O\-Pin\-Direction}}
+\index{\-Set\-G\-P\-I\-O\-Pin\-Direction@{\-Set\-G\-P\-I\-O\-Pin\-Direction}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Set\-G\-P\-I\-O\-Pin\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-G\-P\-I\-O\-Pin\-Direction} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-G\-P\-Pin\-Def}}]{def}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a587186e5ac054e4239f014d6081b424f}
+\-Set \-G\-P\-I\-O current pin direction in volatile memory
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} note, only the direction member variable is used. 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a84c0182b5a8740b40b484fbd82267af3}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Set\-G\-P\-I\-O\-Pin\-Val@{\-Set\-G\-P\-I\-O\-Pin\-Val}}
+\index{\-Set\-G\-P\-I\-O\-Pin\-Val@{\-Set\-G\-P\-I\-O\-Pin\-Val}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Set\-G\-P\-I\-O\-Pin\-Val}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-G\-P\-I\-O\-Pin\-Val} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-G\-P\-Pin\-Def}}]{def}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a84c0182b5a8740b40b484fbd82267af3}
+\-Set \-G\-P\-I\-O current pin value 
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} note, only the value member variable is used. 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_ae0440fcfdc1adbe1a76ea6d53ae400f7}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Set\-Manufacturer\-Product\-Name@{\-Set\-Manufacturer\-Product\-Name}}
+\index{\-Set\-Manufacturer\-Product\-Name@{\-Set\-Manufacturer\-Product\-Name}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Set\-Manufacturer\-Product\-Name}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-Manufacturer\-Product\-Name} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{unsigned int}]{sub\-Cmd\-Code, }
+\item[{{\bf \-Manufacturer\-Product\-Name\-Def}}]{def}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_ae0440fcfdc1adbe1a76ea6d53ae400f7}
+\-Set \-U\-S\-B manufacturer name or product name
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em sub\-Cmd\-Code} & \-The sub command code which determines whether the action is to set manufacturer name or product name\-:\\
+\hline
+\end{DoxyParams}
+\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E\-: set manufacturer name \-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E\-: set product name 
+\begin{DoxyParams}{\-Parameters}
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\-U\-S\-B\-Manufacturer\-Product\-Name\-Def 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-The provided password does not match the one stored in the chip or the settings are permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a7c7fa077ea51968ef7f6d0fa8ee2fec7}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Set\-S\-P\-I\-Transfer\-Settings@{\-Set\-S\-P\-I\-Transfer\-Settings}}
+\index{\-Set\-S\-P\-I\-Transfer\-Settings@{\-Set\-S\-P\-I\-Transfer\-Settings}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Set\-S\-P\-I\-Transfer\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-S\-P\-I\-Transfer\-Settings} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-S\-P\-I\-Transfer\-Settings\-Def}}]{def, }
+\item[{bool}]{is\-Volatile = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a7c7fa077ea51968ef7f6d0fa8ee2fec7}
+\-Set \-S\-P\-I power-\/up transfer settings 
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{\-Parameters}
+{\em is\-Volatile} & (default true) \-Whether to make change permanently or in memory only.\\
+\hline
+\end{DoxyParams}
+ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-The provided password does not match the one stored in the chip or the settings are permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_a1379e6de32f81df8121a95b19afc77bf}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Set\-U\-S\-B\-Key\-Parameters@{\-Set\-U\-S\-B\-Key\-Parameters}}
+\index{\-Set\-U\-S\-B\-Key\-Parameters@{\-Set\-U\-S\-B\-Key\-Parameters}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Set\-U\-S\-B\-Key\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-U\-S\-B\-Key\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-U\-S\-B\-Key\-Parameters\-Def}}]{def}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a1379e6de32f81df8121a95b19afc77bf}
+\-Set \-U\-S\-B power-\/up key parameters
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-The provided password does not match the one stored in the chip or the settings are permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8cpp_aa2cfbe9757c7be3421fcef7d0bdb82eb}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-S\-P\-I\-Data\-Transfer@{\-S\-P\-I\-Data\-Transfer}}
+\index{\-S\-P\-I\-Data\-Transfer@{\-S\-P\-I\-Data\-Transfer}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-S\-P\-I\-Data\-Transfer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def} {\bf \-S\-P\-I\-Data\-Transfer} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte} $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_aa2cfbe9757c7be3421fcef7d0bdb82eb}
+\-S\-P\-I \-Data \-Transfer
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em data} & a pointer to the data array to be transfered \\
+\hline
+{\em length} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \-Error\-Code meaning\-: 0x\-F7\-: \-S\-P\-I bus not available 0x\-F8\-: \-S\-P\-I transfer in progress (cannot accept any data for the moment) 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_aef764467c999d43a3b7de9541a37bd85}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-S\-P\-I\-Send\-Receive@{\-S\-P\-I\-Send\-Receive}}
+\index{\-S\-P\-I\-Send\-Receive@{\-S\-P\-I\-Send\-Receive}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-S\-P\-I\-Send\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def} {\bf \-S\-P\-I\-Send\-Receive} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte} $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_aef764467c999d43a3b7de9541a37bd85}
+\-Send data and wait till results are received from the \-S\-P\-I bus.
+
+\-Note\-: this method differers from \-S\-P\-I\-Data\-Transfer in that it also waits till the transfer is finished. \-In \-S\-P\-I\-Data\-Transfer, the \-S\-P\-I\-Engine\-Status in the returned data structure tells the status of the \-S\-P\-I engine, and the call returns after the data is sent, regardless of whether the data has been received.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em data} & a pointer to the data array to be transfered \\
+\hline
+{\em length} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \-Error\-Code meaning\-: 0x\-F7\-: \-S\-P\-I bus not available 0x\-F8\-: \-S\-P\-I transfer in progress (cannot accept any data for the moment) 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_a67f5920bb156bf436f7afbf92528dc37}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Write\-E\-E\-P\-R\-O\-M@{\-Write\-E\-E\-P\-R\-O\-M}}
+\index{\-Write\-E\-E\-P\-R\-O\-M@{\-Write\-E\-E\-P\-R\-O\-M}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Write\-E\-E\-P\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Write\-E\-E\-P\-R\-O\-M} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte}}]{addr, }
+\item[{{\bf byte}}]{val}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a67f5920bb156bf436f7afbf92528dc37}
+\-Write \-E\-E\-P\-R\-O\-M \-Memory
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em addr} & \-The address to be accessed (0-\/255) \\
+\hline
+{\em val} & \-The byte to be written to the specified address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-A\-: \-E\-E\-P\-R\-O\-M \-Write failure 0x\-F\-B\-: \-E\-E\-P\-R\-O\-M is password protected or permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}

@@ -1,0 +1,41 @@
+\hypertarget{struct_s_p_i_data_transfer_status_def}{\section{\-S\-P\-I\-Data\-Transfer\-Status\-Def \-Struct \-Reference}
+\label{struct_s_p_i_data_transfer_status_def}\index{\-S\-P\-I\-Data\-Transfer\-Status\-Def@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}}
+}
+
+
+{\ttfamily \#include $<$mcp2210.\-h$>$}
+
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{struct_s_p_i_data_transfer_status_def_a98b49f5e7b7da8d8785c3d4a98a67449}{\-Number\-Of\-Bytes\-Received}
+\item 
+unsigned int \hyperlink{struct_s_p_i_data_transfer_status_def_a4a2227f2a2c87291d918a9a3f39c5d55}{\-S\-P\-I\-Engine\-Status}
+\item 
+unsigned char \hyperlink{struct_s_p_i_data_transfer_status_def_a6376a62c46b37059a74995cc4ba567b3}{\-Data\-Received} \mbox{[}60\mbox{]}
+\item 
+int \hyperlink{struct_s_p_i_data_transfer_status_def_a202e947d5055ae583859ab2b1dddaede}{\-Error\-Code}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-S\-P\-I data transfer status definition 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{struct_s_p_i_data_transfer_status_def_a6376a62c46b37059a74995cc4ba567b3}{\index{\-S\-P\-I\-Data\-Transfer\-Status\-Def@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}!\-Data\-Received@{\-Data\-Received}}
+\index{\-Data\-Received@{\-Data\-Received}!SPIDataTransferStatusDef@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}}
+\subsubsection[{\-Data\-Received}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def\-::\-Data\-Received}\mbox{[}60\mbox{]}}}\label{struct_s_p_i_data_transfer_status_def_a6376a62c46b37059a74995cc4ba567b3}
+\-The buffer contains received data. \-Actual amount of data is determined by \-Number\-Of\-Bytes\-Received. \hypertarget{struct_s_p_i_data_transfer_status_def_a202e947d5055ae583859ab2b1dddaede}{\index{\-S\-P\-I\-Data\-Transfer\-Status\-Def@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}!\-Error\-Code@{\-Error\-Code}}
+\index{\-Error\-Code@{\-Error\-Code}!SPIDataTransferStatusDef@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}}
+\subsubsection[{\-Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def\-::\-Error\-Code}}}\label{struct_s_p_i_data_transfer_status_def_a202e947d5055ae583859ab2b1dddaede}
+\-The error code returned \hypertarget{struct_s_p_i_data_transfer_status_def_a98b49f5e7b7da8d8785c3d4a98a67449}{\index{\-S\-P\-I\-Data\-Transfer\-Status\-Def@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}!\-Number\-Of\-Bytes\-Received@{\-Number\-Of\-Bytes\-Received}}
+\index{\-Number\-Of\-Bytes\-Received@{\-Number\-Of\-Bytes\-Received}!SPIDataTransferStatusDef@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}}
+\subsubsection[{\-Number\-Of\-Bytes\-Received}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def\-::\-Number\-Of\-Bytes\-Received}}}\label{struct_s_p_i_data_transfer_status_def_a98b49f5e7b7da8d8785c3d4a98a67449}
+\-Number of bytes received \hypertarget{struct_s_p_i_data_transfer_status_def_a4a2227f2a2c87291d918a9a3f39c5d55}{\index{\-S\-P\-I\-Data\-Transfer\-Status\-Def@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}!\-S\-P\-I\-Engine\-Status@{\-S\-P\-I\-Engine\-Status}}
+\index{\-S\-P\-I\-Engine\-Status@{\-S\-P\-I\-Engine\-Status}!SPIDataTransferStatusDef@{\-S\-P\-I\-Data\-Transfer\-Status\-Def}}
+\subsubsection[{\-S\-P\-I\-Engine\-Status}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def\-::\-S\-P\-I\-Engine\-Status}}}\label{struct_s_p_i_data_transfer_status_def_a4a2227f2a2c87291d918a9a3f39c5d55}
+\-S\-P\-I transfer engine status 0x10\-: \-S\-P\-I transfer finished, no data to send 0x20\-: \-S\-P\-I transfer started, no data to receive 0x30\-: \-S\-P\-I data accepted, command completed successfully 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mcp2210_8h}{mcp2210.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,479 @@
+\hypertarget{group___a_p_i}{\section{hidapi \-A\-P\-I}
+\label{group___a_p_i}\index{hidapi A\-P\-I@{hidapi A\-P\-I}}
+}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga142ffc1b0b7a7fa412d3862b2a17164b}{hid\-\_\-init} (void)
+\begin{DoxyCompactList}\small\item\em \-Initialize the \-H\-I\-D\-A\-P\-I library. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gacf5da9ce37132eba69fc259f17f13023}{hid\-\_\-exit} (void)
+\begin{DoxyCompactList}\small\item\em \-Finalize the \-H\-I\-D\-A\-P\-I library. \end{DoxyCompactList}\item 
+struct \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} \*
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} $\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}{hid\-\_\-enumerate} (unsigned short vendor\-\_\-id, unsigned short product\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Enumerate the \-H\-I\-D \-Devices. \end{DoxyCompactList}\item 
+void \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gafc2d2adf71db3784b783b9a554527aa4}{hid\-\_\-free\-\_\-enumeration} (struct \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} $\ast$devs)
+\begin{DoxyCompactList}\small\item\em \-Free an enumeration \-Linked \-List. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} \*
+$\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open} (unsigned short vendor\-\_\-id, unsigned short product\-\_\-id, const wchar\-\_\-t $\ast$serial\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Open a \-H\-I\-D device using a \-Vendor \-I\-D (\-V\-I\-D), \-Product \-I\-D (\-P\-I\-D) and optionally a serial number. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} \*
+$\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga1e87518670f88540c920dc451df608ee}{hid\-\_\-open\-\_\-path} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em \-Open a \-H\-I\-D device by its path name. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gad14ea48e440cf5066df87cc6488493af}{hid\-\_\-write} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, const unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Write an \-Output report to a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gaa5c9ed5aa290688ffac03343989ad75a}{hid\-\_\-read\-\_\-timeout} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, unsigned char $\ast$data, size\-\_\-t length, int milliseconds)
+\begin{DoxyCompactList}\small\item\em \-Read an \-Input report from a \-H\-I\-D device with timeout. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga6b820f3e72097cf7f994e33715dc7af1}{hid\-\_\-read} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Read an \-Input report from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gaf9d54208d314047727598b506577bb87}{hid\-\_\-set\-\_\-nonblocking} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, int nonblock)
+\begin{DoxyCompactList}\small\item\em \-Set the device handle to be non-\/blocking. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gae43ab80f741786ac4374216658fd5ab3}{hid\-\_\-send\-\_\-feature\-\_\-report} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, const unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Send a \-Feature report to the device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga34d43ac6da0fb785b88fcc2edf13ed65}{hid\-\_\-get\-\_\-feature\-\_\-report} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Get a feature report from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+void \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga9b64828273b8dd052731e79ba9e1a516}{hid\-\_\-close} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device)
+\begin{DoxyCompactList}\small\item\em \-Close a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga2652b2ff0f3982a8c5791718e2a2e6cb}{hid\-\_\-get\-\_\-manufacturer\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Manufacturer \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gaa78526041c4bb470b2c1ad9eb0791c5f}{hid\-\_\-get\-\_\-product\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Product \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga73994b7820264d3604d6ee25de9c66be}{hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Serial \-Number \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga03810bc0be3c21e9229feff689a9de85}{hid\-\_\-get\-\_\-indexed\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, int string\-\_\-index, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get a string from a \-H\-I\-D device, based on its string index. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} const wchar\-\_\-t \*
+$\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga1b5c0ca1c785b8024f5eb46750a8f606}{hid\-\_\-error} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device)
+\begin{DoxyCompactList}\small\item\em \-Get a string describing the last error which occurred. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{group___a_p_i_ga9b64828273b8dd052731e79ba9e1a516}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-close@{hid\-\_\-close}}
+\index{hid\-\_\-close@{hid\-\_\-close}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-close} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga9b64828273b8dd052731e79ba9e1a516}
+
+
+\-Close a \-H\-I\-D device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-enumerate@{hid\-\_\-enumerate}}
+\index{hid\-\_\-enumerate@{hid\-\_\-enumerate}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-enumerate}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf hid\-\_\-device\-\_\-info} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T}$\ast$ {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-enumerate} (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{vendor\-\_\-id, }
+\item[{unsigned short}]{product\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}\label{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}
+
+
+\-Enumerate the \-H\-I\-D \-Devices. 
+
+\-This function returns a linked list of all the \-H\-I\-D devices attached to the system which match vendor\-\_\-id and product\-\_\-id. \-If {\ttfamily vendor\-\_\-id} and {\ttfamily product\-\_\-id} are both set to 0, then all \-H\-I\-D devices will be returned.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em vendor\-\_\-id} & \-The \-Vendor \-I\-D (\-V\-I\-D) of the types of device to open. \\
+\hline
+{\em product\-\_\-id} & \-The \-Product \-I\-D (\-P\-I\-D) of the types of device to open.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns a pointer to a linked list of type struct \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device}, containing information about the \-H\-I\-D devices attached to the system, or \-N\-U\-L\-L in the case of failure. \-Free this linked list by calling \hyperlink{group___a_p_i_gafc2d2adf71db3784b783b9a554527aa4}{hid\-\_\-free\-\_\-enumeration()}. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_ga1b5c0ca1c785b8024f5eb46750a8f606}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-error@{hid\-\_\-error}}
+\index{hid\-\_\-error@{hid\-\_\-error}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} const wchar\-\_\-t$\ast$ {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-error} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga1b5c0ca1c785b8024f5eb46750a8f606}
+
+
+\-Get a string describing the last error which occurred. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns a string containing the last error which occurred or \-N\-U\-L\-L if none has occurred. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_gacf5da9ce37132eba69fc259f17f13023}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-exit@{hid\-\_\-exit}}
+\index{hid\-\_\-exit@{hid\-\_\-exit}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-exit}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-exit} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_gacf5da9ce37132eba69fc259f17f13023}
+
+
+\-Finalize the \-H\-I\-D\-A\-P\-I library. 
+
+\-This function frees all of the static data associated with \-H\-I\-D\-A\-P\-I. \-It should be called at the end of execution to avoid memory leaks.
+
+\begin{DoxyReturn}{\-Returns}
+\-This function returns 0 on success and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_gafc2d2adf71db3784b783b9a554527aa4}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-free\-\_\-enumeration@{hid\-\_\-free\-\_\-enumeration}}
+\index{hid\-\_\-free\-\_\-enumeration@{hid\-\_\-free\-\_\-enumeration}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-free\-\_\-enumeration}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-free\-\_\-enumeration} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf hid\-\_\-device\-\_\-info} $\ast$}]{devs}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_gafc2d2adf71db3784b783b9a554527aa4}
+
+
+\-Free an enumeration \-Linked \-List. 
+
+\-This function frees a linked list created by \hyperlink{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}{hid\-\_\-enumerate()}.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em devs} & \-Pointer to a list of struct\-\_\-device returned from \hyperlink{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}{hid\-\_\-enumerate()}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_i_ga34d43ac6da0fb785b88fcc2edf13ed65}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-get\-\_\-feature\-\_\-report@{hid\-\_\-get\-\_\-feature\-\_\-report}}
+\index{hid\-\_\-get\-\_\-feature\-\_\-report@{hid\-\_\-get\-\_\-feature\-\_\-report}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-get\-\_\-feature\-\_\-report}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-get\-\_\-feature\-\_\-report} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{unsigned char $\ast$}]{data, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga34d43ac6da0fb785b88fcc2edf13ed65}
+
+
+\-Get a feature report from a \-H\-I\-D device. 
+
+\-Make sure to set the first byte of {\ttfamily data}\mbox{[}\mbox{]} to the \-Report \-I\-D of the report to be read. \-Make sure to allow space for this extra byte in {\ttfamily data}\mbox{[}\mbox{]}.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em data} & \-A buffer to put the read data into, including the \-Report \-I\-D. \-Set the first byte of {\ttfamily data}\mbox{[}\mbox{]} to the \-Report \-I\-D of the report to be read. \\
+\hline
+{\em length} & \-The number of bytes to read, including an extra byte for the report \-I\-D. \-The buffer can be longer than the actual report.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns the number of bytes read and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_ga03810bc0be3c21e9229feff689a9de85}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-get\-\_\-indexed\-\_\-string@{hid\-\_\-get\-\_\-indexed\-\_\-string}}
+\index{hid\-\_\-get\-\_\-indexed\-\_\-string@{hid\-\_\-get\-\_\-indexed\-\_\-string}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-get\-\_\-indexed\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-get\-\_\-indexed\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{int}]{string\-\_\-index, }
+\item[{wchar\-\_\-t $\ast$}]{string, }
+\item[{size\-\_\-t}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga03810bc0be3c21e9229feff689a9de85}
+
+
+\-Get a string from a \-H\-I\-D device, based on its string index. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em string\-\_\-index} & \-The index of the string to get. \\
+\hline
+{\em string} & \-A wide string buffer to put the data into. \\
+\hline
+{\em maxlen} & \-The length of the buffer in multiples of wchar\-\_\-t.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns 0 on success and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_ga2652b2ff0f3982a8c5791718e2a2e6cb}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-get\-\_\-manufacturer\-\_\-string@{hid\-\_\-get\-\_\-manufacturer\-\_\-string}}
+\index{hid\-\_\-get\-\_\-manufacturer\-\_\-string@{hid\-\_\-get\-\_\-manufacturer\-\_\-string}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-get\-\_\-manufacturer\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-get\-\_\-manufacturer\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{wchar\-\_\-t $\ast$}]{string, }
+\item[{size\-\_\-t}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga2652b2ff0f3982a8c5791718e2a2e6cb}
+
+
+\-Get \-The \-Manufacturer \-String from a \-H\-I\-D device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em string} & \-A wide string buffer to put the data into. \\
+\hline
+{\em maxlen} & \-The length of the buffer in multiples of wchar\-\_\-t.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns 0 on success and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_gaa78526041c4bb470b2c1ad9eb0791c5f}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-get\-\_\-product\-\_\-string@{hid\-\_\-get\-\_\-product\-\_\-string}}
+\index{hid\-\_\-get\-\_\-product\-\_\-string@{hid\-\_\-get\-\_\-product\-\_\-string}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-get\-\_\-product\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-get\-\_\-product\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{wchar\-\_\-t $\ast$}]{string, }
+\item[{size\-\_\-t}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_gaa78526041c4bb470b2c1ad9eb0791c5f}
+
+
+\-Get \-The \-Product \-String from a \-H\-I\-D device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em string} & \-A wide string buffer to put the data into. \\
+\hline
+{\em maxlen} & \-The length of the buffer in multiples of wchar\-\_\-t.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns 0 on success and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_ga73994b7820264d3604d6ee25de9c66be}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string@{hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string}}
+\index{hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string@{hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{wchar\-\_\-t $\ast$}]{string, }
+\item[{size\-\_\-t}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga73994b7820264d3604d6ee25de9c66be}
+
+
+\-Get \-The \-Serial \-Number \-String from a \-H\-I\-D device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em string} & \-A wide string buffer to put the data into. \\
+\hline
+{\em maxlen} & \-The length of the buffer in multiples of wchar\-\_\-t.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns 0 on success and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_ga142ffc1b0b7a7fa412d3862b2a17164b}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-init@{hid\-\_\-init}}
+\index{hid\-\_\-init@{hid\-\_\-init}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga142ffc1b0b7a7fa412d3862b2a17164b}
+
+
+\-Initialize the \-H\-I\-D\-A\-P\-I library. 
+
+\-This function initializes the \-H\-I\-D\-A\-P\-I library. \-Calling it is not strictly necessary, as it will be called automatically by \hyperlink{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}{hid\-\_\-enumerate()} and any of the hid\-\_\-open\-\_\-$\ast$() functions if it is needed. \-This function should be called at the beginning of execution however, if there is a chance of \-H\-I\-D\-A\-P\-I handles being opened by different threads simultaneously.
+
+\begin{DoxyReturn}{\-Returns}
+\-This function returns 0 on success and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-open@{hid\-\_\-open}}
+\index{hid\-\_\-open@{hid\-\_\-open}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf hid\-\_\-device}$\ast$ {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-open} (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{vendor\-\_\-id, }
+\item[{unsigned short}]{product\-\_\-id, }
+\item[{const wchar\-\_\-t $\ast$}]{serial\-\_\-number}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}
+
+
+\-Open a \-H\-I\-D device using a \-Vendor \-I\-D (\-V\-I\-D), \-Product \-I\-D (\-P\-I\-D) and optionally a serial number. 
+
+\-If {\ttfamily serial\-\_\-number} is \-N\-U\-L\-L, the first device with the specified \-V\-I\-D and \-P\-I\-D is opened.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em vendor\-\_\-id} & \-The \-Vendor \-I\-D (\-V\-I\-D) of the device to open. \\
+\hline
+{\em product\-\_\-id} & \-The \-Product \-I\-D (\-P\-I\-D) of the device to open. \\
+\hline
+{\em serial\-\_\-number} & \-The \-Serial \-Number of the device to open (\-Optionally \-N\-U\-L\-L).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns a pointer to a \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} object on success or \-N\-U\-L\-L on failure. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_ga1e87518670f88540c920dc451df608ee}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-open\-\_\-path@{hid\-\_\-open\-\_\-path}}
+\index{hid\-\_\-open\-\_\-path@{hid\-\_\-open\-\_\-path}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-open\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf hid\-\_\-device}$\ast$ {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-open\-\_\-path} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga1e87518670f88540c920dc451df608ee}
+
+
+\-Open a \-H\-I\-D device by its path name. 
+
+\-The path name be determined by calling \hyperlink{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}{hid\-\_\-enumerate()}, or a platform-\/specific path name can be used (eg\-: /dev/hidraw0 on \-Linux).
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em path} & \-The path name of the device to open\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns a pointer to a \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} object on success or \-N\-U\-L\-L on failure. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_ga6b820f3e72097cf7f994e33715dc7af1}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-read@{hid\-\_\-read}}
+\index{hid\-\_\-read@{hid\-\_\-read}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-read} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{unsigned char $\ast$}]{data, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_ga6b820f3e72097cf7f994e33715dc7af1}
+
+
+\-Read an \-Input report from a \-H\-I\-D device. 
+
+\-Input reports are returned to the host through the \-I\-N\-T\-E\-R\-R\-U\-P\-T \-I\-N endpoint. \-The first byte will contain the \-Report number if the device uses numbered reports.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em data} & \-A buffer to put the read data into. \\
+\hline
+{\em length} & \-The number of bytes to read. \-For devices with multiple reports, make sure to read an extra byte for the report number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns the actual number of bytes read and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_gaa5c9ed5aa290688ffac03343989ad75a}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-read\-\_\-timeout@{hid\-\_\-read\-\_\-timeout}}
+\index{hid\-\_\-read\-\_\-timeout@{hid\-\_\-read\-\_\-timeout}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-read\-\_\-timeout}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-read\-\_\-timeout} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{dev, }
+\item[{unsigned char $\ast$}]{data, }
+\item[{size\-\_\-t}]{length, }
+\item[{int}]{milliseconds}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_gaa5c9ed5aa290688ffac03343989ad75a}
+
+
+\-Read an \-Input report from a \-H\-I\-D device with timeout. 
+
+\-Input reports are returned to the host through the \-I\-N\-T\-E\-R\-R\-U\-P\-T \-I\-N endpoint. \-The first byte will contain the \-Report number if the device uses numbered reports.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em data} & \-A buffer to put the read data into. \\
+\hline
+{\em length} & \-The number of bytes to read. \-For devices with multiple reports, make sure to read an extra byte for the report number. \\
+\hline
+{\em milliseconds} & timeout in milliseconds or -\/1 for blocking wait.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns the actual number of bytes read and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_gae43ab80f741786ac4374216658fd5ab3}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-send\-\_\-feature\-\_\-report@{hid\-\_\-send\-\_\-feature\-\_\-report}}
+\index{hid\-\_\-send\-\_\-feature\-\_\-report@{hid\-\_\-send\-\_\-feature\-\_\-report}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-send\-\_\-feature\-\_\-report}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-send\-\_\-feature\-\_\-report} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{const unsigned char $\ast$}]{data, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_gae43ab80f741786ac4374216658fd5ab3}
+
+
+\-Send a \-Feature report to the device. 
+
+\-Feature reports are sent over the \-Control endpoint as a \-Set\-\_\-\-Report transfer. \-The first byte of {\ttfamily data}\mbox{[}\mbox{]} must contain the \-Report \-I\-D. \-For devices which only support a single report, this must be set to 0x0. \-The remaining bytes contain the report data. \-Since the \-Report \-I\-D is mandatory, calls to \hyperlink{group___a_p_i_gae43ab80f741786ac4374216658fd5ab3}{hid\-\_\-send\-\_\-feature\-\_\-report()} will always contain one more byte than the report contains. \-For example, if a hid report is 16 bytes long, 17 bytes must be passed to \hyperlink{group___a_p_i_gae43ab80f741786ac4374216658fd5ab3}{hid\-\_\-send\-\_\-feature\-\_\-report()}\-: the \-Report \-I\-D (or 0x0, for devices which do not use numbered reports), followed by the report data (16 bytes). \-In this example, the length passed in would be 17.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em data} & \-The data to send, including the report number as the first byte. \\
+\hline
+{\em length} & \-The length in bytes of the data to send, including the report number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns the actual number of bytes written and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_gaf9d54208d314047727598b506577bb87}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-set\-\_\-nonblocking@{hid\-\_\-set\-\_\-nonblocking}}
+\index{hid\-\_\-set\-\_\-nonblocking@{hid\-\_\-set\-\_\-nonblocking}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-set\-\_\-nonblocking}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-set\-\_\-nonblocking} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{int}]{nonblock}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_gaf9d54208d314047727598b506577bb87}
+
+
+\-Set the device handle to be non-\/blocking. 
+
+\-In non-\/blocking mode calls to \hyperlink{group___a_p_i_ga6b820f3e72097cf7f994e33715dc7af1}{hid\-\_\-read()} will return immediately with a value of 0 if there is no data to be read. \-In blocking mode, \hyperlink{group___a_p_i_ga6b820f3e72097cf7f994e33715dc7af1}{hid\-\_\-read()} will wait (block) until there is data to read before returning.
+
+\-Nonblocking can be turned on and off at any time.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em nonblock} & enable or not the nonblocking reads
+\begin{DoxyItemize}
+\item 1 to enable nonblocking
+\item 0 to disable nonblocking.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns 0 on success and -\/1 on error. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_i_gad14ea48e440cf5066df87cc6488493af}{\index{hidapi A\-P\-I@{hidapi A\-P\-I}!hid\-\_\-write@{hid\-\_\-write}}
+\index{hid\-\_\-write@{hid\-\_\-write}!hidapi API@{hidapi A\-P\-I}}
+\subsubsection[{hid\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} {\bf \-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} {\bf hid\-\_\-write} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{const unsigned char $\ast$}]{data, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_i_gad14ea48e440cf5066df87cc6488493af}
+
+
+\-Write an \-Output report to a \-H\-I\-D device. 
+
+\-The first byte of {\ttfamily data}\mbox{[}\mbox{]} must contain the \-Report \-I\-D. \-For devices which only support a single report, this must be set to 0x0. \-The remaining bytes contain the report data. \-Since the \-Report \-I\-D is mandatory, calls to \hyperlink{group___a_p_i_gad14ea48e440cf5066df87cc6488493af}{hid\-\_\-write()} will always contain one more byte than the report contains. \-For example, if a hid report is 16 bytes long, 17 bytes must be passed to \hyperlink{group___a_p_i_gad14ea48e440cf5066df87cc6488493af}{hid\-\_\-write()}, the \-Report \-I\-D (or 0x0, for devices with a single report), followed by the report data (16 bytes). \-In this example, the length passed in would be 17.
+
+\hyperlink{group___a_p_i_gad14ea48e440cf5066df87cc6488493af}{hid\-\_\-write()} will send the data on the first \-O\-U\-T endpoint, if one exists. \-If it does not, it will send the data through the \-Control \-Endpoint (\-Endpoint 0).
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & \-A device handle returned from \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open()}. \\
+\hline
+{\em data} & \-The data to send, including the report number as the first byte. \\
+\hline
+{\em length} & \-The length in bytes of the data to send.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This function returns the actual number of bytes written and -\/1 on error. 
+\end{DoxyReturn}

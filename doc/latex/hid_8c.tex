@@ -1,0 +1,164 @@
+\hypertarget{hid_8c}{\section{hid.\-c \-File \-Reference}
+\label{hid_8c}\index{hid.\-c@{hid.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$locale.\-h$>$}\*
+{\ttfamily \#include $<$errno.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\*
+{\ttfamily \#include $<$sys/ioctl.\-h$>$}\*
+{\ttfamily \#include $<$sys/utsname.\-h$>$}\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\*
+{\ttfamily \#include $<$poll.\-h$>$}\*
+{\ttfamily \#include $<$linux/hidraw.\-h$>$}\*
+{\ttfamily \#include $<$linux/version.\-h$>$}\*
+{\ttfamily \#include $<$linux/input.\-h$>$}\*
+{\ttfamily \#include $<$libudev.\-h$>$}\*
+{\ttfamily \#include \char`\"{}hidapi.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structhid__device__}{hid\-\_\-device\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hid_8c_a03f650125c34f865b2ce0761095dcec9}{\-H\-I\-D\-I\-O\-C\-S\-F\-E\-A\-T\-U\-R\-E}(len)~\-\_\-\-I\-O\-C(\-\_\-\-I\-O\-C\-\_\-\-W\-R\-I\-T\-E$|$\-\_\-\-I\-O\-C\-\_\-\-R\-E\-A\-D, '\-H', 0x06, len)
+\item 
+\#define \hyperlink{hid_8c_ac5092480a5db624163f7b66847e42a70}{\-H\-I\-D\-I\-O\-C\-G\-F\-E\-A\-T\-U\-R\-E}(len)~\-\_\-\-I\-O\-C(\-\_\-\-I\-O\-C\-\_\-\-W\-R\-I\-T\-E$|$\-\_\-\-I\-O\-C\-\_\-\-R\-E\-A\-D, '\-H', 0x07, len)
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{hid_8c_aa6d92ab04844f58836f237b1994e3007}{device\-\_\-string\-\_\-id} \{ \hyperlink{hid_8c_aa6d92ab04844f58836f237b1994e3007a57493cd7979c4138e430e46e7038f656}{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R}, 
+\hyperlink{hid_8c_aa6d92ab04844f58836f237b1994e3007a99aea612d2426e6342025ba6a151da89}{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-P\-R\-O\-D\-U\-C\-T}, 
+\hyperlink{hid_8c_aa6d92ab04844f58836f237b1994e3007a28584a42df67ec8d8b86234c9c576fad}{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-E\-R\-I\-A\-L}, 
+\hyperlink{hid_8c_aa6d92ab04844f58836f237b1994e3007a5114857ab5e188582f278af5bb3b1231}{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-O\-U\-N\-T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{hid_8c_a4a51eff11e6b5e81700d8a2f85267d5f}{new\-\_\-hid\-\_\-device} ()
+\item 
+int \hyperlink{hid_8c_a8231475fac4a08db9dd6da86a5355acf}{parse\-\_\-uevent\-\_\-info} (const char $\ast$uevent, int $\ast$bus\-\_\-type, unsigned short $\ast$vendor\-\_\-id, unsigned short $\ast$product\-\_\-id, char $\ast$$\ast$serial\-\_\-number\-\_\-utf8, char $\ast$$\ast$product\-\_\-name\-\_\-utf8)
+\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_ga142ffc1b0b7a7fa412d3862b2a17164b}{hid\-\_\-init} (void)
+\begin{DoxyCompactList}\small\item\em \-Initialize the \-H\-I\-D\-A\-P\-I library. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_gacf5da9ce37132eba69fc259f17f13023}{hid\-\_\-exit} (void)
+\begin{DoxyCompactList}\small\item\em \-Finalize the \-H\-I\-D\-A\-P\-I library. \end{DoxyCompactList}\item 
+struct \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} \*
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} $\ast$ \hyperlink{group___a_p_i_ga135931e04d48078a9fb7aebf663676f9}{hid\-\_\-enumerate} (unsigned short vendor\-\_\-id, unsigned short product\-\_\-id)
+\begin{DoxyCompactList}\small\item\em \-Enumerate the \-H\-I\-D \-Devices. \end{DoxyCompactList}\item 
+void \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_gafc2d2adf71db3784b783b9a554527aa4}{hid\-\_\-free\-\_\-enumeration} (struct \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} $\ast$devs)
+\begin{DoxyCompactList}\small\item\em \-Free an enumeration \-Linked \-List. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{group___a_p_i_gae6910ed9f01c4a99d25539b16800e90c}{hid\-\_\-open} (unsigned short vendor\-\_\-id, unsigned short product\-\_\-id, const wchar\-\_\-t $\ast$serial\-\_\-number)
+\begin{DoxyCompactList}\small\item\em \-Open a \-H\-I\-D device using a \-Vendor \-I\-D (\-V\-I\-D), \-Product \-I\-D (\-P\-I\-D) and optionally a serial number. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_ga1e87518670f88540c920dc451df608ee}{hid\-\_\-open\-\_\-path} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em \-Open a \-H\-I\-D device by its path name. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_gad14ea48e440cf5066df87cc6488493af}{hid\-\_\-write} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, const unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Write an \-Output report to a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_gaa5c9ed5aa290688ffac03343989ad75a}{hid\-\_\-read\-\_\-timeout} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, unsigned char $\ast$data, size\-\_\-t length, int milliseconds)
+\begin{DoxyCompactList}\small\item\em \-Read an \-Input report from a \-H\-I\-D device with timeout. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_ga6b820f3e72097cf7f994e33715dc7af1}{hid\-\_\-read} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Read an \-Input report from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_gaf9d54208d314047727598b506577bb87}{hid\-\_\-set\-\_\-nonblocking} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, int nonblock)
+\begin{DoxyCompactList}\small\item\em \-Set the device handle to be non-\/blocking. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_gae43ab80f741786ac4374216658fd5ab3}{hid\-\_\-send\-\_\-feature\-\_\-report} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, const unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Send a \-Feature report to the device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_ga34d43ac6da0fb785b88fcc2edf13ed65}{hid\-\_\-get\-\_\-feature\-\_\-report} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, unsigned char $\ast$data, size\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Get a feature report from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+void \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_ga9b64828273b8dd052731e79ba9e1a516}{hid\-\_\-close} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em \-Close a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga2652b2ff0f3982a8c5791718e2a2e6cb}{hid\-\_\-get\-\_\-manufacturer\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Manufacturer \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_gaa78526041c4bb470b2c1ad9eb0791c5f}{hid\-\_\-get\-\_\-product\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Product \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga73994b7820264d3604d6ee25de9c66be}{hid\-\_\-get\-\_\-serial\-\_\-number\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get \-The \-Serial \-Number \-String from a \-H\-I\-D device. \end{DoxyCompactList}\item 
+int \hyperlink{hidapi_8h_a70c49eda5025c1bc455af77da19ca312}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga03810bc0be3c21e9229feff689a9de85}{hid\-\_\-get\-\_\-indexed\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, int string\-\_\-index, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
+\begin{DoxyCompactList}\small\item\em \-Get a string from a \-H\-I\-D device, based on its string index. \end{DoxyCompactList}\item 
+\hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} const wchar\-\_\-t \*
+$\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-C\-A\-L\-L} \hyperlink{group___a_p_i_ga1b5c0ca1c785b8024f5eb46750a8f606}{hid\-\_\-error} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em \-Get a string describing the last error which occurred. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{hid_8c_a0ca67dd1130adb839438e3ae0990e952}{device\-\_\-string\-\_\-names} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{hid_8c_ac5092480a5db624163f7b66847e42a70}{\index{hid.\-c@{hid.\-c}!\-H\-I\-D\-I\-O\-C\-G\-F\-E\-A\-T\-U\-R\-E@{\-H\-I\-D\-I\-O\-C\-G\-F\-E\-A\-T\-U\-R\-E}}
+\index{\-H\-I\-D\-I\-O\-C\-G\-F\-E\-A\-T\-U\-R\-E@{\-H\-I\-D\-I\-O\-C\-G\-F\-E\-A\-T\-U\-R\-E}!hid.c@{hid.\-c}}
+\subsubsection[{\-H\-I\-D\-I\-O\-C\-G\-F\-E\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-I\-D\-I\-O\-C\-G\-F\-E\-A\-T\-U\-R\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{len}
+\end{DoxyParamCaption}
+)~\-\_\-\-I\-O\-C(\-\_\-\-I\-O\-C\-\_\-\-W\-R\-I\-T\-E$|$\-\_\-\-I\-O\-C\-\_\-\-R\-E\-A\-D, '\-H', 0x07, len)}}\label{hid_8c_ac5092480a5db624163f7b66847e42a70}
+\hypertarget{hid_8c_a03f650125c34f865b2ce0761095dcec9}{\index{hid.\-c@{hid.\-c}!\-H\-I\-D\-I\-O\-C\-S\-F\-E\-A\-T\-U\-R\-E@{\-H\-I\-D\-I\-O\-C\-S\-F\-E\-A\-T\-U\-R\-E}}
+\index{\-H\-I\-D\-I\-O\-C\-S\-F\-E\-A\-T\-U\-R\-E@{\-H\-I\-D\-I\-O\-C\-S\-F\-E\-A\-T\-U\-R\-E}!hid.c@{hid.\-c}}
+\subsubsection[{\-H\-I\-D\-I\-O\-C\-S\-F\-E\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-I\-D\-I\-O\-C\-S\-F\-E\-A\-T\-U\-R\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{len}
+\end{DoxyParamCaption}
+)~\-\_\-\-I\-O\-C(\-\_\-\-I\-O\-C\-\_\-\-W\-R\-I\-T\-E$|$\-\_\-\-I\-O\-C\-\_\-\-R\-E\-A\-D, '\-H', 0x06, len)}}\label{hid_8c_a03f650125c34f865b2ce0761095dcec9}
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{hid_8c_aa6d92ab04844f58836f237b1994e3007}{\index{hid.\-c@{hid.\-c}!device\-\_\-string\-\_\-id@{device\-\_\-string\-\_\-id}}
+\index{device\-\_\-string\-\_\-id@{device\-\_\-string\-\_\-id}!hid.c@{hid.\-c}}
+\subsubsection[{device\-\_\-string\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf device\-\_\-string\-\_\-id}}}\label{hid_8c_aa6d92ab04844f58836f237b1994e3007}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R@{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R}!hid.\-c@{hid.\-c}}\index{hid.\-c@{hid.\-c}!\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R@{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R}}\item[{\em 
+\hypertarget{hid_8c_aa6d92ab04844f58836f237b1994e3007a57493cd7979c4138e430e46e7038f656}{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R}\label{hid_8c_aa6d92ab04844f58836f237b1994e3007a57493cd7979c4138e430e46e7038f656}
+}]\index{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-P\-R\-O\-D\-U\-C\-T@{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-P\-R\-O\-D\-U\-C\-T}!hid.\-c@{hid.\-c}}\index{hid.\-c@{hid.\-c}!\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-P\-R\-O\-D\-U\-C\-T@{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-P\-R\-O\-D\-U\-C\-T}}\item[{\em 
+\hypertarget{hid_8c_aa6d92ab04844f58836f237b1994e3007a99aea612d2426e6342025ba6a151da89}{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-P\-R\-O\-D\-U\-C\-T}\label{hid_8c_aa6d92ab04844f58836f237b1994e3007a99aea612d2426e6342025ba6a151da89}
+}]\index{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-E\-R\-I\-A\-L@{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-E\-R\-I\-A\-L}!hid.\-c@{hid.\-c}}\index{hid.\-c@{hid.\-c}!\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-E\-R\-I\-A\-L@{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-E\-R\-I\-A\-L}}\item[{\em 
+\hypertarget{hid_8c_aa6d92ab04844f58836f237b1994e3007a28584a42df67ec8d8b86234c9c576fad}{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-E\-R\-I\-A\-L}\label{hid_8c_aa6d92ab04844f58836f237b1994e3007a28584a42df67ec8d8b86234c9c576fad}
+}]\index{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-O\-U\-N\-T@{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-O\-U\-N\-T}!hid.\-c@{hid.\-c}}\index{hid.\-c@{hid.\-c}!\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-O\-U\-N\-T@{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-O\-U\-N\-T}}\item[{\em 
+\hypertarget{hid_8c_aa6d92ab04844f58836f237b1994e3007a5114857ab5e188582f278af5bb3b1231}{\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-O\-U\-N\-T}\label{hid_8c_aa6d92ab04844f58836f237b1994e3007a5114857ab5e188582f278af5bb3b1231}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{hid_8c_a4a51eff11e6b5e81700d8a2f85267d5f}{\index{hid.\-c@{hid.\-c}!new\-\_\-hid\-\_\-device@{new\-\_\-hid\-\_\-device}}
+\index{new\-\_\-hid\-\_\-device@{new\-\_\-hid\-\_\-device}!hid.c@{hid.\-c}}
+\subsubsection[{new\-\_\-hid\-\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device}$\ast$ {\bf new\-\_\-hid\-\_\-device} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{hid_8c_a4a51eff11e6b5e81700d8a2f85267d5f}
+\hypertarget{hid_8c_a8231475fac4a08db9dd6da86a5355acf}{\index{hid.\-c@{hid.\-c}!parse\-\_\-uevent\-\_\-info@{parse\-\_\-uevent\-\_\-info}}
+\index{parse\-\_\-uevent\-\_\-info@{parse\-\_\-uevent\-\_\-info}!hid.c@{hid.\-c}}
+\subsubsection[{parse\-\_\-uevent\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf parse\-\_\-uevent\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{uevent, }
+\item[{int $\ast$}]{bus\-\_\-type, }
+\item[{unsigned short $\ast$}]{vendor\-\_\-id, }
+\item[{unsigned short $\ast$}]{product\-\_\-id, }
+\item[{char $\ast$$\ast$}]{serial\-\_\-number\-\_\-utf8, }
+\item[{char $\ast$$\ast$}]{product\-\_\-name\-\_\-utf8}
+\end{DoxyParamCaption}
+)}}\label{hid_8c_a8231475fac4a08db9dd6da86a5355acf}
+type vendor product \-H\-I\-D\-\_\-\-I\-D=0003\-:000005\-A\-C\-:00008242
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{hid_8c_a0ca67dd1130adb839438e3ae0990e952}{\index{hid.\-c@{hid.\-c}!device\-\_\-string\-\_\-names@{device\-\_\-string\-\_\-names}}
+\index{device\-\_\-string\-\_\-names@{device\-\_\-string\-\_\-names}!hid.c@{hid.\-c}}
+\subsubsection[{device\-\_\-string\-\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf device\-\_\-string\-\_\-names}\mbox{[}$\,$\mbox{]}}}\label{hid_8c_a0ca67dd1130adb839438e3ae0990e952}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+     "manufacturer",
+     "product",
+     "serial",
+}
+\end{DoxyCode}

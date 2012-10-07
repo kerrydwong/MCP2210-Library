@@ -1,0 +1,920 @@
+\hypertarget{mcp2210_8h}{\section{mcp2210.\-h \-File \-Reference}
+\label{mcp2210_8h}\index{mcp2210.\-h@{mcp2210.\-h}}
+}
+{\ttfamily \#include $<$cstdlib$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$wchar.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include $<$stdint.\-h$>$}\*
+{\ttfamily \#include \char`\"{}hidapi.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_g_p_pin}{\-G\-P\-Pin}
+\item 
+struct \hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def}
+\item 
+struct \hyperlink{struct_chip_settings_def}{\-Chip\-Settings\-Def}
+\item 
+struct \hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def}
+\item 
+struct \hyperlink{struct_manufacturer_product_name_def}{\-Manufacturer\-Product\-Name\-Def}
+\item 
+struct \hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def}
+\item 
+struct \hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def}
+\item 
+struct \hyperlink{struct_external_interrupt_pin_status_def}{\-External\-Interrupt\-Pin\-Status\-Def}
+\item 
+struct \hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mcp2210_8h_a48c00ece206fdfe72edfb18ef6c72769}{\-M\-C\-P2210\-\_\-\-V\-I\-D}~0x04d8
+\item 
+\#define \hyperlink{mcp2210_8h_a1fcd3059a678640e1ea1f7f83a4dc9e9}{\-M\-C\-P2210\-\_\-\-P\-I\-D}~0x00de
+\item 
+\#define \hyperlink{mcp2210_8h_ad5672af51b60e9c00ffa9850feb75e37}{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-O\-U\-T\-P\-U\-T}~0
+\item 
+\#define \hyperlink{mcp2210_8h_a2424a0689fe07d992bec1a7840942613}{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-I\-N\-P\-U\-T}~1
+\item 
+\#define \hyperlink{mcp2210_8h_a4b4eebf230a61a69257570c1c511b9ab}{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-G\-P\-I\-O}~0x0
+\item 
+\#define \hyperlink{mcp2210_8h_a4db8c0b9f67bc098ea64f40d264476ab}{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-C\-S}~0x1
+\item 
+\#define \hyperlink{mcp2210_8h_a49a91a96db0edf5d80e2cb72deb7c3c7}{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-D\-E\-D\-I\-C\-A\-T\-E\-D}~0x2
+\item 
+\#define \hyperlink{mcp2210_8h_abe84dfa63d6452c1c2c5419a0fee5bb5}{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}~0x0
+\item 
+\#define \hyperlink{mcp2210_8h_af57f368b1074b61d4e722391119927d6}{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-V\-E\-U\-P\-\_\-\-E\-N\-A\-B\-L\-E\-D}~0x1
+\item 
+\#define \hyperlink{mcp2210_8h_ac6830212dfacc2c37c4f2ba45a684ee5}{\-C\-O\-U\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-U\-L\-S\-E\-S}~0x4
+\item 
+\#define \hyperlink{mcp2210_8h_ac8a8c468f6901f87879450604bfe1503}{\-C\-O\-U\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-U\-L\-S\-E\-S}~0x3
+\item 
+\#define \hyperlink{mcp2210_8h_a4cfc4c3a6bf909b436d879f7bab17234}{\-C\-O\-U\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}~0x2
+\item 
+\#define \hyperlink{mcp2210_8h_ad7fa9ff6d60ed4c212c55c2d1b850e9e}{\-C\-O\-U\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}~0x1
+\item 
+\#define \hyperlink{mcp2210_8h_af22176336124f881aa4a568504b7830d}{\-N\-O\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G}~0x0
+\item 
+\#define \hyperlink{mcp2210_8h_a13bce5417b47276090ef55d09907bdbd}{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-N\-O\-T\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}~0x0
+\item 
+\#define \hyperlink{mcp2210_8h_ab9fe8507c48440ad48410da2119976f9}{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-B\-Y\-\_\-\-P\-W\-D}~0x40
+\item 
+\#define \hyperlink{mcp2210_8h_a39922b384d2c8efae381858baa78b125}{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-L\-O\-C\-K\-E\-D}~0x80
+\item 
+\#define \hyperlink{mcp2210_8h_ae0075029a6d3c961364eb1aeea474153}{\-U\-S\-B\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-I\-D}~0x03
+\item 
+\#define \hyperlink{mcp2210_8h_a53940458c688d735fbc9e094dd372f57}{\-C\-M\-D\-\_\-\-U\-N\-S\-P\-O\-O\-R\-T\-E\-D}~0x0
+\item 
+\#define \hyperlink{mcp2210_8h_ac3136100403223489dd6421f64a0f238}{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-H\-I\-P\-\_\-\-S\-T\-A\-T\-U\-S}~0x10
+\item 
+\#define \hyperlink{mcp2210_8h_a28693257168ac62cc7930bedc1281f55}{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-C\-A\-N\-C\-E\-L}~0x11
+\item 
+\#define \hyperlink{mcp2210_8h_a4b8b6700c22a37ae577f74a8770f2307}{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-U\-M\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-F\-R\-O\-M\-\_\-\-I\-N\-T\-\_\-\-P\-I\-N}~0x12
+\item 
+\#define \hyperlink{mcp2210_8h_a69765184f3030356497679623f0a0653}{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}~0x20
+\item 
+\#define \hyperlink{mcp2210_8h_ab66460b5ce631a296e5f3bb30d2eb77e}{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}~0x21
+\item 
+\#define \hyperlink{mcp2210_8h_a0c2ac936fbc33b475e6851bc2a81834c}{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}~0x30
+\item 
+\#define \hyperlink{mcp2210_8h_a0665b2a46554b4fbe6bf5170d60f29a1}{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}~0x31
+\item 
+\#define \hyperlink{mcp2210_8h_ad40be212a97b6691747a629bf55140b2}{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}~0x32
+\item 
+\#define \hyperlink{mcp2210_8h_aa687b04685f7769c78e8a09e3e3c26e9}{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}~0x33
+\item 
+\#define \hyperlink{mcp2210_8h_a033b7e0ce1efa1ccb2af9cad1e011b08}{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}~0x40
+\item 
+\#define \hyperlink{mcp2210_8h_aa970e0881933068177ff9c7de8aa0635}{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}~0x41
+\item 
+\#define \hyperlink{mcp2210_8h_abe3b7eb2eebbdc51102c4810b37eb909}{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}~0x42
+\item 
+\#define \hyperlink{mcp2210_8h_a97d401132692831065945611d8934e32}{\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}~0x50
+\item 
+\#define \hyperlink{mcp2210_8h_a284438ede6122e321df2e2ef68ff5546}{\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}~0x51
+\item 
+\#define \hyperlink{mcp2210_8h_ac02e5169b4549ba2a1dfbd89a904ae03}{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}~0x60
+\item 
+\#define \hyperlink{mcp2210_8h_a0a309a240e914fc8a92137918ba4641c}{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}~0x61
+\item 
+\#define \hyperlink{mcp2210_8h_ab08dcf6647f512fe9335f6aa77bd9a4b}{\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D}~0x70
+\item 
+\#define \hyperlink{mcp2210_8h_a779f3f658d17fe627800d9b240f8b5d2}{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-R\-E\-Q}~0x80
+\item 
+\#define \hyperlink{mcp2210_8h_ac2043e3daf6d8eb535d319f5a9c1009c}{\-C\-M\-D\-S\-U\-B\-\_\-\-S\-P\-I\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-X\-F\-E\-R\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}~0x10
+\item 
+\#define \hyperlink{mcp2210_8h_a14bd43532b841cd801a59d73d83708a8}{\-C\-M\-D\-S\-U\-B\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}~0x20
+\item 
+\#define \hyperlink{mcp2210_8h_a866bd4301445979bfbad5ee416e9374e}{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R\-S}~0x30
+\item 
+\#define \hyperlink{mcp2210_8h_a901bcd6946338af5d40fff5a8a0ebb5d}{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E}~0x40
+\item 
+\#define \hyperlink{mcp2210_8h_ad7a5e5045218249fcfa138fa023a27a2}{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E}~0x50
+\item 
+\#define \hyperlink{mcp2210_8h_af5a2e173b812bdbc8a1bc505534bb705}{\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S\-F\-U\-L}~0
+\item 
+\#define \hyperlink{mcp2210_8h_a4deeabd750e9bdd57f4770f89793e37e}{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-O\-P\-E\-N\-\_\-\-D\-E\-V\-I\-C\-E}~-\/1
+\item 
+\#define \hyperlink{mcp2210_8h_aaad991bdf4e465eb65a7a075dc0f8ab6}{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-W\-R\-I\-T\-E\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E}~-\/2
+\item 
+\#define \hyperlink{mcp2210_8h_a4cc9cd91d1a74df9224d931fcca8f7fa}{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-A\-D\-\_\-\-F\-R\-O\-M\-\_\-\-D\-E\-V\-I\-C\-E}~-\/3
+\item 
+\#define \hyperlink{mcp2210_8h_a60ec41154df53aafaee186316dc51146}{\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-H\-A\-N\-D\-L\-E}~-\/99
+\item 
+\#define \hyperlink{mcp2210_8h_aeae55aa39effa47d478a4337398fdbe1}{\-C\-O\-M\-M\-A\-N\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}~64
+\item 
+\#define \hyperlink{mcp2210_8h_ae418247dcaca196cfa54fc77a19d591f}{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}~64
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint8\-\_\-t \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} $\ast$ \hyperlink{mcp2210_8h_a0b3fb01a244efdc3126f2646553aeb3d}{\-Enumerate\-M\-C\-P2210} ()
+\item 
+\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{mcp2210_8h_a73f677a660068a18a713c94bd6a76e60}{\-Init\-M\-C\-P2210} ()
+\item 
+\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{mcp2210_8h_ab81541af956be15df79c95f49b1803c3}{\-Init\-M\-C\-P2210} (wchar\-\_\-t $\ast$serial\-Number)
+\item 
+void \hyperlink{mcp2210_8h_afca69dafd7a0768a60da2cf80525c6b5}{\-Release\-M\-C\-P2210} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+int \hyperlink{mcp2210_8h_ad2035535d0aeeaafe45fb9da0722cfad}{\-Send\-U\-S\-B\-Cmd} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$cmd\-Buf, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$response\-Buf)
+\item 
+\hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def} \hyperlink{mcp2210_8h_ac204d847f8e7a40352ddeba810219608}{\-Get\-S\-P\-I\-Transfer\-Settings} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, bool is\-Volatile=true)
+\item 
+int \hyperlink{mcp2210_8h_a13dd2cef2a3a1bb759a1feec17fb3419}{\-Set\-S\-P\-I\-Transfer\-Settings} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def} def, bool is\-Volatile=true)
+\item 
+\hyperlink{struct_chip_settings_def}{\-Chip\-Settings\-Def} \hyperlink{mcp2210_8h_a11807ce257ba3d6bebb041e3c98a9a58}{\-Get\-Chip\-Settings} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, bool is\-Volatile=true)
+\item 
+int \hyperlink{mcp2210_8h_accc2214dfb1d69eb9654358bdf27446a}{\-Set\-Chip\-Settings} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_chip_settings_def}{\-Chip\-Settings\-Def} def, bool is\-Volatile=true)
+\item 
+\hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} \hyperlink{mcp2210_8h_a75c695b47cd5705afb8aad13a4e5751f}{\-Get\-U\-S\-B\-Key\-Parameters} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+int \hyperlink{mcp2210_8h_a1379e6de32f81df8121a95b19afc77bf}{\-Set\-U\-S\-B\-Key\-Parameters} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} def)
+\item 
+\hyperlink{struct_manufacturer_product_name_def}{\-Manufacturer\-Product\-Name\-Def} \hyperlink{mcp2210_8h_a394bb8317789fff387a1e338121a145b}{\-Get\-Manufacturer\-Product\-Name} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, unsigned int sub\-Cmd\-Code)
+\item 
+int \hyperlink{mcp2210_8h_ae0440fcfdc1adbe1a76ea6d53ae400f7}{\-Set\-Manufacturer\-Product\-Name} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, unsigned int sub\-Cmd\-Code, \hyperlink{struct_manufacturer_product_name_def}{\-Manufacturer\-Product\-Name\-Def} def)
+\item 
+int \hyperlink{mcp2210_8h_a7de4c7ae20fcf6acbef30424395a7986}{\-Send\-Access\-Password} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, char $\ast$pwd, int pwd\-Length)
+\item 
+int \hyperlink{mcp2210_8h_a8ccc5483803201158f79ebe9b01d204d}{\-Read\-E\-E\-P\-R\-O\-M} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} addr, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$val)
+\item 
+int \hyperlink{mcp2210_8h_a67f5920bb156bf436f7afbf92528dc37}{\-Write\-E\-E\-P\-R\-O\-M} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} addr, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} val)
+\item 
+int \hyperlink{mcp2210_8h_adfb0cd492ab9c674d4ad5a5aeabbf365}{\-Request\-S\-P\-I\-Bus\-Release} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} val)
+\item 
+\hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def} \hyperlink{mcp2210_8h_a7d64b0e934db7345efb94af6a316e487}{\-Get\-Chip\-Status} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+\hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def} \hyperlink{mcp2210_8h_abf54ce25e056b5fa2e0df30d632aa850}{\-Cancel\-S\-P\-I\-Transfer} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \hyperlink{mcp2210_8h_aa2cfbe9757c7be3421fcef7d0bdb82eb}{\-S\-P\-I\-Data\-Transfer} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$data, int length)
+\item 
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \hyperlink{mcp2210_8h_aef764467c999d43a3b7de9541a37bd85}{\-S\-P\-I\-Send\-Receive} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$data, int length)
+\item 
+\hyperlink{struct_external_interrupt_pin_status_def}{\-External\-Interrupt\-Pin\-Status\-Def} \hyperlink{mcp2210_8h_af4f479adbc61b93bd180a1eb541ca6ef}{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} reset\-Counter)
+\item 
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} \hyperlink{mcp2210_8h_a4fa41d03c61fe4ac4c68ab1653b7f0b4}{\-Get\-G\-P\-I\-O\-Pin\-Direction} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+int \hyperlink{mcp2210_8h_a587186e5ac054e4239f014d6081b424f}{\-Set\-G\-P\-I\-O\-Pin\-Direction} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} def)
+\item 
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} \hyperlink{mcp2210_8h_a3acf8cc5387dfe9b1fe8dbb5fecfb867}{\-Get\-G\-P\-I\-O\-Pin\-Value} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle)
+\item 
+int \hyperlink{mcp2210_8h_a84c0182b5a8740b40b484fbd82267af3}{\-Set\-G\-P\-I\-O\-Pin\-Val} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} def)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{mcp2210_8h_a39922b384d2c8efae381858baa78b125}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-L\-O\-C\-K\-E\-D@{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-L\-O\-C\-K\-E\-D}}
+\index{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-L\-O\-C\-K\-E\-D@{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-L\-O\-C\-K\-E\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-L\-O\-C\-K\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-L\-O\-C\-K\-E\-D}~0x80}}\label{mcp2210_8h_a39922b384d2c8efae381858baa78b125}
+\hypertarget{mcp2210_8h_a13bce5417b47276090ef55d09907bdbd}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-N\-O\-T\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D@{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-N\-O\-T\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}}
+\index{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-N\-O\-T\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D@{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-N\-O\-T\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-N\-O\-T\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-N\-O\-T\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}~0x0}}\label{mcp2210_8h_a13bce5417b47276090ef55d09907bdbd}
+\hypertarget{mcp2210_8h_ab9fe8507c48440ad48410da2119976f9}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-B\-Y\-\_\-\-P\-W\-D@{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-B\-Y\-\_\-\-P\-W\-D}}
+\index{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-B\-Y\-\_\-\-P\-W\-D@{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-B\-Y\-\_\-\-P\-W\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-B\-Y\-\_\-\-P\-W\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D\-\_\-\-B\-Y\-\_\-\-P\-W\-D}~0x40}}\label{mcp2210_8h_ab9fe8507c48440ad48410da2119976f9}
+\hypertarget{mcp2210_8h_ac3136100403223489dd6421f64a0f238}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-H\-I\-P\-\_\-\-S\-T\-A\-T\-U\-S@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-H\-I\-P\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-H\-I\-P\-\_\-\-S\-T\-A\-T\-U\-S@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-H\-I\-P\-\_\-\-S\-T\-A\-T\-U\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-H\-I\-P\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-H\-I\-P\-\_\-\-S\-T\-A\-T\-U\-S}~0x10}}\label{mcp2210_8h_ac3136100403223489dd6421f64a0f238}
+\hypertarget{mcp2210_8h_aa687b04685f7769c78e8a09e3e3c26e9}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}}
+\index{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}~0x33}}\label{mcp2210_8h_aa687b04685f7769c78e8a09e3e3c26e9}
+\hypertarget{mcp2210_8h_a0665b2a46554b4fbe6bf5170d60f29a1}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}}
+\index{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}~0x31}}\label{mcp2210_8h_a0665b2a46554b4fbe6bf5170d60f29a1}
+\hypertarget{mcp2210_8h_a69765184f3030356497679623f0a0653}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}}
+\index{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}~0x20}}\label{mcp2210_8h_a69765184f3030356497679623f0a0653}
+\hypertarget{mcp2210_8h_a4b8b6700c22a37ae577f74a8770f2307}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-U\-M\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-F\-R\-O\-M\-\_\-\-I\-N\-T\-\_\-\-P\-I\-N@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-U\-M\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-F\-R\-O\-M\-\_\-\-I\-N\-T\-\_\-\-P\-I\-N}}
+\index{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-U\-M\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-F\-R\-O\-M\-\_\-\-I\-N\-T\-\_\-\-P\-I\-N@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-U\-M\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-F\-R\-O\-M\-\_\-\-I\-N\-T\-\_\-\-P\-I\-N}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-U\-M\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-F\-R\-O\-M\-\_\-\-I\-N\-T\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-U\-M\-\_\-\-E\-V\-E\-N\-T\-S\-\_\-\-F\-R\-O\-M\-\_\-\-I\-N\-T\-\_\-\-P\-I\-N}~0x12}}\label{mcp2210_8h_a4b8b6700c22a37ae577f74a8770f2307}
+\hypertarget{mcp2210_8h_a0a309a240e914fc8a92137918ba4641c}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}}
+\index{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}~0x61}}\label{mcp2210_8h_a0a309a240e914fc8a92137918ba4641c}
+\hypertarget{mcp2210_8h_aa970e0881933068177ff9c7de8aa0635}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}}
+\index{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G@{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}~0x41}}\label{mcp2210_8h_aa970e0881933068177ff9c7de8aa0635}
+\hypertarget{mcp2210_8h_a97d401132692831065945611d8934e32}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M@{\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}}
+\index{\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M@{\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}~0x50}}\label{mcp2210_8h_a97d401132692831065945611d8934e32}
+\hypertarget{mcp2210_8h_ab08dcf6647f512fe9335f6aa77bd9a4b}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D@{\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D}}
+\index{\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D@{\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D}~0x70}}\label{mcp2210_8h_ab08dcf6647f512fe9335f6aa77bd9a4b}
+\hypertarget{mcp2210_8h_ad40be212a97b6691747a629bf55140b2}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}}
+\index{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-D\-I\-R}~0x32}}\label{mcp2210_8h_ad40be212a97b6691747a629bf55140b2}
+\hypertarget{mcp2210_8h_a0c2ac936fbc33b475e6851bc2a81834c}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}}
+\index{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-P\-I\-N\-\_\-\-V\-A\-L}~0x30}}\label{mcp2210_8h_a0c2ac936fbc33b475e6851bc2a81834c}
+\hypertarget{mcp2210_8h_ab66460b5ce631a296e5f3bb30d2eb77e}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}}
+\index{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-G\-P\-I\-O\-\_\-\-S\-E\-T\-T\-I\-N\-G}~0x21}}\label{mcp2210_8h_ab66460b5ce631a296e5f3bb30d2eb77e}
+\hypertarget{mcp2210_8h_ac02e5169b4549ba2a1dfbd89a904ae03}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}}
+\index{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M}~0x60}}\label{mcp2210_8h_ac02e5169b4549ba2a1dfbd89a904ae03}
+\hypertarget{mcp2210_8h_a033b7e0ce1efa1ccb2af9cad1e011b08}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}}
+\index{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G@{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-I\-\_\-\-S\-E\-T\-T\-I\-N\-G}~0x40}}\label{mcp2210_8h_a033b7e0ce1efa1ccb2af9cad1e011b08}
+\hypertarget{mcp2210_8h_a779f3f658d17fe627800d9b240f8b5d2}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-R\-E\-Q@{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-R\-E\-Q}}
+\index{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-R\-E\-Q@{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-R\-E\-Q}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-R\-E\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-R\-E\-Q}~0x80}}\label{mcp2210_8h_a779f3f658d17fe627800d9b240f8b5d2}
+\hypertarget{mcp2210_8h_a28693257168ac62cc7930bedc1281f55}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-C\-A\-N\-C\-E\-L@{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-C\-A\-N\-C\-E\-L}}
+\index{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-C\-A\-N\-C\-E\-L@{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-C\-A\-N\-C\-E\-L}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-C\-A\-N\-C\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-C\-A\-N\-C\-E\-L}~0x11}}\label{mcp2210_8h_a28693257168ac62cc7930bedc1281f55}
+\hypertarget{mcp2210_8h_abe3b7eb2eebbdc51102c4810b37eb909}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R@{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}}
+\index{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R@{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-S\-P\-I\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}~0x42}}\label{mcp2210_8h_abe3b7eb2eebbdc51102c4810b37eb909}
+\hypertarget{mcp2210_8h_a53940458c688d735fbc9e094dd372f57}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-U\-N\-S\-P\-O\-O\-R\-T\-E\-D@{\-C\-M\-D\-\_\-\-U\-N\-S\-P\-O\-O\-R\-T\-E\-D}}
+\index{\-C\-M\-D\-\_\-\-U\-N\-S\-P\-O\-O\-R\-T\-E\-D@{\-C\-M\-D\-\_\-\-U\-N\-S\-P\-O\-O\-R\-T\-E\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-U\-N\-S\-P\-O\-O\-R\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-U\-N\-S\-P\-O\-O\-R\-T\-E\-D}~0x0}}\label{mcp2210_8h_a53940458c688d735fbc9e094dd372f57}
+\hypertarget{mcp2210_8h_a284438ede6122e321df2e2ef68ff5546}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M@{\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}}
+\index{\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M@{\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-M\-E\-M}~0x51}}\label{mcp2210_8h_a284438ede6122e321df2e2ef68ff5546}
+\hypertarget{mcp2210_8h_a14bd43532b841cd801a59d73d83708a8}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-S\-U\-B\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S@{\-C\-M\-D\-S\-U\-B\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}}
+\index{\-C\-M\-D\-S\-U\-B\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S@{\-C\-M\-D\-S\-U\-B\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-S\-U\-B\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-S\-U\-B\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}~0x20}}\label{mcp2210_8h_a14bd43532b841cd801a59d73d83708a8}
+\hypertarget{mcp2210_8h_ac2043e3daf6d8eb535d319f5a9c1009c}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-S\-U\-B\-\_\-\-S\-P\-I\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-X\-F\-E\-R\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S@{\-C\-M\-D\-S\-U\-B\-\_\-\-S\-P\-I\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-X\-F\-E\-R\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}}
+\index{\-C\-M\-D\-S\-U\-B\-\_\-\-S\-P\-I\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-X\-F\-E\-R\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S@{\-C\-M\-D\-S\-U\-B\-\_\-\-S\-P\-I\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-X\-F\-E\-R\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-S\-U\-B\-\_\-\-S\-P\-I\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-X\-F\-E\-R\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-S\-U\-B\-\_\-\-S\-P\-I\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-X\-F\-E\-R\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S}~0x10}}\label{mcp2210_8h_ac2043e3daf6d8eb535d319f5a9c1009c}
+\hypertarget{mcp2210_8h_a866bd4301445979bfbad5ee416e9374e}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R\-S@{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R\-S}}
+\index{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R\-S@{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R\-S}~0x30}}\label{mcp2210_8h_a866bd4301445979bfbad5ee416e9374e}
+\hypertarget{mcp2210_8h_ad7a5e5045218249fcfa138fa023a27a2}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E@{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E}}
+\index{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E@{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E}~0x50}}\label{mcp2210_8h_ad7a5e5045218249fcfa138fa023a27a2}
+\hypertarget{mcp2210_8h_a901bcd6946338af5d40fff5a8a0ebb5d}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E@{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E}}
+\index{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E@{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E}~0x40}}\label{mcp2210_8h_a901bcd6946338af5d40fff5a8a0ebb5d}
+\hypertarget{mcp2210_8h_aeae55aa39effa47d478a4337398fdbe1}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-O\-M\-M\-A\-N\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H@{\-C\-O\-M\-M\-A\-N\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{\-C\-O\-M\-M\-A\-N\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H@{\-C\-O\-M\-M\-A\-N\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-O\-M\-M\-A\-N\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-M\-M\-A\-N\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}~64}}\label{mcp2210_8h_aeae55aa39effa47d478a4337398fdbe1}
+\hypertarget{mcp2210_8h_ad7fa9ff6d60ed4c212c55c2d1b850e9e}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-O\-U\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S@{\-C\-O\-U\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}}
+\index{\-C\-O\-U\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S@{\-C\-O\-U\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-O\-U\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-U\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}~0x1}}\label{mcp2210_8h_ad7fa9ff6d60ed4c212c55c2d1b850e9e}
+\hypertarget{mcp2210_8h_ac6830212dfacc2c37c4f2ba45a684ee5}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-O\-U\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-U\-L\-S\-E\-S@{\-C\-O\-U\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-U\-L\-S\-E\-S}}
+\index{\-C\-O\-U\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-U\-L\-S\-E\-S@{\-C\-O\-U\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-U\-L\-S\-E\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-O\-U\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-U\-L\-S\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-U\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-U\-L\-S\-E\-S}~0x4}}\label{mcp2210_8h_ac6830212dfacc2c37c4f2ba45a684ee5}
+\hypertarget{mcp2210_8h_ac8a8c468f6901f87879450604bfe1503}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-O\-U\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-U\-L\-S\-E\-S@{\-C\-O\-U\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-U\-L\-S\-E\-S}}
+\index{\-C\-O\-U\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-U\-L\-S\-E\-S@{\-C\-O\-U\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-U\-L\-S\-E\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-O\-U\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-U\-L\-S\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-U\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-U\-L\-S\-E\-S}~0x3}}\label{mcp2210_8h_ac8a8c468f6901f87879450604bfe1503}
+\hypertarget{mcp2210_8h_a4cfc4c3a6bf909b436d879f7bab17234}{\index{mcp2210.\-h@{mcp2210.\-h}!\-C\-O\-U\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S@{\-C\-O\-U\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}}
+\index{\-C\-O\-U\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S@{\-C\-O\-U\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-C\-O\-U\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-U\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E\-S}~0x2}}\label{mcp2210_8h_a4cfc4c3a6bf909b436d879f7bab17234}
+\hypertarget{mcp2210_8h_a60ec41154df53aafaee186316dc51146}{\index{mcp2210.\-h@{mcp2210.\-h}!\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-H\-A\-N\-D\-L\-E@{\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-H\-A\-N\-D\-L\-E}}
+\index{\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-H\-A\-N\-D\-L\-E@{\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-H\-A\-N\-D\-L\-E}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-H\-A\-N\-D\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-H\-A\-N\-D\-L\-E}~-\/99}}\label{mcp2210_8h_a60ec41154df53aafaee186316dc51146}
+\hypertarget{mcp2210_8h_a4deeabd750e9bdd57f4770f89793e37e}{\index{mcp2210.\-h@{mcp2210.\-h}!\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-O\-P\-E\-N\-\_\-\-D\-E\-V\-I\-C\-E@{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-O\-P\-E\-N\-\_\-\-D\-E\-V\-I\-C\-E}}
+\index{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-O\-P\-E\-N\-\_\-\-D\-E\-V\-I\-C\-E@{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-O\-P\-E\-N\-\_\-\-D\-E\-V\-I\-C\-E}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-O\-P\-E\-N\-\_\-\-D\-E\-V\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-O\-P\-E\-N\-\_\-\-D\-E\-V\-I\-C\-E}~-\/1}}\label{mcp2210_8h_a4deeabd750e9bdd57f4770f89793e37e}
+\hypertarget{mcp2210_8h_a4cc9cd91d1a74df9224d931fcca8f7fa}{\index{mcp2210.\-h@{mcp2210.\-h}!\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-A\-D\-\_\-\-F\-R\-O\-M\-\_\-\-D\-E\-V\-I\-C\-E@{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-A\-D\-\_\-\-F\-R\-O\-M\-\_\-\-D\-E\-V\-I\-C\-E}}
+\index{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-A\-D\-\_\-\-F\-R\-O\-M\-\_\-\-D\-E\-V\-I\-C\-E@{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-A\-D\-\_\-\-F\-R\-O\-M\-\_\-\-D\-E\-V\-I\-C\-E}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-A\-D\-\_\-\-F\-R\-O\-M\-\_\-\-D\-E\-V\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-A\-D\-\_\-\-F\-R\-O\-M\-\_\-\-D\-E\-V\-I\-C\-E}~-\/3}}\label{mcp2210_8h_a4cc9cd91d1a74df9224d931fcca8f7fa}
+\hypertarget{mcp2210_8h_aaad991bdf4e465eb65a7a075dc0f8ab6}{\index{mcp2210.\-h@{mcp2210.\-h}!\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-W\-R\-I\-T\-E\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E@{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-W\-R\-I\-T\-E\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E}}
+\index{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-W\-R\-I\-T\-E\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E@{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-W\-R\-I\-T\-E\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-W\-R\-I\-T\-E\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-R\-R\-O\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-W\-R\-I\-T\-E\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E}~-\/2}}\label{mcp2210_8h_aaad991bdf4e465eb65a7a075dc0f8ab6}
+\hypertarget{mcp2210_8h_a4db8c0b9f67bc098ea64f40d264476ab}{\index{mcp2210.\-h@{mcp2210.\-h}!\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-C\-S@{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-C\-S}}
+\index{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-C\-S@{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-C\-S}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-C\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-C\-S}~0x1}}\label{mcp2210_8h_a4db8c0b9f67bc098ea64f40d264476ab}
+\hypertarget{mcp2210_8h_a49a91a96db0edf5d80e2cb72deb7c3c7}{\index{mcp2210.\-h@{mcp2210.\-h}!\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-D\-E\-D\-I\-C\-A\-T\-E\-D@{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-D\-E\-D\-I\-C\-A\-T\-E\-D}}
+\index{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-D\-E\-D\-I\-C\-A\-T\-E\-D@{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-D\-E\-D\-I\-C\-A\-T\-E\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-D\-E\-D\-I\-C\-A\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-D\-E\-D\-I\-C\-A\-T\-E\-D}~0x2}}\label{mcp2210_8h_a49a91a96db0edf5d80e2cb72deb7c3c7}
+\hypertarget{mcp2210_8h_a4b4eebf230a61a69257570c1c511b9ab}{\index{mcp2210.\-h@{mcp2210.\-h}!\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-G\-P\-I\-O@{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-G\-P\-I\-O}}
+\index{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-G\-P\-I\-O@{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-G\-P\-I\-O}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-G\-P\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-P\-\_\-\-P\-I\-N\-\_\-\-D\-E\-S\-I\-G\-N\-A\-T\-I\-O\-N\-\_\-\-G\-P\-I\-O}~0x0}}\label{mcp2210_8h_a4b4eebf230a61a69257570c1c511b9ab}
+\-Response bit value for \-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M 0x60, \-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-N\-V\-R\-A\-M\-\_\-\-P\-A\-R\-A\-M 0x61 \-C\-M\-D\-S\-U\-B\-\_\-\-P\-O\-W\-E\-R\-U\-P\-\_\-\-C\-H\-I\-P\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S 0x20 \hypertarget{mcp2210_8h_a2424a0689fe07d992bec1a7840942613}{\index{mcp2210.\-h@{mcp2210.\-h}!\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-I\-N\-P\-U\-T@{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-I\-N\-P\-U\-T}}
+\index{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-I\-N\-P\-U\-T@{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-I\-N\-P\-U\-T}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-I\-N\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-I\-N\-P\-U\-T}~1}}\label{mcp2210_8h_a2424a0689fe07d992bec1a7840942613}
+\hypertarget{mcp2210_8h_ad5672af51b60e9c00ffa9850feb75e37}{\index{mcp2210.\-h@{mcp2210.\-h}!\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-O\-U\-T\-P\-U\-T@{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-O\-U\-T\-P\-U\-T}}
+\index{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-O\-U\-T\-P\-U\-T@{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-O\-U\-T\-P\-U\-T}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-O\-U\-T\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-P\-I\-O\-\_\-\-D\-I\-R\-E\-C\-T\-I\-O\-N\-\_\-\-O\-U\-T\-P\-U\-T}~0}}\label{mcp2210_8h_ad5672af51b60e9c00ffa9850feb75e37}
+\-G\-P\-I\-O pin directions \hypertarget{mcp2210_8h_a1fcd3059a678640e1ea1f7f83a4dc9e9}{\index{mcp2210.\-h@{mcp2210.\-h}!\-M\-C\-P2210\-\_\-\-P\-I\-D@{\-M\-C\-P2210\-\_\-\-P\-I\-D}}
+\index{\-M\-C\-P2210\-\_\-\-P\-I\-D@{\-M\-C\-P2210\-\_\-\-P\-I\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-M\-C\-P2210\-\_\-\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-C\-P2210\-\_\-\-P\-I\-D}~0x00de}}\label{mcp2210_8h_a1fcd3059a678640e1ea1f7f83a4dc9e9}
+\hypertarget{mcp2210_8h_a48c00ece206fdfe72edfb18ef6c72769}{\index{mcp2210.\-h@{mcp2210.\-h}!\-M\-C\-P2210\-\_\-\-V\-I\-D@{\-M\-C\-P2210\-\_\-\-V\-I\-D}}
+\index{\-M\-C\-P2210\-\_\-\-V\-I\-D@{\-M\-C\-P2210\-\_\-\-V\-I\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-M\-C\-P2210\-\_\-\-V\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-C\-P2210\-\_\-\-V\-I\-D}~0x04d8}}\label{mcp2210_8h_a48c00ece206fdfe72edfb18ef6c72769}
+\hypertarget{mcp2210_8h_af22176336124f881aa4a568504b7830d}{\index{mcp2210.\-h@{mcp2210.\-h}!\-N\-O\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G@{\-N\-O\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G}}
+\index{\-N\-O\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G@{\-N\-O\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-N\-O\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-N\-O\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C\-O\-U\-N\-T\-I\-N\-G}~0x0}}\label{mcp2210_8h_af22176336124f881aa4a568504b7830d}
+\hypertarget{mcp2210_8h_af5a2e173b812bdbc8a1bc505534bb705}{\index{mcp2210.\-h@{mcp2210.\-h}!\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S\-F\-U\-L@{\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S\-F\-U\-L}}
+\index{\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S\-F\-U\-L@{\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S\-F\-U\-L}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S\-F\-U\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S\-F\-U\-L}~0}}\label{mcp2210_8h_af5a2e173b812bdbc8a1bc505534bb705}
+\hypertarget{mcp2210_8h_abe84dfa63d6452c1c2c5419a0fee5bb5}{\index{mcp2210.\-h@{mcp2210.\-h}!\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}}
+\index{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}~0x0}}\label{mcp2210_8h_abe84dfa63d6452c1c2c5419a0fee5bb5}
+\hypertarget{mcp2210_8h_af57f368b1074b61d4e722391119927d6}{\index{mcp2210.\-h@{mcp2210.\-h}!\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-V\-E\-U\-P\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-V\-E\-U\-P\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-V\-E\-U\-P\-\_\-\-E\-N\-A\-B\-L\-E\-D@{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-V\-E\-U\-P\-\_\-\-E\-N\-A\-B\-L\-E\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-V\-E\-U\-P\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-V\-E\-U\-P\-\_\-\-E\-N\-A\-B\-L\-E\-D}~0x1}}\label{mcp2210_8h_af57f368b1074b61d4e722391119927d6}
+\hypertarget{mcp2210_8h_ae418247dcaca196cfa54fc77a19d591f}{\index{mcp2210.\-h@{mcp2210.\-h}!\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H@{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H@{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}~64}}\label{mcp2210_8h_ae418247dcaca196cfa54fc77a19d591f}
+\hypertarget{mcp2210_8h_ae0075029a6d3c961364eb1aeea474153}{\index{mcp2210.\-h@{mcp2210.\-h}!\-U\-S\-B\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-I\-D@{\-U\-S\-B\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-I\-D}}
+\index{\-U\-S\-B\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-I\-D@{\-U\-S\-B\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-I\-D}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-U\-S\-B\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-S\-B\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-I\-D}~0x03}}\label{mcp2210_8h_ae0075029a6d3c961364eb1aeea474153}
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{\index{mcp2210.\-h@{mcp2210.\-h}!byte@{byte}}
+\index{byte@{byte}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{byte}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint8\-\_\-t {\bf byte}}}\label{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}
+\-Copyright 2012, \-Kerry \-D. \-Wong
+
+\href{http://www.kerrywong.com}{\tt http\-://www.\-kerrywong.\-com}
+
+\-Licensed under the \-Apache \-License, \-Version 2.\-0 (the \char`\"{}\-License\char`\"{}); you may not use this file except in compliance with the \-License. \-You may obtain a copy of the \-License at
+
+\href{http://www.apache.org/licenses/LICENSE-2.0}{\tt http\-://www.\-apache.\-org/licenses/\-L\-I\-C\-E\-N\-S\-E-\/2.\-0}
+
+\-Unless required by applicable law or agreed to in writing, software distributed under the \-License is distributed on an \char`\"{}\-A\-S I\-S\char`\"{} \-B\-A\-S\-I\-S, \-W\-I\-T\-H\-O\-U\-T \-W\-A\-R\-R\-A\-N\-T\-I\-E\-S \-O\-R \-C\-O\-N\-D\-I\-T\-I\-O\-N\-S \-O\-F \-A\-N\-Y \-K\-I\-N\-D, either express or implied. \-See the \-License for the specific language governing permissions and limitations under the \-License. 
+
+\subsection{\-Function \-Documentation}
+\hypertarget{mcp2210_8h_abf54ce25e056b5fa2e0df30d632aa850}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Cancel\-S\-P\-I\-Transfer@{\-Cancel\-S\-P\-I\-Transfer}}
+\index{\-Cancel\-S\-P\-I\-Transfer@{\-Cancel\-S\-P\-I\-Transfer}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Cancel\-S\-P\-I\-Transfer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Chip\-Status\-Def} {\bf \-Cancel\-S\-P\-I\-Transfer} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_abf54ce25e056b5fa2e0df30d632aa850}
+\-Cancel the current \-S\-P\-I transfer
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_a0b3fb01a244efdc3126f2646553aeb3d}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Enumerate\-M\-C\-P2210@{\-Enumerate\-M\-C\-P2210}}
+\index{\-Enumerate\-M\-C\-P2210@{\-Enumerate\-M\-C\-P2210}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Enumerate\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device\-\_\-info}$\ast$ {\bf \-Enumerate\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a0b3fb01a244efdc3126f2646553aeb3d}
+\-Enumerate the connected \-M\-C\-P2210's
+
+\begin{DoxyReturn}{\-Returns}
+a pointer to \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_a11807ce257ba3d6bebb041e3c98a9a58}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Get\-Chip\-Settings@{\-Get\-Chip\-Settings}}
+\index{\-Get\-Chip\-Settings@{\-Get\-Chip\-Settings}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Get\-Chip\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Chip\-Settings\-Def} {\bf \-Get\-Chip\-Settings} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{bool}]{is\-Volatile = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a11807ce257ba3d6bebb041e3c98a9a58}
+\-Get power-\/up settings
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em is\-Volatile} & (default true) \-Whether to make change permanently or in memory only. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_chip_settings_def}{\-Chip\-Settings\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_a7d64b0e934db7345efb94af6a316e487}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Get\-Chip\-Status@{\-Get\-Chip\-Status}}
+\index{\-Get\-Chip\-Status@{\-Get\-Chip\-Status}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Get\-Chip\-Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Chip\-Status\-Def} {\bf \-Get\-Chip\-Status} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a7d64b0e934db7345efb94af6a316e487}
+\-Get \-M\-C\-P2210 status
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_chip_status_def}{\-Chip\-Status\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_a4fa41d03c61fe4ac4c68ab1653b7f0b4}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Get\-G\-P\-I\-O\-Pin\-Direction@{\-Get\-G\-P\-I\-O\-Pin\-Direction}}
+\index{\-Get\-G\-P\-I\-O\-Pin\-Direction@{\-Get\-G\-P\-I\-O\-Pin\-Direction}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Get\-G\-P\-I\-O\-Pin\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-P\-Pin\-Def} {\bf \-Get\-G\-P\-I\-O\-Pin\-Direction} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a4fa41d03c61fe4ac4c68ab1653b7f0b4}
+\-Get \-G\-P\-I\-O current pin direction from volatile memory
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} note, only the direction member variable is affected. 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_a3acf8cc5387dfe9b1fe8dbb5fecfb867}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Get\-G\-P\-I\-O\-Pin\-Value@{\-Get\-G\-P\-I\-O\-Pin\-Value}}
+\index{\-Get\-G\-P\-I\-O\-Pin\-Value@{\-Get\-G\-P\-I\-O\-Pin\-Value}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Get\-G\-P\-I\-O\-Pin\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-P\-Pin\-Def} {\bf \-Get\-G\-P\-I\-O\-Pin\-Value} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a3acf8cc5387dfe9b1fe8dbb5fecfb867}
+\-Get \-G\-P\-I\-O current pin value
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} note, only the value member variable is affected. 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_a394bb8317789fff387a1e338121a145b}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Get\-Manufacturer\-Product\-Name@{\-Get\-Manufacturer\-Product\-Name}}
+\index{\-Get\-Manufacturer\-Product\-Name@{\-Get\-Manufacturer\-Product\-Name}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Get\-Manufacturer\-Product\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Manufacturer\-Product\-Name\-Def} {\bf \-Get\-Manufacturer\-Product\-Name} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{unsigned int}]{sub\-Cmd\-Code}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a394bb8317789fff387a1e338121a145b}
+\-Set \-U\-S\-B manufacturer name or product name 
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em sub\-Cmd\-Code} & \-The sub command code which determines whether the action is to set manufacturer name or product name\-:\\
+\hline
+\end{DoxyParams}
+\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E\-: set manufacturer name \-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E\-: set product name \begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\-U\-S\-B\-Manufacturer\-Product\-Name\-Def 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_af4f479adbc61b93bd180a1eb541ca6ef}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin@{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin}}
+\index{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin@{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-External\-Interrupt\-Pin\-Status\-Def} {\bf \-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte}}]{reset\-Counter}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_af4f479adbc61b93bd180a1eb541ca6ef}
+\-Get the current number of events from the interrupt pin
+
+\-Note, \-G\-P6 must be configured to have its dedicated function active.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em reset\-Counter} & 0x0\-: reads, then resets the event counter $>$0\-: the event counter is read, however the counter is not reset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_ac204d847f8e7a40352ddeba810219608}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Get\-S\-P\-I\-Transfer\-Settings@{\-Get\-S\-P\-I\-Transfer\-Settings}}
+\index{\-Get\-S\-P\-I\-Transfer\-Settings@{\-Get\-S\-P\-I\-Transfer\-Settings}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Get\-S\-P\-I\-Transfer\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-Transfer\-Settings\-Def} {\bf \-Get\-S\-P\-I\-Transfer\-Settings} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{bool}]{is\-Volatile = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_ac204d847f8e7a40352ddeba810219608}
+\-Get \-S\-P\-I power-\/up transfer settings 
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em is\-Volatile} & (default true) \-Whether to make change permanently or in memory only.\\
+\hline
+\end{DoxyParams}
+ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_a75c695b47cd5705afb8aad13a4e5751f}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Get\-U\-S\-B\-Key\-Parameters@{\-Get\-U\-S\-B\-Key\-Parameters}}
+\index{\-Get\-U\-S\-B\-Key\-Parameters@{\-Get\-U\-S\-B\-Key\-Parameters}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Get\-U\-S\-B\-Key\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-U\-S\-B\-Key\-Parameters\-Def} {\bf \-Get\-U\-S\-B\-Key\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a75c695b47cd5705afb8aad13a4e5751f}
+\-Get \-U\-S\-B power-\/up key parameters
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_a73f677a660068a18a713c94bd6a76e60}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}}
+\index{\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Init\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device}$\ast$ {\bf \-Init\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a73f677a660068a18a713c94bd6a76e60}
+\-Initialize \-M\-C\-P2210 \-Vendor \-I\-D\-: 0x04d8 \-Product \-I\-D\-: 0x00de
+
+\begin{DoxyReturn}{\-Returns}
+\-The handle to the \-M\-C\-P2210 device 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_ab81541af956be15df79c95f49b1803c3}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}}
+\index{\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Init\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device}$\ast$ {\bf \-Init\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t $\ast$}]{serial\-Number}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_ab81541af956be15df79c95f49b1803c3}
+\-Initialize \-M\-C\-P2210 (if more than one is present) \-Vendor \-I\-D\-: 0x04d8 \-Product \-I\-D\-: 0x00de
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em serial\-Number} & \-The serial\-Number of the \-M\-C\-P2210 device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The handle to the \-M\-C\-P2210 device 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_a8ccc5483803201158f79ebe9b01d204d}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Read\-E\-E\-P\-R\-O\-M@{\-Read\-E\-E\-P\-R\-O\-M}}
+\index{\-Read\-E\-E\-P\-R\-O\-M@{\-Read\-E\-E\-P\-R\-O\-M}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Read\-E\-E\-P\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Read\-E\-E\-P\-R\-O\-M} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte}}]{addr, }
+\item[{{\bf byte} $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a8ccc5483803201158f79ebe9b01d204d}
+\-Read \-E\-E\-P\-R\-O\-M \-Memory
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em addr} & \-The address to be accessed (0-\/255) \\
+\hline
+{\em val} & \-The byte read at the specified address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_afca69dafd7a0768a60da2cf80525c6b5}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Release\-M\-C\-P2210@{\-Release\-M\-C\-P2210}}
+\index{\-Release\-M\-C\-P2210@{\-Release\-M\-C\-P2210}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Release\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Release\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_afca69dafd7a0768a60da2cf80525c6b5}
+\-Release the device handle and close the device
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+\end{DoxyParams}
+\hypertarget{mcp2210_8h_adfb0cd492ab9c674d4ad5a5aeabbf365}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Request\-S\-P\-I\-Bus\-Release@{\-Request\-S\-P\-I\-Bus\-Release}}
+\index{\-Request\-S\-P\-I\-Bus\-Release@{\-Request\-S\-P\-I\-Bus\-Release}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Request\-S\-P\-I\-Bus\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Request\-S\-P\-I\-Bus\-Release} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte}}]{val}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_adfb0cd492ab9c674d4ad5a5aeabbf365}
+\-Request \-S\-P\-I bus release
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em val} & \-The value of the \-S\-P\-I bus release \-A\-C\-K pin (only if \-G\-P7 is assigned to this dedicated function) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F8\-: \-S\-P\-I transfer in process (\-B\-U\-S not released) $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_a7de4c7ae20fcf6acbef30424395a7986}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Send\-Access\-Password@{\-Send\-Access\-Password}}
+\index{\-Send\-Access\-Password@{\-Send\-Access\-Password}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Send\-Access\-Password}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Send\-Access\-Password} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{char $\ast$}]{pwd, }
+\item[{int}]{pwd\-Length}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a7de4c7ae20fcf6acbef30424395a7986}
+\-Send access password
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em pwd} & password \\
+\hline
+{\em pwd\-Length} & password length ($<$=8) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-Chip conditional access is on, the password does not match and the number of attempts is above the accepted threshold of 5. \-The \-Access \-Password mechanism is temporarily blocked and no further password will be accepted until the next power-\/up. 0x\-F\-C\-: \-Access rejected 0\-X\-F\-D\-: \-Chip conditional access is on, the password does not match and the number of attempts is less than the accepted threshold of 5. 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_ad2035535d0aeeaafe45fb9da0722cfad}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Send\-U\-S\-B\-Cmd@{\-Send\-U\-S\-B\-Cmd}}
+\index{\-Send\-U\-S\-B\-Cmd@{\-Send\-U\-S\-B\-Cmd}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Send\-U\-S\-B\-Cmd}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Send\-U\-S\-B\-Cmd} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte} $\ast$}]{cmd\-Buf, }
+\item[{{\bf byte} $\ast$}]{response\-Buf}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_ad2035535d0aeeaafe45fb9da0722cfad}
+\-Send a \-U\-S\-B command
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em cmd\-Buf} & command buffer (64 bytes), unused/reserved entries must be filled with zero. \\
+\hline
+{\em response\-Buf} & the buffer (64 bytes) that contains the response. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_accc2214dfb1d69eb9654358bdf27446a}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Set\-Chip\-Settings@{\-Set\-Chip\-Settings}}
+\index{\-Set\-Chip\-Settings@{\-Set\-Chip\-Settings}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Set\-Chip\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-Chip\-Settings} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-Chip\-Settings\-Def}}]{def, }
+\item[{bool}]{is\-Volatile = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_accc2214dfb1d69eb9654358bdf27446a}
+\-Set chip settings power-\/up default
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\-Chip\-Setting\-Def 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{\-Parameters}
+{\em is\-Volatile} & (default true) \-Whether to make change permanently or in memory only.\\
+\hline
+\end{DoxyParams}
+ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-The provided password does not match the one stored in the chip or the settings are permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_a587186e5ac054e4239f014d6081b424f}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Set\-G\-P\-I\-O\-Pin\-Direction@{\-Set\-G\-P\-I\-O\-Pin\-Direction}}
+\index{\-Set\-G\-P\-I\-O\-Pin\-Direction@{\-Set\-G\-P\-I\-O\-Pin\-Direction}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Set\-G\-P\-I\-O\-Pin\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-G\-P\-I\-O\-Pin\-Direction} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-G\-P\-Pin\-Def}}]{def}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a587186e5ac054e4239f014d6081b424f}
+\-Set \-G\-P\-I\-O current pin direction in volatile memory
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} note, only the direction member variable is used. 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_a84c0182b5a8740b40b484fbd82267af3}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Set\-G\-P\-I\-O\-Pin\-Val@{\-Set\-G\-P\-I\-O\-Pin\-Val}}
+\index{\-Set\-G\-P\-I\-O\-Pin\-Val@{\-Set\-G\-P\-I\-O\-Pin\-Val}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Set\-G\-P\-I\-O\-Pin\-Val}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-G\-P\-I\-O\-Pin\-Val} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-G\-P\-Pin\-Def}}]{def}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a84c0182b5a8740b40b484fbd82267af3}
+\-Set \-G\-P\-I\-O current pin value 
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_g_p_pin_def}{\-G\-P\-Pin\-Def} note, only the value member variable is used. 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_ae0440fcfdc1adbe1a76ea6d53ae400f7}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Set\-Manufacturer\-Product\-Name@{\-Set\-Manufacturer\-Product\-Name}}
+\index{\-Set\-Manufacturer\-Product\-Name@{\-Set\-Manufacturer\-Product\-Name}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Set\-Manufacturer\-Product\-Name}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-Manufacturer\-Product\-Name} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{unsigned int}]{sub\-Cmd\-Code, }
+\item[{{\bf \-Manufacturer\-Product\-Name\-Def}}]{def}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_ae0440fcfdc1adbe1a76ea6d53ae400f7}
+\-Set \-U\-S\-B manufacturer name or product name
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em sub\-Cmd\-Code} & \-The sub command code which determines whether the action is to set manufacturer name or product name\-:\\
+\hline
+\end{DoxyParams}
+\-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-M\-A\-N\-U\-F\-A\-C\-T\-U\-R\-E\-R\-\_\-\-N\-A\-M\-E\-: set manufacturer name \-C\-M\-D\-S\-U\-B\-\_\-\-U\-S\-B\-\_\-\-P\-R\-O\-D\-U\-C\-T\-\_\-\-N\-A\-M\-E\-: set product name 
+\begin{DoxyParams}{\-Parameters}
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\-U\-S\-B\-Manufacturer\-Product\-Name\-Def 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-The provided password does not match the one stored in the chip or the settings are permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_a13dd2cef2a3a1bb759a1feec17fb3419}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Set\-S\-P\-I\-Transfer\-Settings@{\-Set\-S\-P\-I\-Transfer\-Settings}}
+\index{\-Set\-S\-P\-I\-Transfer\-Settings@{\-Set\-S\-P\-I\-Transfer\-Settings}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Set\-S\-P\-I\-Transfer\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-S\-P\-I\-Transfer\-Settings} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-S\-P\-I\-Transfer\-Settings\-Def}}]{def, }
+\item[{bool}]{is\-Volatile = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a13dd2cef2a3a1bb759a1feec17fb3419}
+\-Set \-S\-P\-I power-\/up transfer settings 
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_s_p_i_transfer_settings_def}{\-S\-P\-I\-Transfer\-Settings\-Def} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{\-Parameters}
+{\em is\-Volatile} & (default true) \-Whether to make change permanently or in memory only.\\
+\hline
+\end{DoxyParams}
+ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-The provided password does not match the one stored in the chip or the settings are permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_a1379e6de32f81df8121a95b19afc77bf}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Set\-U\-S\-B\-Key\-Parameters@{\-Set\-U\-S\-B\-Key\-Parameters}}
+\index{\-Set\-U\-S\-B\-Key\-Parameters@{\-Set\-U\-S\-B\-Key\-Parameters}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Set\-U\-S\-B\-Key\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Set\-U\-S\-B\-Key\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf \-U\-S\-B\-Key\-Parameters\-Def}}]{def}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a1379e6de32f81df8121a95b19afc77bf}
+\-Set \-U\-S\-B power-\/up key parameters
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em def} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-B\-: \-The provided password does not match the one stored in the chip or the settings are permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}
+\hypertarget{mcp2210_8h_aa2cfbe9757c7be3421fcef7d0bdb82eb}{\index{mcp2210.\-h@{mcp2210.\-h}!\-S\-P\-I\-Data\-Transfer@{\-S\-P\-I\-Data\-Transfer}}
+\index{\-S\-P\-I\-Data\-Transfer@{\-S\-P\-I\-Data\-Transfer}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-S\-P\-I\-Data\-Transfer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def} {\bf \-S\-P\-I\-Data\-Transfer} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte} $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_aa2cfbe9757c7be3421fcef7d0bdb82eb}
+\-S\-P\-I \-Data \-Transfer
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em data} & a pointer to the data array to be transfered \\
+\hline
+{\em length} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \-Error\-Code meaning\-: 0x\-F7\-: \-S\-P\-I bus not available 0x\-F8\-: \-S\-P\-I transfer in progress (cannot accept any data for the moment) 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_aef764467c999d43a3b7de9541a37bd85}{\index{mcp2210.\-h@{mcp2210.\-h}!\-S\-P\-I\-Send\-Receive@{\-S\-P\-I\-Send\-Receive}}
+\index{\-S\-P\-I\-Send\-Receive@{\-S\-P\-I\-Send\-Receive}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-S\-P\-I\-Send\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def} {\bf \-S\-P\-I\-Send\-Receive} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte} $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_aef764467c999d43a3b7de9541a37bd85}
+\-Send data and wait till results are received from the \-S\-P\-I bus.
+
+\-Note\-: this method differers from \-S\-P\-I\-Data\-Transfer in that it also waits till the transfer is finished. \-In \-S\-P\-I\-Data\-Transfer, the \-S\-P\-I\-Engine\-Status in the returned data structure tells the status of the \-S\-P\-I engine, and the call returns after the data is sent, regardless of whether the data has been received.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em data} & a pointer to the data array to be transfered \\
+\hline
+{\em length} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \-Error\-Code meaning\-: 0x\-F7\-: \-S\-P\-I bus not available 0x\-F8\-: \-S\-P\-I transfer in progress (cannot accept any data for the moment) 
+\end{DoxySeeAlso}
+\hypertarget{mcp2210_8h_a67f5920bb156bf436f7afbf92528dc37}{\index{mcp2210.\-h@{mcp2210.\-h}!\-Write\-E\-E\-P\-R\-O\-M@{\-Write\-E\-E\-P\-R\-O\-M}}
+\index{\-Write\-E\-E\-P\-R\-O\-M@{\-Write\-E\-E\-P\-R\-O\-M}!mcp2210.h@{mcp2210.\-h}}
+\subsubsection[{\-Write\-E\-E\-P\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Write\-E\-E\-P\-R\-O\-M} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
+\item[{{\bf byte}}]{addr, }
+\item[{{\bf byte}}]{val}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8h_a67f5920bb156bf436f7afbf92528dc37}
+\-Write \-E\-E\-P\-R\-O\-M \-Memory
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em handle} & \-The handle to the \-M\-C\-P2210 device \\
+\hline
+{\em addr} & \-The address to be accessed (0-\/255) \\
+\hline
+{\em val} & \-The byte to be written to the specified address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0\-: \-Operation was successful 0x\-F\-A\-: \-E\-E\-P\-R\-O\-M \-Write failure 0x\-F\-B\-: \-E\-E\-P\-R\-O\-M is password protected or permanently locked. $<$0\-: \-Other device errors (see error codes) 
+\end{DoxyReturn}

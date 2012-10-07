@@ -1,0 +1,76 @@
+\hypertarget{structhid__device__info}{\section{hid\-\_\-device\-\_\-info \-Struct \-Reference}
+\label{structhid__device__info}\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}}
+}
+
+
+{\ttfamily \#include $<$hidapi.\-h$>$}
+
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{structhid__device__info_a6384b5bf4d9583598e5f5a889f240921}{path}
+\item 
+unsigned short \hyperlink{structhid__device__info_a5037a3914e0bd8a3f821d1be9376c709}{vendor\-\_\-id}
+\item 
+unsigned short \hyperlink{structhid__device__info_a04595915457b4374492edb1fdb62d65d}{product\-\_\-id}
+\item 
+wchar\-\_\-t $\ast$ \hyperlink{structhid__device__info_a80756cea367e1566f966438984b75faf}{serial\-\_\-number}
+\item 
+unsigned short \hyperlink{structhid__device__info_a6a832d25260f7ec17ef008e53e50e1d0}{release\-\_\-number}
+\item 
+wchar\-\_\-t $\ast$ \hyperlink{structhid__device__info_a484eebf746220cd2910954cc861759b7}{manufacturer\-\_\-string}
+\item 
+wchar\-\_\-t $\ast$ \hyperlink{structhid__device__info_aceee256b4f7cd7fdd9fa5d556f49d221}{product\-\_\-string}
+\item 
+unsigned short \hyperlink{structhid__device__info_ab811117f8084ce2036815bdd33b16b3b}{usage\-\_\-page}
+\item 
+unsigned short \hyperlink{structhid__device__info_a47f8011d58bcddd67f1403d6d3b4cab6}{usage}
+\item 
+int \hyperlink{structhid__device__info_a9163d8d5d7db8dc47bddfaf876e17547}{interface\-\_\-number}
+\item 
+struct \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} $\ast$ \hyperlink{structhid__device__info_a2bfebc240baf3bdaf03965816e11f149}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+hidapi info structure 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structhid__device__info_a9163d8d5d7db8dc47bddfaf876e17547}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!interface\-\_\-number@{interface\-\_\-number}}
+\index{interface\-\_\-number@{interface\-\_\-number}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{interface\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf hid\-\_\-device\-\_\-info\-::interface\-\_\-number}}}\label{structhid__device__info_a9163d8d5d7db8dc47bddfaf876e17547}
+\-The \-U\-S\-B interface which this logical device represents. \-Valid on both \-Linux implementations in all cases, and valid on the \-Windows implementation only if the device contains more than one interface. \hypertarget{structhid__device__info_a484eebf746220cd2910954cc861759b7}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!manufacturer\-\_\-string@{manufacturer\-\_\-string}}
+\index{manufacturer\-\_\-string@{manufacturer\-\_\-string}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{manufacturer\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}wchar\-\_\-t$\ast$ {\bf hid\-\_\-device\-\_\-info\-::manufacturer\-\_\-string}}}\label{structhid__device__info_a484eebf746220cd2910954cc861759b7}
+\-Manufacturer \-String \hypertarget{structhid__device__info_a2bfebc240baf3bdaf03965816e11f149}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!next@{next}}
+\index{next@{next}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf hid\-\_\-device\-\_\-info}$\ast$ {\bf hid\-\_\-device\-\_\-info\-::next}}}\label{structhid__device__info_a2bfebc240baf3bdaf03965816e11f149}
+\-Pointer to the next device \hypertarget{structhid__device__info_a6384b5bf4d9583598e5f5a889f240921}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!path@{path}}
+\index{path@{path}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf hid\-\_\-device\-\_\-info\-::path}}}\label{structhid__device__info_a6384b5bf4d9583598e5f5a889f240921}
+\-Platform-\/specific device path \hypertarget{structhid__device__info_a04595915457b4374492edb1fdb62d65d}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!product\-\_\-id@{product\-\_\-id}}
+\index{product\-\_\-id@{product\-\_\-id}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{product\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf hid\-\_\-device\-\_\-info\-::product\-\_\-id}}}\label{structhid__device__info_a04595915457b4374492edb1fdb62d65d}
+\-Device \-Product \-I\-D \hypertarget{structhid__device__info_aceee256b4f7cd7fdd9fa5d556f49d221}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!product\-\_\-string@{product\-\_\-string}}
+\index{product\-\_\-string@{product\-\_\-string}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{product\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}wchar\-\_\-t$\ast$ {\bf hid\-\_\-device\-\_\-info\-::product\-\_\-string}}}\label{structhid__device__info_aceee256b4f7cd7fdd9fa5d556f49d221}
+\-Product string \hypertarget{structhid__device__info_a6a832d25260f7ec17ef008e53e50e1d0}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!release\-\_\-number@{release\-\_\-number}}
+\index{release\-\_\-number@{release\-\_\-number}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{release\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf hid\-\_\-device\-\_\-info\-::release\-\_\-number}}}\label{structhid__device__info_a6a832d25260f7ec17ef008e53e50e1d0}
+\-Device \-Release \-Number in binary-\/coded decimal, also known as \-Device \-Version \-Number \hypertarget{structhid__device__info_a80756cea367e1566f966438984b75faf}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!serial\-\_\-number@{serial\-\_\-number}}
+\index{serial\-\_\-number@{serial\-\_\-number}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{serial\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}wchar\-\_\-t$\ast$ {\bf hid\-\_\-device\-\_\-info\-::serial\-\_\-number}}}\label{structhid__device__info_a80756cea367e1566f966438984b75faf}
+\-Serial \-Number \hypertarget{structhid__device__info_a47f8011d58bcddd67f1403d6d3b4cab6}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!usage@{usage}}
+\index{usage@{usage}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf hid\-\_\-device\-\_\-info\-::usage}}}\label{structhid__device__info_a47f8011d58bcddd67f1403d6d3b4cab6}
+\-Usage for this \-Device/\-Interface (\-Windows/\-Mac only). \hypertarget{structhid__device__info_ab811117f8084ce2036815bdd33b16b3b}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!usage\-\_\-page@{usage\-\_\-page}}
+\index{usage\-\_\-page@{usage\-\_\-page}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{usage\-\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf hid\-\_\-device\-\_\-info\-::usage\-\_\-page}}}\label{structhid__device__info_ab811117f8084ce2036815bdd33b16b3b}
+\-Usage \-Page for this \-Device/\-Interface (\-Windows/\-Mac only). \hypertarget{structhid__device__info_a5037a3914e0bd8a3f821d1be9376c709}{\index{hid\-\_\-device\-\_\-info@{hid\-\_\-device\-\_\-info}!vendor\-\_\-id@{vendor\-\_\-id}}
+\index{vendor\-\_\-id@{vendor\-\_\-id}!hid_device_info@{hid\-\_\-device\-\_\-info}}
+\subsubsection[{vendor\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf hid\-\_\-device\-\_\-info\-::vendor\-\_\-id}}}\label{structhid__device__info_a5037a3914e0bd8a3f821d1be9376c709}
+\-Device \-Vendor \-I\-D 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{hidapi_8h}{hidapi.\-h}\end{DoxyCompactItemize}

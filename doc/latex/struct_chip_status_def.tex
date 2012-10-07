@@ -1,0 +1,46 @@
+\hypertarget{struct_chip_status_def}{\section{\-Chip\-Status\-Def \-Struct \-Reference}
+\label{struct_chip_status_def}\index{\-Chip\-Status\-Def@{\-Chip\-Status\-Def}}
+}
+
+
+{\ttfamily \#include $<$mcp2210.\-h$>$}
+
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{struct_chip_status_def_ac1422f04b7345187a77b5d506dc8a492}{\-S\-P\-I\-Bus\-Release\-Ext\-Req\-Stat}
+\item 
+unsigned int \hyperlink{struct_chip_status_def_ac8d8808a7cf921e77831dc4e30e8d096}{\-S\-P\-I\-Bus\-Current\-Owner}
+\item 
+unsigned int \hyperlink{struct_chip_status_def_a775f8cb07137f324ce59e7bbc961fd55}{\-Attempted\-P\-W\-D\-Accesses}
+\item 
+unsigned int \hyperlink{struct_chip_status_def_ae83bf4d444de30c1a451f9aef7ce4d6f}{\-Password\-Guessed}
+\item 
+int \hyperlink{struct_chip_status_def_ab359484a0244ec153c49f0af23c2d29b}{\-Error\-Code}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-M\-C\-P2210 status definition 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{struct_chip_status_def_a775f8cb07137f324ce59e7bbc961fd55}{\index{\-Chip\-Status\-Def@{\-Chip\-Status\-Def}!\-Attempted\-P\-W\-D\-Accesses@{\-Attempted\-P\-W\-D\-Accesses}}
+\index{\-Attempted\-P\-W\-D\-Accesses@{\-Attempted\-P\-W\-D\-Accesses}!ChipStatusDef@{\-Chip\-Status\-Def}}
+\subsubsection[{\-Attempted\-P\-W\-D\-Accesses}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Chip\-Status\-Def\-::\-Attempted\-P\-W\-D\-Accesses}}}\label{struct_chip_status_def_a775f8cb07137f324ce59e7bbc961fd55}
+\-Attempted password accesses informs the \-U\-S\-B host on how many times the \-N\-V\-R\-A\-M password was tried \hypertarget{struct_chip_status_def_ab359484a0244ec153c49f0af23c2d29b}{\index{\-Chip\-Status\-Def@{\-Chip\-Status\-Def}!\-Error\-Code@{\-Error\-Code}}
+\index{\-Error\-Code@{\-Error\-Code}!ChipStatusDef@{\-Chip\-Status\-Def}}
+\subsubsection[{\-Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Chip\-Status\-Def\-::\-Error\-Code}}}\label{struct_chip_status_def_ab359484a0244ec153c49f0af23c2d29b}
+\-The error code returned \hypertarget{struct_chip_status_def_ae83bf4d444de30c1a451f9aef7ce4d6f}{\index{\-Chip\-Status\-Def@{\-Chip\-Status\-Def}!\-Password\-Guessed@{\-Password\-Guessed}}
+\index{\-Password\-Guessed@{\-Password\-Guessed}!ChipStatusDef@{\-Chip\-Status\-Def}}
+\subsubsection[{\-Password\-Guessed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Chip\-Status\-Def\-::\-Password\-Guessed}}}\label{struct_chip_status_def_ae83bf4d444de30c1a451f9aef7ce4d6f}
+\-Whether the password was guessed 0x00\-: password not guessed 0x01\-: password guessed \hypertarget{struct_chip_status_def_ac8d8808a7cf921e77831dc4e30e8d096}{\index{\-Chip\-Status\-Def@{\-Chip\-Status\-Def}!\-S\-P\-I\-Bus\-Current\-Owner@{\-S\-P\-I\-Bus\-Current\-Owner}}
+\index{\-S\-P\-I\-Bus\-Current\-Owner@{\-S\-P\-I\-Bus\-Current\-Owner}!ChipStatusDef@{\-Chip\-Status\-Def}}
+\subsubsection[{\-S\-P\-I\-Bus\-Current\-Owner}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Chip\-Status\-Def\-::\-S\-P\-I\-Bus\-Current\-Owner}}}\label{struct_chip_status_def_ac8d8808a7cf921e77831dc4e30e8d096}
+\-S\-P\-I bus current owner 0x00\-: no owner 0x01\-: \-U\-S\-B bridge 0x02\-: \-External master \hypertarget{struct_chip_status_def_ac1422f04b7345187a77b5d506dc8a492}{\index{\-Chip\-Status\-Def@{\-Chip\-Status\-Def}!\-S\-P\-I\-Bus\-Release\-Ext\-Req\-Stat@{\-S\-P\-I\-Bus\-Release\-Ext\-Req\-Stat}}
+\index{\-S\-P\-I\-Bus\-Release\-Ext\-Req\-Stat@{\-S\-P\-I\-Bus\-Release\-Ext\-Req\-Stat}!ChipStatusDef@{\-Chip\-Status\-Def}}
+\subsubsection[{\-S\-P\-I\-Bus\-Release\-Ext\-Req\-Stat}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Chip\-Status\-Def\-::\-S\-P\-I\-Bus\-Release\-Ext\-Req\-Stat}}}\label{struct_chip_status_def_ac1422f04b7345187a77b5d506dc8a492}
+\-S\-P\-I bus release external request status 0x01\-: no external request for \-S\-P\-I bus release 0x00\-: pending external request for \-S\-P\-I bus release 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mcp2210_8h}{mcp2210.\-h}\end{DoxyCompactItemize}
