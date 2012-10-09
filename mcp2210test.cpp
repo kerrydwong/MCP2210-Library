@@ -54,21 +54,21 @@ void TestTC77(hid_device* handle) {
     }
 
     byte buf[2];
-    
+
     SPIDataTransferStatusDef def1 = SPISendReceive(handle, buf, 2);
-   
+
     int tempVal = 0;
     int sign = def1.DataReceived[0] & 0x80;
-    
+
     //13 bit 2's complement left aligned (last three bits are all 1's)
-    if (sign == 0) 
+    if (sign == 0)
         tempVal = (def1.DataReceived[0] << 8 | def1.DataReceived[1]) >> 3;
     else
-        ((def1.DataReceived[0] & 0x7f) << 8 | def1.DataReceived[1]) >> 3 - 4096;
-    
+        (((def1.DataReceived[0] & 0x7f) << 8 | def1.DataReceived[1]) >> 3) - 4096;
+
     float tempC = (float) tempVal * 0.0625;
-    float tempF = 1.8* (float) tempC + 32.0f;
-    
+    float tempF = 1.8 * (float) tempC + 32.0f;
+
     printf("temp (C) = %3.1f\n", tempC);
     printf("temp (F) = %3.1f\n", tempF);
 }
@@ -117,7 +117,7 @@ void TestMCP23S08(hid_device* handle) {
     def1 = SPISendReceive(handle, spiCmdBuffer, 3);
 
     spiCmdBuffer[0] = 0x40;
-    spiCmdBuffer[1] = 0x0a;
+    spiCmdBuffer[1] = 0x0a; //write to output latches
 
     for (int k = 0; k < 10; k++) {
         //lights up LED0 through LED7 one by one
@@ -172,7 +172,7 @@ void TestGPIO(hid_device* handle) {
 }
 
 /**
- * running a few tests, you can see the values returned by setting
+ * Running a few tests, you can see the values returned by setting
  * break points and run through the debugger.
  */
 void TestMisc(hid_device* handle) {
