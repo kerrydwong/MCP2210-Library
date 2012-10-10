@@ -21,6 +21,79 @@
 using namespace std;
 
 /**
+ * Test 25LC020A EEPROM
+ */
+void Test25LC020A(hid_device* handle) {
+    ChipSettingsDef chipDef;
+
+    //set GPIO pins to be CS
+    chipDef = GetChipSettings(handle);
+
+    for (int i = 0; i < 9; i++) {
+        chipDef.GP[i].PinDesignation = GP_PIN_DESIGNATION_CS;
+        chipDef.GP[i].GPIODirection = GPIO_DIRECTION_OUTPUT;
+        chipDef.GP[i].GPIOOutput = 1;
+    }
+    int r = SetChipSettings(handle, chipDef);
+
+    //configure SPI
+    SPITransferSettingsDef def;
+    def = GetSPITransferSettings(handle);
+
+    //chip select is GP0
+    def.ActiveChipSelectValue = 0xfffe;
+    def.IdleChipSelectValue = 0xffff;
+    def.BitRate = 6000000l;
+    def.BytesPerSPITransfer = 2; 
+    
+    r = SetSPITransferSettings(handle, def);
+
+    if (r != 0) {
+        printf("Errror setting SPI parameters.\n");
+        return;
+    }
+
+    byte spiCmdBuffer[10];
+
+    //enable write
+    spiCmdBuffer[0] = 0x06; //WREN
+    SPIDataTransferStatusDef def1  = SPISendReceive(handle, spiCmdBuffer, 1, 1);
+    
+    //write 8 bytes
+    def.BytesPerSPITransfer = 11;     
+    r = SetSPITransferSettings(handle, def);
+    if (r != 0) {
+        printf("Errror setting SPI parameters.\n");
+        return;
+    }
+     
+    spiCmdBuffer[0] = 0x02; //0000 0010 write    
+    spiCmdBuffer[1] = 0x00; //address 0x00
+    
+    for (int i = 1; i <= 8; i++) {
+        spiCmdBuffer[i + 1] = i;
+    }
+        
+    def1  = SPISendReceive(handle, spiCmdBuffer, 10, 1);
+    
+    //read 8 bytes
+    def.BytesPerSPITransfer = 11;     
+    r = SetSPITransferSettings(handle, def);
+    if (r != 0) {
+        printf("Errror setting SPI parameters.\n");
+        return;
+    }
+    
+    spiCmdBuffer[0] = 0x03; //0000 0011 read
+    spiCmdBuffer[1] = 0x00; //address 0x00
+        
+    def1  = SPISendReceive(handle, spiCmdBuffer, 2 , 9);
+    
+    for (int i = 0; i < 8; i++)
+    printf("%d\n", def1.DataReceived[i]);
+}
+
+/**
  * Test the TC77 temperature sensor
  */
 void TestTC77(hid_device* handle) {
@@ -55,7 +128,7 @@ void TestTC77(hid_device* handle) {
 
     byte buf[2];
 
-    SPIDataTransferStatusDef def1 = SPISendReceive(handle, buf, 2);
+    SPIDataTransferStatusDef def1 = SPISendReceive(handle, buf, 2, 2);
 
     int tempVal = 0;
     int sign = def1.DataReceived[0] & 0x80;
@@ -114,7 +187,7 @@ void TestMCP23S08(hid_device* handle) {
 
     SPIDataTransferStatusDef def1;
 
-    def1 = SPISendReceive(handle, spiCmdBuffer, 3);
+    def1 = SPISendReceive(handle, spiCmdBuffer, 3, 1);
 
     spiCmdBuffer[0] = 0x40;
     spiCmdBuffer[1] = 0x0a; //write to output latches
@@ -123,13 +196,13 @@ void TestMCP23S08(hid_device* handle) {
         //lights up LED0 through LED7 one by one
         for (int i = 0; i < 8; i++) {
             spiCmdBuffer[2] = 1 << i;
-            SPIDataTransferStatusDef def2 = SPISendReceive(handle, spiCmdBuffer, 3);
+            SPIDataTransferStatusDef def2 = SPISendReceive(handle, spiCmdBuffer, 3, 1);
             usleep(20000ul);
         }
         //lights up LED7 through LD0 one by one
         for (int i = 0; i < 8; i++) {
             spiCmdBuffer[2] = 0x80 >> i;
-            SPIDataTransferStatusDef def2 = SPISendReceive(handle, spiCmdBuffer, 3);
+            SPIDataTransferStatusDef def2 = SPISendReceive(handle, spiCmdBuffer, 3, 1);
             usleep(20000ul);
         }
     }
@@ -212,7 +285,8 @@ int main(int argc, char** argv) {
 
     //TestGPIO(handle);
     //TestMCP23S08(handle);
-    TestTC77(handle);
+    //TestTC77(handle);
+    Test25LC020A(handle);
 
     /**
      * release the handle

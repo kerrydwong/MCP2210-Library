@@ -17,7 +17,7 @@ var searchData=
   ['spidatatransferstatusdef',['SPIDataTransferStatusDef',['../struct_s_p_i_data_transfer_status_def.html',1,'']]],
   ['spienginestatus',['SPIEngineStatus',['../struct_s_p_i_data_transfer_status_def.html#a4a2227f2a2c87291d918a9a3f39c5d55',1,'SPIDataTransferStatusDef']]],
   ['spimode',['SPIMode',['../struct_s_p_i_transfer_settings_def.html#a362c078515ae312b89face990d02d6c6',1,'SPITransferSettingsDef']]],
-  ['spisendreceive',['SPISendReceive',['../mcp2210_8cpp.html#aef764467c999d43a3b7de9541a37bd85',1,'SPISendReceive(hid_device *handle, byte *data, int length):&#160;mcp2210.cpp'],['../mcp2210_8h.html#aef764467c999d43a3b7de9541a37bd85',1,'SPISendReceive(hid_device *handle, byte *data, int length):&#160;mcp2210.cpp']]],
+  ['spisendreceive',['SPISendReceive',['../mcp2210_8cpp.html#a0df93baf2754a041a868b2794d30c8ff',1,'SPISendReceive(hid_device *handle, byte *data, int cmdBufferLength, int dataLength):&#160;mcp2210.cpp'],['../mcp2210_8h.html#a3ead14b01a9ff9afcec47423b4de3134',1,'SPISendReceive(hid_device *handle, byte *data, int cmdBufferLength, int dataLength=-1):&#160;mcp2210.cpp']]],
   ['spitransfersettingsdef',['SPITransferSettingsDef',['../struct_s_p_i_transfer_settings_def.html',1,'']]],
   ['subsequentdatabytedelay',['SubsequentDataByteDelay',['../struct_s_p_i_transfer_settings_def.html#a7692386eb70c3fd674c1a0fdbe7a62c2',1,'SPITransferSettingsDef']]]
 ];

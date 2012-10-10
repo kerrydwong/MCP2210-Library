@@ -444,11 +444,14 @@ SPIDataTransferStatusDef SPIDataTransfer(hid_device *handle, byte* data, int len
     return def;
 }
 
-SPIDataTransferStatusDef SPISendReceive(hid_device *handle, byte* data, int length) {
-    SPIDataTransferStatusDef def = SPIDataTransfer(handle, data, length);
+SPIDataTransferStatusDef SPISendReceive(hid_device *handle, byte* data, int cmdBufferLength, int dataLength) {
+    SPIDataTransferStatusDef def = SPIDataTransfer(handle, data, cmdBufferLength);
 
     while (def.SPIEngineStatus == 0x20 || def.SPIEngineStatus == 0x30) {
-        def = SPIDataTransfer(handle, data, 1);
+        if (dataLength > 0)
+            def = SPIDataTransfer(handle, data, dataLength);
+        else
+            def = SPIDataTransfer(handle, data, cmdBufferLength);
     }
 
     return def;

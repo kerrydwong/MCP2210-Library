@@ -666,15 +666,17 @@ SPIDataTransferStatusDef SPIDataTransfer(hid_device *handle, byte* data, int len
  *      The handle to the MCP2210 device
  * @param data
  *      a pointer to the data array to be transfered
- * @param length
- *      number of bytes to be transfered
+ * @param cmdBufferLength
+ *      number of command bytes to be transfered
+ * @param dataLength
+ *      number of data elements to be returned
  * @return 
  *      @see SPIDataTransferStatusDef
  *      ErrorCode meaning:
  *      0xF7:   SPI bus not available
  *      0xF8:   SPI transfer in progress (cannot accept any data for the moment)
  */
-SPIDataTransferStatusDef SPISendReceive(hid_device *handle, byte* data, int length);
+SPIDataTransferStatusDef SPISendReceive(hid_device *handle, byte* data, int cmdBufferLength, int dataLength = -1);
 
 /**
  * Get the current number of events from the interrupt pin

@@ -37,7 +37,7 @@ int \hyperlink{mcp2210_8cpp_adfb0cd492ab9c674d4ad5a5aeabbf365}{\-Request\-S\-P\-
 \item 
 \hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \hyperlink{mcp2210_8cpp_aa2cfbe9757c7be3421fcef7d0bdb82eb}{\-S\-P\-I\-Data\-Transfer} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$data, int length)
 \item 
-\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \hyperlink{mcp2210_8cpp_aef764467c999d43a3b7de9541a37bd85}{\-S\-P\-I\-Send\-Receive} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$data, int length)
+\hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \hyperlink{mcp2210_8cpp_a0df93baf2754a041a868b2794d30c8ff}{\-S\-P\-I\-Send\-Receive} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} $\ast$data, int cmd\-Buffer\-Length, int data\-Length)
 \item 
 \hyperlink{struct_external_interrupt_pin_status_def}{\-External\-Interrupt\-Pin\-Status\-Def} \hyperlink{mcp2210_8cpp_af4f479adbc61b93bd180a1eb541ca6ef}{\-Get\-Num\-Of\-Events\-From\-Interrupt\-Pin} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$handle, \hyperlink{mcp2210_8h_ab8ef12fab634c171394422d0ee8baf94}{byte} reset\-Counter)
 \item 
@@ -569,15 +569,16 @@ ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{D
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{struct_s_p_i_data_transfer_status_def}{\-S\-P\-I\-Data\-Transfer\-Status\-Def} \-Error\-Code meaning\-: 0x\-F7\-: \-S\-P\-I bus not available 0x\-F8\-: \-S\-P\-I transfer in progress (cannot accept any data for the moment) 
 \end{DoxySeeAlso}
-\hypertarget{mcp2210_8cpp_aef764467c999d43a3b7de9541a37bd85}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-S\-P\-I\-Send\-Receive@{\-S\-P\-I\-Send\-Receive}}
+\hypertarget{mcp2210_8cpp_a0df93baf2754a041a868b2794d30c8ff}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-S\-P\-I\-Send\-Receive@{\-S\-P\-I\-Send\-Receive}}
 \index{\-S\-P\-I\-Send\-Receive@{\-S\-P\-I\-Send\-Receive}!mcp2210.cpp@{mcp2210.\-cpp}}
 \subsubsection[{\-S\-P\-I\-Send\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-Data\-Transfer\-Status\-Def} {\bf \-S\-P\-I\-Send\-Receive} (
 \begin{DoxyParamCaption}
 \item[{{\bf hid\-\_\-device} $\ast$}]{handle, }
 \item[{{\bf byte} $\ast$}]{data, }
-\item[{int}]{length}
+\item[{int}]{cmd\-Buffer\-Length, }
+\item[{int}]{data\-Length = {\ttfamily -\/1}}
 \end{DoxyParamCaption}
-)}}\label{mcp2210_8cpp_aef764467c999d43a3b7de9541a37bd85}
+)}}\label{mcp2210_8cpp_a0df93baf2754a041a868b2794d30c8ff}
 \-Send data and wait till results are received from the \-S\-P\-I bus.
 
 \-Note\-: this method differers from \-S\-P\-I\-Data\-Transfer in that it also waits till the transfer is finished. \-In \-S\-P\-I\-Data\-Transfer, the \-S\-P\-I\-Engine\-Status in the returned data structure tells the status of the \-S\-P\-I engine, and the call returns after the data is sent, regardless of whether the data has been received.
@@ -588,7 +589,9 @@ ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{D
 \hline
 {\em data} & a pointer to the data array to be transfered \\
 \hline
-{\em length} & number of bytes to be transfered \\
+{\em cmd\-Buffer\-Length} & number of command bytes to be transfered \\
+\hline
+{\em data\-Length} & number of data elements to be returned \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{\-Returns}

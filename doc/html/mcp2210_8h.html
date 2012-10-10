@@ -201,7 +201,7 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a7d64b0e934db7345efb94af6a316e487">GetChipStatus</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_chip_status_def.html">ChipStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#abf54ce25e056b5fa2e0df30d632aa850">CancelSPITransfer</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#aa2cfbe9757c7be3421fcef7d0bdb82eb">SPIDataTransfer</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *data, int length)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#aef764467c999d43a3b7de9541a37bd85">SPISendReceive</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *data, int length)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a3ead14b01a9ff9afcec47423b4de3134">SPISendReceive</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> *data, int cmdBufferLength, int dataLength=-1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_external_interrupt_pin_status_def.html">ExternalInterruptPinStatusDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#af4f479adbc61b93bd180a1eb541ca6ef">GetNumOfEventsFromInterruptPin</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="mcp2210_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a> resetCounter)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a4fa41d03c61fe4ac4c68ab1653b7f0b4">GetGPIOPinDirection</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8h.html#a587186e5ac054e4239f014d6081b424f">SetGPIOPinDirection</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> def)</td></tr>
@@ -1703,12 +1703,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aef764467c999d43a3b7de9541a37bd85"></a><!-- doxytag: member="mcp2210.h::SPISendReceive" ref="aef764467c999d43a3b7de9541a37bd85" args="(hid_device *handle, byte *data, int length)" -->
+<a class="anchor" id="a3ead14b01a9ff9afcec47423b4de3134"></a><!-- doxytag: member="mcp2210.h::SPISendReceive" ref="a3ead14b01a9ff9afcec47423b4de3134" args="(hid_device *handle, byte *data, int cmdBufferLength, int dataLength=&#45;1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a> <a class="el" href="mcp2210_8h.html#aef764467c999d43a3b7de9541a37bd85">SPISendReceive</a> </td>
+          <td class="memname"><a class="el" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a> <a class="el" href="mcp2210_8h.html#a3ead14b01a9ff9afcec47423b4de3134">SPISendReceive</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
@@ -1723,7 +1723,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>length</em>&#160;</td>
+          <td class="paramname"><em>cmdBufferLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dataLength</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1739,7 +1745,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">handle</td><td>The handle to the MCP2210 device </td></tr>
     <tr><td class="paramname">data</td><td>a pointer to the data array to be transfered </td></tr>
-    <tr><td class="paramname">length</td><td>number of bytes to be transfered </td></tr>
+    <tr><td class="paramname">cmdBufferLength</td><td>number of command bytes to be transfered </td></tr>
+    <tr><td class="paramname">dataLength</td><td>number of data elements to be returned </td></tr>
   </table>
   </dd>
 </dl>
@@ -1811,7 +1818,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="mcp2210_8h.html">mcp2210.h</a>      </li>
 
-    <li class="footer">Generated on Mon Oct 1 2012 19:14:41 for MCP2210 Library by
+    <li class="footer">Generated on Tue Oct 9 2012 21:12:22 for MCP2210 Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

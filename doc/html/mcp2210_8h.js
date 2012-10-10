@@ -74,6 +74,6 @@ var mcp2210_8h =
     [ "SetSPITransferSettings", "mcp2210_8h.html#a13dd2cef2a3a1bb759a1feec17fb3419", null ],
     [ "SetUSBKeyParameters", "mcp2210_8h.html#a1379e6de32f81df8121a95b19afc77bf", null ],
     [ "SPIDataTransfer", "mcp2210_8h.html#aa2cfbe9757c7be3421fcef7d0bdb82eb", null ],
-    [ "SPISendReceive", "mcp2210_8h.html#aef764467c999d43a3b7de9541a37bd85", null ],
+    [ "SPISendReceive", "mcp2210_8h.html#a3ead14b01a9ff9afcec47423b4de3134", null ],
     [ "WriteEEPROM", "mcp2210_8h.html#a67f5920bb156bf436f7afbf92528dc37", null ]
 ];
