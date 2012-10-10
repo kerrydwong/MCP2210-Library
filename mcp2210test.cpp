@@ -128,7 +128,7 @@ void TestTC77(hid_device* handle) {
 
     byte buf[2];
 
-    SPIDataTransferStatusDef def1 = SPISendReceive(handle, buf, 2, 2);
+    SPIDataTransferStatusDef def1 = SPISendReceive(handle, buf, 2);
 
     int tempVal = 0;
     int sign = def1.DataReceived[0] & 0x80;
@@ -285,8 +285,8 @@ int main(int argc, char** argv) {
 
     //TestGPIO(handle);
     //TestMCP23S08(handle);
-    //TestTC77(handle);
-    Test25LC020A(handle);
+    TestTC77(handle);
+    //Test25LC020A(handle);
 
     /**
      * release the handle
