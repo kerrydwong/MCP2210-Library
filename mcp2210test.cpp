@@ -128,6 +128,7 @@ void TestTC77(hid_device* handle) {
 
     byte buf[2];
 
+    //read the temperature
     SPIDataTransferStatusDef def1 = SPISendReceive(handle, buf, 2);
 
     int tempVal = 0;
