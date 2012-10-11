@@ -21,6 +21,54 @@
 using namespace std;
 
 /**
+ * Test MCP3204 ADC
+ */
+void TestMCP3204(hid_device* handle) {
+    ChipSettingsDef chipDef;
+
+    //set GPIO pins to be CS
+    chipDef = GetChipSettings(handle);
+
+    for (int i = 0; i < 9; i++) {
+        chipDef.GP[i].PinDesignation = GP_PIN_DESIGNATION_CS;
+        chipDef.GP[i].GPIODirection = GPIO_DIRECTION_OUTPUT;
+        chipDef.GP[i].GPIOOutput = 1;
+    }
+    int r = SetChipSettings(handle, chipDef);
+
+    //configure SPI
+    SPITransferSettingsDef def;
+    def = GetSPITransferSettings(handle);
+
+    //chip select is GP1
+    def.ActiveChipSelectValue = 0xfffd;
+    def.IdleChipSelectValue = 0xffff;
+    def.BitRate = 50000l;
+    def.BytesPerSPITransfer =3;
+
+    r = SetSPITransferSettings(handle, def);
+
+    if (r != 0) {
+        printf("Errror setting SPI parameters.\n");
+        return;
+    }
+    
+    byte spiCmdBuffer[4];
+
+    //query ch0
+    spiCmdBuffer[0] = 0x06; //00000110B (start, single ended, ch2)
+    spiCmdBuffer[1] = 0x00; //(ch1 ch0)
+    
+    SPIDataTransferStatusDef def1 = SPISendReceive(handle, spiCmdBuffer, 3);   
+    
+    unsigned int val = ((def1.DataReceived[1] & 0xF) <<8) | def1.DataReceived[2];   
+    
+    printf("%d %d %d %d %d\n",def1.DataReceived[0],def1.DataReceived[1],def1.DataReceived[2],def1.DataReceived[3],def1.DataReceived[4]);
+    printf("%d\n",val);
+    printf("%3.2f\n", val/4096.0*2.5*2);
+}
+
+/**
  * Test 25LC020A EEPROM
  */
 void Test25LC020A(hid_device* handle) {
@@ -44,8 +92,8 @@ void Test25LC020A(hid_device* handle) {
     def.ActiveChipSelectValue = 0xfffe;
     def.IdleChipSelectValue = 0xffff;
     def.BitRate = 6000000l;
-    def.BytesPerSPITransfer = 2; 
-    
+    def.BytesPerSPITransfer = 2;
+
     r = SetSPITransferSettings(handle, def);
 
     if (r != 0) {
@@ -57,40 +105,40 @@ void Test25LC020A(hid_device* handle) {
 
     //enable write
     spiCmdBuffer[0] = 0x06; //WREN
-    SPIDataTransferStatusDef def1  = SPISendReceive(handle, spiCmdBuffer, 1, 1);
-    
+    SPIDataTransferStatusDef def1 = SPISendReceive(handle, spiCmdBuffer, 1, 1);
+
     //write 8 bytes
-    def.BytesPerSPITransfer = 11;     
+    def.BytesPerSPITransfer = 11;
     r = SetSPITransferSettings(handle, def);
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
         return;
     }
-     
+
     spiCmdBuffer[0] = 0x02; //0000 0010 write    
     spiCmdBuffer[1] = 0x00; //address 0x00
-    
+
     for (int i = 1; i <= 8; i++) {
         spiCmdBuffer[i + 1] = i;
     }
-        
-    def1  = SPISendReceive(handle, spiCmdBuffer, 10, 1);
-    
+
+    def1 = SPISendReceive(handle, spiCmdBuffer, 10, 1);
+
     //read 8 bytes
-    def.BytesPerSPITransfer = 11;     
+    def.BytesPerSPITransfer = 11;
     r = SetSPITransferSettings(handle, def);
     if (r != 0) {
         printf("Errror setting SPI parameters.\n");
         return;
     }
-    
+
     spiCmdBuffer[0] = 0x03; //0000 0011 read
     spiCmdBuffer[1] = 0x00; //address 0x00
-        
-    def1  = SPISendReceive(handle, spiCmdBuffer, 2 , 9);
-    
+
+    def1 = SPISendReceive(handle, spiCmdBuffer, 2, 9);
+
     for (int i = 0; i < 8; i++)
-    printf("%d\n", def1.DataReceived[i]);
+        printf("%d\n", def1.DataReceived[i]);
 }
 
 /**
@@ -286,8 +334,9 @@ int main(int argc, char** argv) {
 
     //TestGPIO(handle);
     //TestMCP23S08(handle);
-    TestTC77(handle);
+    //TestTC77(handle);
     //Test25LC020A(handle);
+    TestMCP3204(handle);
 
     /**
      * release the handle
