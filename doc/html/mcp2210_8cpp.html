@@ -127,6 +127,7 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_p_pin_def.html">GPPinDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8cpp.html#a3acf8cc5387dfe9b1fe8dbb5fecfb867">GetGPIOPinValue</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8cpp.html#a84c0182b5a8740b40b484fbd82267af3">SetGPIOPinVal</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle, <a class="el" href="struct_g_p_pin_def.html">GPPinDef</a> def)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhid__device__info.html">hid_device_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8cpp.html#a0b3fb01a244efdc3126f2646553aeb3d">EnumerateMCP2210</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8cpp.html#a8da62fe716bc4b1936d50fd0fca2116d">InitMCP2210</a> (unsigned short vid, unsigned short pid, wchar_t *serialNumber)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8cpp.html#ab81541af956be15df79c95f49b1803c3">InitMCP2210</a> (wchar_t *serialNumber)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8cpp.html#a73f677a660068a18a713c94bd6a76e60">InitMCP2210</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcp2210_8cpp.html#afca69dafd7a0768a60da2cf80525c6b5">ReleaseMCP2210</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *handle)</td></tr>
@@ -430,12 +431,55 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8da62fe716bc4b1936d50fd0fca2116d"></a><!-- doxytag: member="mcp2210.cpp::InitMCP2210" ref="a8da62fe716bc4b1936d50fd0fca2116d" args="(unsigned short vid, unsigned short pid, wchar_t *serialNumber)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a>* <a class="el" href="mcp2210_8h.html#a8da62fe716bc4b1936d50fd0fca2116d">InitMCP2210</a> </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>vid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>serialNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Initialize MCP2210 (using all parameters) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vid</td><td>Vender ID </td></tr>
+    <tr><td class="paramname">pid</td><td>Product ID </td></tr>
+    <tr><td class="paramname">serialNumber</td><td>Serial number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The handle to the MCP2210 device </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ab81541af956be15df79c95f49b1803c3"></a><!-- doxytag: member="mcp2210.cpp::InitMCP2210" ref="ab81541af956be15df79c95f49b1803c3" args="(wchar_t *serialNumber)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a>* <a class="el" href="mcp2210_8h.html#ab81541af956be15df79c95f49b1803c3">InitMCP2210</a> </td>
+          <td class="memname"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a>* <a class="el" href="mcp2210_8h.html#a8da62fe716bc4b1936d50fd0fca2116d">InitMCP2210</a> </td>
           <td>(</td>
           <td class="paramtype">wchar_t *&#160;</td>
           <td class="paramname"><em>serialNumber</em></td><td>)</td>
@@ -447,7 +491,7 @@ Functions</h2></td></tr>
 <p>Initialize MCP2210 (if more than one is present) Vendor ID: 0x04d8 Product ID: 0x00de</p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">serialNumber</td><td>The serialNumber of the MCP2210 device</td></tr>
+    <tr><td class="paramname">serialNumber</td><td>The serial number of the MCP2210 device</td></tr>
   </table>
   </dd>
 </dl>
@@ -460,7 +504,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a>* <a class="el" href="mcp2210_8h.html#ab81541af956be15df79c95f49b1803c3">InitMCP2210</a> </td>
+          <td class="memname"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a>* <a class="el" href="mcp2210_8h.html#a8da62fe716bc4b1936d50fd0fca2116d">InitMCP2210</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1010,10 +1054,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">handle</td><td>The handle to the MCP2210 device </td></tr>
     <tr><td class="paramname">data</td><td>a pointer to the data array to be transfered </td></tr>
     <tr><td class="paramname">cmdBufferLength</td><td>number of command bytes to be transfered </td></tr>
-    <tr><td class="paramname">dataLength</td><td>number of data elements to be returned </td></tr>
+    <tr><td class="paramname">dataLength</td><td>(optional) number of data elements to be returned</td></tr>
   </table>
   </dd>
 </dl>
+<p>if this parameter is not supplied the default length is set to be the same as the command buffer length </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd></dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="struct_s_p_i_data_transfer_status_def.html">SPIDataTransferStatusDef</a> ErrorCode meaning: 0xF7: SPI bus not available 0xF8: SPI transfer in progress (cannot accept any data for the moment) </dd></dl>
 
@@ -1082,7 +1127,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="mcp2210_8cpp.html">mcp2210.cpp</a>      </li>
 
-    <li class="footer">Generated on Tue Oct 9 2012 21:12:22 for MCP2210 Library by
+    <li class="footer">Generated on Fri Oct 12 2012 10:59:32 for MCP2210 Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

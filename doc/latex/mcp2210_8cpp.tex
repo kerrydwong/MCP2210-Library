@@ -51,6 +51,8 @@ int \hyperlink{mcp2210_8cpp_a84c0182b5a8740b40b484fbd82267af3}{\-Set\-G\-P\-I\-O
 \item 
 \hyperlink{structhid__device__info}{hid\-\_\-device\-\_\-info} $\ast$ \hyperlink{mcp2210_8cpp_a0b3fb01a244efdc3126f2646553aeb3d}{\-Enumerate\-M\-C\-P2210} ()
 \item 
+\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{mcp2210_8cpp_a8da62fe716bc4b1936d50fd0fca2116d}{\-Init\-M\-C\-P2210} (unsigned short vid, unsigned short pid, wchar\-\_\-t $\ast$serial\-Number)
+\item 
 \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{mcp2210_8cpp_ab81541af956be15df79c95f49b1803c3}{\-Init\-M\-C\-P2210} (wchar\-\_\-t $\ast$serial\-Number)
 \item 
 \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{mcp2210_8cpp_a73f677a660068a18a713c94bd6a76e60}{\-Init\-M\-C\-P2210} ()
@@ -259,6 +261,27 @@ ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{D
 \begin{DoxySeeAlso}{\-See also}
 \hyperlink{struct_u_s_b_key_parameters_def}{\-U\-S\-B\-Key\-Parameters\-Def} 
 \end{DoxySeeAlso}
+\hypertarget{mcp2210_8cpp_a8da62fe716bc4b1936d50fd0fca2116d}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}}
+\index{\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}!mcp2210.cpp@{mcp2210.\-cpp}}
+\subsubsection[{\-Init\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device}$\ast$ {\bf \-Init\-M\-C\-P2210} (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{vid, }
+\item[{unsigned short}]{pid, }
+\item[{wchar\-\_\-t $\ast$}]{serial\-Number}
+\end{DoxyParamCaption}
+)}}\label{mcp2210_8cpp_a8da62fe716bc4b1936d50fd0fca2116d}
+\-Initialize \-M\-C\-P2210 (using all parameters) 
+\begin{DoxyParams}{\-Parameters}
+{\em vid} & \-Vender \-I\-D \\
+\hline
+{\em pid} & \-Product \-I\-D \\
+\hline
+{\em serial\-Number} & \-Serial number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The handle to the \-M\-C\-P2210 device 
+\end{DoxyReturn}
 \hypertarget{mcp2210_8cpp_ab81541af956be15df79c95f49b1803c3}{\index{mcp2210.\-cpp@{mcp2210.\-cpp}!\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}}
 \index{\-Init\-M\-C\-P2210@{\-Init\-M\-C\-P2210}!mcp2210.cpp@{mcp2210.\-cpp}}
 \subsubsection[{\-Init\-M\-C\-P2210}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device}$\ast$ {\bf \-Init\-M\-C\-P2210} (
@@ -270,7 +293,7 @@ ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{D
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em serial\-Number} & \-The serial\-Number of the \-M\-C\-P2210 device\\
+{\em serial\-Number} & \-The serial number of the \-M\-C\-P2210 device\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{\-Returns}
@@ -591,10 +614,10 @@ ture\-: in memory only. false\-: changes are written to \-N\-V\-R\-A\-M \begin{D
 \hline
 {\em cmd\-Buffer\-Length} & number of command bytes to be transfered \\
 \hline
-{\em data\-Length} & number of data elements to be returned \\
+{\em data\-Length} & (optional) number of data elements to be returned\\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
+if this parameter is not supplied the default length is set to be the same as the command buffer length \begin{DoxyReturn}{\-Returns}
 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{\-See also}

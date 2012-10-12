@@ -10,6 +10,7 @@ var mcp2210_8cpp =
     [ "GetNumOfEventsFromInterruptPin", "mcp2210_8cpp.html#af4f479adbc61b93bd180a1eb541ca6ef", null ],
     [ "GetSPITransferSettings", "mcp2210_8cpp.html#a28a3a304193aa5b16165a52b6be89d8e", null ],
     [ "GetUSBKeyParameters", "mcp2210_8cpp.html#a75c695b47cd5705afb8aad13a4e5751f", null ],
+    [ "InitMCP2210", "mcp2210_8cpp.html#a8da62fe716bc4b1936d50fd0fca2116d", null ],
     [ "InitMCP2210", "mcp2210_8cpp.html#ab81541af956be15df79c95f49b1803c3", null ],
     [ "InitMCP2210", "mcp2210_8cpp.html#a73f677a660068a18a713c94bd6a76e60", null ],
     [ "ReadEEPROM", "mcp2210_8cpp.html#a8ccc5483803201158f79ebe9b01d204d", null ],
