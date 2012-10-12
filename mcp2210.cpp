@@ -447,7 +447,7 @@ SPIDataTransferStatusDef SPIDataTransfer(hid_device *handle, byte* data, int len
 SPIDataTransferStatusDef SPISendReceive(hid_device *handle, byte* data, int cmdBufferLength, int dataLength) {
     SPIDataTransferStatusDef def = SPIDataTransfer(handle, data, cmdBufferLength);
 
-    while (def.SPIEngineStatus == 0x20 || def.SPIEngineStatus == 0x30) {
+    while (def.SPIEngineStatus == SPI_STATUS_STARTED_NO_DATA_TO_RECEIVE || def.SPIEngineStatus == SPI_STATUS_SUCCESSFUL) {
         if (dataLength > 0)
             def = SPIDataTransfer(handle, data, dataLength);
         else
@@ -568,6 +568,10 @@ int SetGPIOPinVal(hid_device *handle, GPPinDef def) {
 
 hid_device_info* EnumerateMCP2210() {
     return hid_enumerate(MCP2210_VID, MCP2210_PID);
+}
+
+hid_device* InitMCP2210(unsigned short vid, unsigned short pid, wchar_t* serialNumber) {
+    return hid_open(vid, pid, serialNumber);    
 }
 
 hid_device* InitMCP2210(wchar_t* serialNumber) {

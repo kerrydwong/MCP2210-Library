@@ -332,11 +332,16 @@ int main(int argc, char** argv) {
         exit(-1);
     }
 
+    /**
+     * Uncomment each line to test the
+     * corresponding device.
+     */
+    
     //TestGPIO(handle);
-    //TestMCP23S08(handle);
+    TestMCP23S08(handle);
     //TestTC77(handle);
     //Test25LC020A(handle);
-    TestMCP3204(handle);
+    //TestMCP3204(handle);
 
     /**
      * release the handle

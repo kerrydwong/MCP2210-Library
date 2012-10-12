@@ -96,6 +96,10 @@ typedef uint8_t byte;
 #define COMMAND_BUFFER_LENGTH 64
 #define RESPONSE_BUFFER_LENGTH 64
 
+#define SPI_STATUS_FINISHED_NO_DATA_TO_SEND 0x10
+#define SPI_STATUS_STARTED_NO_DATA_TO_RECEIVE 0x20
+#define SPI_STATUS_SUCCESSFUL 0x30
+
 /**
  * General purpose pin definition
  */
@@ -390,12 +394,25 @@ hid_device* InitMCP2210();
  *      Product ID: 0x00de
  *
  *      @param serialNumber
- *              The serialNumber of the MCP2210 device
+ *              The serial number of the MCP2210 device
  *      
  * @return 
  *      The handle to the MCP2210 device
  */
 hid_device* InitMCP2210(wchar_t* serialNumber);
+
+/**
+ * Initialize MCP2210 (using all parameters)
+ * @param vid
+ *      Vender ID
+ * @param pid
+ *      Product ID
+ * @param serialNumber
+ *      Serial number
+ * @return 
+ *      The handle to the MCP2210 device
+ */
+hid_device* InitMCP2210(unsigned short vid, unsigned short pid, wchar_t* serialNumber);
 
 /**
  * Release the device handle and close the device
@@ -668,8 +685,11 @@ SPIDataTransferStatusDef SPIDataTransfer(hid_device *handle, byte* data, int len
  *      a pointer to the data array to be transfered
  * @param cmdBufferLength
  *      number of command bytes to be transfered
- * @param dataLength
+ * @param dataLength (optional)
  *      number of data elements to be returned
+ * 
+ *      if this parameter is not supplied the default length is set to 
+ *      be the same as the command buffer length
  * @return 
  *      @see SPIDataTransferStatusDef
  *      ErrorCode meaning:
