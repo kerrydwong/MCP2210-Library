@@ -74,7 +74,7 @@ void TestMCP3204(hid_device* handle) {
 void Test25LC020A(hid_device* handle) {
     ChipSettingsDef chipDef;
 
-    //set GPIO pins to be CS
+    //set GPIO pins to beC S
     chipDef = GetChipSettings(handle);
 
     for (int i = 0; i < 9; i++) {
@@ -338,8 +338,8 @@ int main(int argc, char** argv) {
      */
     
     //TestGPIO(handle);
-    TestMCP23S08(handle);
-    //TestTC77(handle);
+    //TestMCP23S08(handle);
+    TestTC77(handle);
     //Test25LC020A(handle);
     //TestMCP3204(handle);
 
