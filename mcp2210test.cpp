@@ -63,8 +63,6 @@ void TestMCP3204(hid_device* handle) {
     
     unsigned int val = ((def1.DataReceived[1] & 0xF) <<8) | def1.DataReceived[2];   
     
-    printf("%d %d %d %d %d\n",def1.DataReceived[0],def1.DataReceived[1],def1.DataReceived[2],def1.DataReceived[3],def1.DataReceived[4]);
-    printf("%d\n",val);
     printf("%3.2f\n", val/4096.0*2.5*2);
 }
 
