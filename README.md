@@ -18,6 +18,9 @@ The library uses <a href="https://github.com/signal11/hidapi">signal11's hidapi<
 <li>
 <a href="http://www.kerrywong.com/2012/10/15/mcp2210-library-spi-eeprom/">SPI EEPROM Example</a>
 </li>
+<li>
+<a href="http://www.kerrywong.com/2012/10/22/mcp2210-library-mcp3204-spi-adc/">MCP3204 SPI ADC Example</a>
+</li>
 </ul>
 
 Note, the compiled code needs root access to the device and need to be run using "sudo". You may need to add the provided udev rule (99-hid.rules) to the /etc/udev/rules.d directory. 
