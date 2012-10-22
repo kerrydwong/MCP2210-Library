@@ -24,5 +24,3 @@ The library uses <a href="https://github.com/signal11/hidapi">signal11's hidapi<
 </ul>
 
 Note, the compiled code needs root access to the device and need to be run using "sudo". You may need to add the provided udev rule (99-hid.rules) to the /etc/udev/rules.d directory. 
-
-More examples will be available on my <a href="http://www.kerrywong.com">blog</a>.
