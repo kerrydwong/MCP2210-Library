@@ -22,6 +22,7 @@ using namespace std;
 
 /**
  * Test MCP3204 ADC
+ * Note: the code below assumes that CS is connected to GP1.
  */
 void TestMCP3204(hid_device* handle) {
     ChipSettingsDef chipDef;
@@ -68,6 +69,7 @@ void TestMCP3204(hid_device* handle) {
 
 /**
  * Test 25LC020A EEPROM
+ * Note: the code below assumes that CS is connected to GP0.
  */
 void Test25LC020A(hid_device* handle) {
     ChipSettingsDef chipDef;
@@ -141,6 +143,7 @@ void Test25LC020A(hid_device* handle) {
 
 /**
  * Test the TC77 temperature sensor
+ * Note: the code below assumes that CS is connected to GP7
  */
 void TestTC77(hid_device* handle) {
     ChipSettingsDef chipDef;
@@ -195,6 +198,7 @@ void TestTC77(hid_device* handle) {
 
 /**
  * Test MCP23S08 (parameters used are for the evaluation board)
+ * Note: the code below assumes that CS is connected to GP4
  */
 void TestMCP23S08(hid_device* handle) {
     ChipSettingsDef chipDef;

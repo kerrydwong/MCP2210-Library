@@ -31,6 +31,7 @@ var searchData=
   ['cmdsub_5fusb_5fmanufacturer_5fname',['CMDSUB_USB_MANUFACTURER_NAME',['../mcp2210_8h.html#ad7a5e5045218249fcfa138fa023a27a2',1,'mcp2210.h']]],
   ['cmdsub_5fusb_5fproduct_5fname',['CMDSUB_USB_PRODUCT_NAME',['../mcp2210_8h.html#a901bcd6946338af5d40fff5a8a0ebb5d',1,'mcp2210.h']]],
   ['command_5fbuffer_5flength',['COMMAND_BUFFER_LENGTH',['../mcp2210_8h.html#aeae55aa39effa47d478a4337398fdbe1',1,'mcp2210.h']]],
+  ['copy_5fudev_5fstring',['copy_udev_string',['../hid_8c.html#abae9df0dc1e8130854ede76fcf131b8f',1,'hid.c']]],
   ['count_5ffalling_5fedges',['COUNT_FALLING_EDGES',['../mcp2210_8h.html#ad7fa9ff6d60ed4c212c55c2d1b850e9e',1,'mcp2210.h']]],
   ['count_5fhigh_5fpulses',['COUNT_HIGH_PULSES',['../mcp2210_8h.html#ac6830212dfacc2c37c4f2ba45a684ee5',1,'mcp2210.h']]],
   ['count_5flow_5fpulses',['COUNT_LOW_PULSES',['../mcp2210_8h.html#ac8a8c468f6901f87879450604bfe1503',1,'mcp2210.h']]],

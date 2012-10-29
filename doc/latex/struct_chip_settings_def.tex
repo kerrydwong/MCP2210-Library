@@ -24,29 +24,40 @@ int \hyperlink{struct_chip_settings_def_a711cd7ddde92dcfefaba6863b303ab3d}{\-Err
 \end{DoxyCompactItemize}
 
 
+\subsection{\-Detailed \-Description}
+\-Chip settings definition 
+
 \subsection{\-Member \-Data \-Documentation}
 \hypertarget{struct_chip_settings_def_af61e2aaa5bcf3284abd4554d2be88002}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-Dedicated\-Function\-Interrupt\-Pin\-Mode@{\-Dedicated\-Function\-Interrupt\-Pin\-Mode}}
 \index{\-Dedicated\-Function\-Interrupt\-Pin\-Mode@{\-Dedicated\-Function\-Interrupt\-Pin\-Mode}!ChipSettingsDef@{\-Chip\-Settings\-Def}}
 \subsubsection[{\-Dedicated\-Function\-Interrupt\-Pin\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Chip\-Settings\-Def\-::\-Dedicated\-Function\-Interrupt\-Pin\-Mode}}}\label{struct_chip_settings_def_af61e2aaa5bcf3284abd4554d2be88002}
-\hypertarget{struct_chip_settings_def_a711cd7ddde92dcfefaba6863b303ab3d}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-Error\-Code@{\-Error\-Code}}
+\-Dedicated function mode
+
+\-B100 -\/ count high pulses \-B011 -\/ count low pulses \-B010 -\/ count rising edges \-B001 -\/ count falling edges \-B000 -\/ no interrupt counting \hypertarget{struct_chip_settings_def_a711cd7ddde92dcfefaba6863b303ab3d}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-Error\-Code@{\-Error\-Code}}
 \index{\-Error\-Code@{\-Error\-Code}!ChipSettingsDef@{\-Chip\-Settings\-Def}}
 \subsubsection[{\-Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Chip\-Settings\-Def\-::\-Error\-Code}}}\label{struct_chip_settings_def_a711cd7ddde92dcfefaba6863b303ab3d}
 \hypertarget{struct_chip_settings_def_aea8065ee4c940dcbde93dd1633c63f38}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-G\-P@{\-G\-P}}
 \index{\-G\-P@{\-G\-P}!ChipSettingsDef@{\-Chip\-Settings\-Def}}
 \subsubsection[{\-G\-P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-P\-Pin} {\bf \-Chip\-Settings\-Def\-::\-G\-P}\mbox{[}9\mbox{]}}}\label{struct_chip_settings_def_aea8065ee4c940dcbde93dd1633c63f38}
-\hypertarget{struct_chip_settings_def_a56bcb330a04c9b6b108ee63ce635c92d}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-N\-V\-Ram\-Chip\-Param\-Access\-Control@{\-N\-V\-Ram\-Chip\-Param\-Access\-Control}}
+\-General purpose \-I/\-O pin 0...8 \hypertarget{struct_chip_settings_def_a56bcb330a04c9b6b108ee63ce635c92d}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-N\-V\-Ram\-Chip\-Param\-Access\-Control@{\-N\-V\-Ram\-Chip\-Param\-Access\-Control}}
 \index{\-N\-V\-Ram\-Chip\-Param\-Access\-Control@{\-N\-V\-Ram\-Chip\-Param\-Access\-Control}!ChipSettingsDef@{\-Chip\-Settings\-Def}}
 \subsubsection[{\-N\-V\-Ram\-Chip\-Param\-Access\-Control}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Chip\-Settings\-Def\-::\-N\-V\-Ram\-Chip\-Param\-Access\-Control}}}\label{struct_chip_settings_def_a56bcb330a04c9b6b108ee63ce635c92d}
-\hypertarget{struct_chip_settings_def_a0e9e9123c42b18bdd6294d0ae7935582}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!password@{password}}
+\-N\-V\-R\-A\-M chip parameters access control
+
+0x00 -\/ \-Chip settings not protected 0x01 -\/ \-Chip settings protected by password access 0x80 -\/ \-Chip settings permanently locked \hypertarget{struct_chip_settings_def_a0e9e9123c42b18bdd6294d0ae7935582}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!password@{password}}
 \index{password@{password}!ChipSettingsDef@{\-Chip\-Settings\-Def}}
 \subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf \-Chip\-Settings\-Def\-::password}\mbox{[}8\mbox{]}}}\label{struct_chip_settings_def_a0e9e9123c42b18bdd6294d0ae7935582}
-\hypertarget{struct_chip_settings_def_a5a29397e3fd6793de5d8d348b3b11d22}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-Remote\-Wake\-Up\-Enabled@{\-Remote\-Wake\-Up\-Enabled}}
+\-New password charecters 0..7
+
+\-When the password does not need to be changed, the fields must be filled with 0. \hypertarget{struct_chip_settings_def_a5a29397e3fd6793de5d8d348b3b11d22}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-Remote\-Wake\-Up\-Enabled@{\-Remote\-Wake\-Up\-Enabled}}
 \index{\-Remote\-Wake\-Up\-Enabled@{\-Remote\-Wake\-Up\-Enabled}!ChipSettingsDef@{\-Chip\-Settings\-Def}}
 \subsubsection[{\-Remote\-Wake\-Up\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Chip\-Settings\-Def\-::\-Remote\-Wake\-Up\-Enabled}}}\label{struct_chip_settings_def_a5a29397e3fd6793de5d8d348b3b11d22}
-\hypertarget{struct_chip_settings_def_abeaf6785170c987a19025a506cf14a8d}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-S\-P\-I\-Bus\-Release\-Mode@{\-S\-P\-I\-Bus\-Release\-Mode}}
+\-Remote wake-\/up enabled/disabled 0 -\/ \-Disabled 1 -\/ \-Enabled \hypertarget{struct_chip_settings_def_abeaf6785170c987a19025a506cf14a8d}{\index{\-Chip\-Settings\-Def@{\-Chip\-Settings\-Def}!\-S\-P\-I\-Bus\-Release\-Mode@{\-S\-P\-I\-Bus\-Release\-Mode}}
 \index{\-S\-P\-I\-Bus\-Release\-Mode@{\-S\-P\-I\-Bus\-Release\-Mode}!ChipSettingsDef@{\-Chip\-Settings\-Def}}
 \subsubsection[{\-S\-P\-I\-Bus\-Release\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Chip\-Settings\-Def\-::\-S\-P\-I\-Bus\-Release\-Mode}}}\label{struct_chip_settings_def_abeaf6785170c987a19025a506cf14a8d}
+\-S\-P\-I bus release enable
 
+0 -\/ \-S\-P\-I bus is released between transfers 1 -\/ \-S\-P\-I bus is not released by the \-M\-C\-P2210 between transfers 
 
 \-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 

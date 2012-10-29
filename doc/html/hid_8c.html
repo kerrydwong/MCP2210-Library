@@ -35,7 +35,7 @@
    <div id="projectname">MCP2210 Library
    
    </div>
-   
+   <div id="projectbrief">An Open Source MCP2210 Library for Linux.</div>
   </td>
   
   
@@ -139,7 +139,12 @@ Enumerations</h2></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#a4a51eff11e6b5e81700d8a2f85267d5f">new_hid_device</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#ab31adac234dbe9c0059f8d027c0333a8">register_error</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *device, const char *op)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#a7159e475a48b3e88d6a5cf5ab33ed283">utf8_to_wchar_t</a> (const char *utf8)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#abae9df0dc1e8130854ede76fcf131b8f">copy_udev_string</a> (struct udev_device *dev, const char *udev_name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#aa8367d23a06060a60fde2dc6d9852f47">uses_numbered_reports</a> (__u8 *report_descriptor, __u32 size)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#a8231475fac4a08db9dd6da86a5355acf">parse_uevent_info</a> (const char *uevent, int *bus_type, unsigned short *vendor_id, unsigned short *product_id, char **serial_number_utf8, char **product_name_utf8)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#acd5574d95a5e6b63f627ea60d66612cc">get_device_string</a> (<a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *dev, enum <a class="el" href="hid_8c.html#aa6d92ab04844f58836f237b1994e3007">device_string_id</a> key, wchar_t *string, size_t maxlen)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int <a class="el" href="hidapi_8h.html#aa60150016800ccb88fdf140e8553ae13">HID_API_EXPORT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_p_i.html#ga142ffc1b0b7a7fa412d3862b2a17164b">hid_init</a> (void)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the HIDAPI library.  <a href="group___a_p_i.html#ga142ffc1b0b7a7fa412d3862b2a17164b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int <a class="el" href="hidapi_8h.html#aa60150016800ccb88fdf140e8553ae13">HID_API_EXPORT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_p_i.html#gacf5da9ce37132eba69fc259f17f13023">hid_exit</a> (void)</td></tr>
@@ -181,6 +186,7 @@ Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#a0ca67dd1130adb839438e3ae0990e952">device_string_names</a> []</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static __u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hid_8c.html#ab1b291184dd4fab1ce3164bcd1ecc9fe">kernel_version</a> = 0</td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
 <a class="anchor" id="ac5092480a5db624163f7b66847e42a70"></a><!-- doxytag: member="hid.c::HIDIOCGFEATURE" ref="ac5092480a5db624163f7b66847e42a70" args="(len)" -->
@@ -244,6 +250,72 @@ Variables</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="abae9df0dc1e8130854ede76fcf131b8f"></a><!-- doxytag: member="hid.c::copy_udev_string" ref="abae9df0dc1e8130854ede76fcf131b8f" args="(struct udev_device *dev, const char *udev_name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static wchar_t* <a class="el" href="hid_8c.html#abae9df0dc1e8130854ede76fcf131b8f">copy_udev_string</a> </td>
+          <td>(</td>
+          <td class="paramtype">struct udev_device *&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>udev_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd5574d95a5e6b63f627ea60d66612cc"></a><!-- doxytag: member="hid.c::get_device_string" ref="acd5574d95a5e6b63f627ea60d66612cc" args="(hid_device *dev, enum device_string_id key, wchar_t *string, size_t maxlen)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int <a class="el" href="hid_8c.html#acd5574d95a5e6b63f627ea60d66612cc">get_device_string</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="hid_8c.html#aa6d92ab04844f58836f237b1994e3007">device_string_id</a>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>maxlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4a51eff11e6b5e81700d8a2f85267d5f"></a><!-- doxytag: member="hid.c::new_hid_device" ref="a4a51eff11e6b5e81700d8a2f85267d5f" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -312,6 +384,77 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab31adac234dbe9c0059f8d027c0333a8"></a><!-- doxytag: member="hid.c::register_error" ref="ab31adac234dbe9c0059f8d027c0333a8" args="(hid_device *device, const char *op)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="hid_8c.html#ab31adac234dbe9c0059f8d027c0333a8">register_error</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="hidapi_8h.html#aa6da74d5686d198dd3e5440e60088fcc">hid_device</a> *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa8367d23a06060a60fde2dc6d9852f47"></a><!-- doxytag: member="hid.c::uses_numbered_reports" ref="aa8367d23a06060a60fde2dc6d9852f47" args="(__u8 *report_descriptor, __u32 size)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int <a class="el" href="hid_8c.html#aa8367d23a06060a60fde2dc6d9852f47">uses_numbered_reports</a> </td>
+          <td>(</td>
+          <td class="paramtype">__u8 *&#160;</td>
+          <td class="paramname"><em>report_descriptor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__u32&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7159e475a48b3e88d6a5cf5ab33ed283"></a><!-- doxytag: member="hid.c::utf8_to_wchar_t" ref="a7159e475a48b3e88d6a5cf5ab33ed283" args="(const char *utf8)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static wchar_t* <a class="el" href="hid_8c.html#a7159e475a48b3e88d6a5cf5ab33ed283">utf8_to_wchar_t</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>utf8</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/><h2>Variable Documentation</h2>
 <a class="anchor" id="a0ca67dd1130adb839438e3ae0990e952"></a><!-- doxytag: member="hid.c::device_string_names" ref="a0ca67dd1130adb839438e3ae0990e952" args="[]" -->
 <div class="memitem">
@@ -329,6 +472,19 @@ Variables</h2></td></tr>
      <span class="stringliteral">&quot;serial&quot;</span>,
 }
 </pre></div>
+</div>
+</div>
+<a class="anchor" id="ab1b291184dd4fab1ce3164bcd1ecc9fe"></a><!-- doxytag: member="hid.c::kernel_version" ref="ab1b291184dd4fab1ce3164bcd1ecc9fe" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__u32 <a class="el" href="hid_8c.html#ab1b291184dd4fab1ce3164bcd1ecc9fe">kernel_version</a> = 0<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
 </div>
 </div>
 </div><!-- contents -->
@@ -351,7 +507,7 @@ Variables</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="hid_8c.html">hid.c</a>      </li>
 
-    <li class="footer">Generated on Mon Oct 22 2012 19:27:47 for MCP2210 Library by
+    <li class="footer">Generated on Sun Oct 28 2012 20:27:19 for MCP2210 Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

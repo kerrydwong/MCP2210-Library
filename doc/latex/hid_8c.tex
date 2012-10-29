@@ -44,7 +44,17 @@ enum \hyperlink{hid_8c_aa6d92ab04844f58836f237b1994e3007}{device\-\_\-string\-\_
 \item 
 \hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$ \hyperlink{hid_8c_a4a51eff11e6b5e81700d8a2f85267d5f}{new\-\_\-hid\-\_\-device} ()
 \item 
+static void \hyperlink{hid_8c_ab31adac234dbe9c0059f8d027c0333a8}{register\-\_\-error} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$device, const char $\ast$op)
+\item 
+static wchar\-\_\-t $\ast$ \hyperlink{hid_8c_a7159e475a48b3e88d6a5cf5ab33ed283}{utf8\-\_\-to\-\_\-wchar\-\_\-t} (const char $\ast$utf8)
+\item 
+static wchar\-\_\-t $\ast$ \hyperlink{hid_8c_abae9df0dc1e8130854ede76fcf131b8f}{copy\-\_\-udev\-\_\-string} (struct udev\-\_\-device $\ast$dev, const char $\ast$udev\-\_\-name)
+\item 
+static int \hyperlink{hid_8c_aa8367d23a06060a60fde2dc6d9852f47}{uses\-\_\-numbered\-\_\-reports} (\-\_\-\-\_\-u8 $\ast$report\-\_\-descriptor, \-\_\-\-\_\-u32 size)
+\item 
 int \hyperlink{hid_8c_a8231475fac4a08db9dd6da86a5355acf}{parse\-\_\-uevent\-\_\-info} (const char $\ast$uevent, int $\ast$bus\-\_\-type, unsigned short $\ast$vendor\-\_\-id, unsigned short $\ast$product\-\_\-id, char $\ast$$\ast$serial\-\_\-number\-\_\-utf8, char $\ast$$\ast$product\-\_\-name\-\_\-utf8)
+\item 
+static int \hyperlink{hid_8c_acd5574d95a5e6b63f627ea60d66612cc}{get\-\_\-device\-\_\-string} (\hyperlink{hidapi_8h_aa6da74d5686d198dd3e5440e60088fcc}{hid\-\_\-device} $\ast$dev, enum \hyperlink{hid_8c_aa6d92ab04844f58836f237b1994e3007}{device\-\_\-string\-\_\-id} key, wchar\-\_\-t $\ast$string, size\-\_\-t maxlen)
 \item 
 int \hyperlink{hidapi_8h_aa60150016800ccb88fdf140e8553ae13}{\-H\-I\-D\-\_\-\-A\-P\-I\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group___a_p_i_ga142ffc1b0b7a7fa412d3862b2a17164b}{hid\-\_\-init} (void)
 \begin{DoxyCompactList}\small\item\em \-Initialize the \-H\-I\-D\-A\-P\-I library. \end{DoxyCompactList}\item 
@@ -88,6 +98,8 @@ $\ast$\hyperlink{hidapi_8h_af140a25716604e86096670a505a58ee0}{\-H\-I\-D\-\_\-\-A
 \begin{DoxyCompactItemize}
 \item 
 const char $\ast$ \hyperlink{hid_8c_a0ca67dd1130adb839438e3ae0990e952}{device\-\_\-string\-\_\-names} \mbox{[}$\,$\mbox{]}
+\item 
+static \-\_\-\-\_\-u32 \hyperlink{hid_8c_ab1b291184dd4fab1ce3164bcd1ecc9fe}{kernel\-\_\-version} = 0
 \end{DoxyCompactItemize}
 
 
@@ -129,6 +141,24 @@ const char $\ast$ \hyperlink{hid_8c_a0ca67dd1130adb839438e3ae0990e952}{device\-\
 
 
 \subsection{\-Function \-Documentation}
+\hypertarget{hid_8c_abae9df0dc1e8130854ede76fcf131b8f}{\index{hid.\-c@{hid.\-c}!copy\-\_\-udev\-\_\-string@{copy\-\_\-udev\-\_\-string}}
+\index{copy\-\_\-udev\-\_\-string@{copy\-\_\-udev\-\_\-string}!hid.c@{hid.\-c}}
+\subsubsection[{copy\-\_\-udev\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}static wchar\-\_\-t$\ast$ {\bf copy\-\_\-udev\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{struct udev\-\_\-device $\ast$}]{dev, }
+\item[{const char $\ast$}]{udev\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{hid_8c_abae9df0dc1e8130854ede76fcf131b8f}
+\hypertarget{hid_8c_acd5574d95a5e6b63f627ea60d66612cc}{\index{hid.\-c@{hid.\-c}!get\-\_\-device\-\_\-string@{get\-\_\-device\-\_\-string}}
+\index{get\-\_\-device\-\_\-string@{get\-\_\-device\-\_\-string}!hid.c@{hid.\-c}}
+\subsubsection[{get\-\_\-device\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}static int {\bf get\-\_\-device\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{dev, }
+\item[{enum {\bf device\-\_\-string\-\_\-id}}]{key, }
+\item[{wchar\-\_\-t $\ast$}]{string, }
+\item[{size\-\_\-t}]{maxlen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{hid_8c_acd5574d95a5e6b63f627ea60d66612cc}
 \hypertarget{hid_8c_a4a51eff11e6b5e81700d8a2f85267d5f}{\index{hid.\-c@{hid.\-c}!new\-\_\-hid\-\_\-device@{new\-\_\-hid\-\_\-device}}
 \index{new\-\_\-hid\-\_\-device@{new\-\_\-hid\-\_\-device}!hid.c@{hid.\-c}}
 \subsubsection[{new\-\_\-hid\-\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hid\-\_\-device}$\ast$ {\bf new\-\_\-hid\-\_\-device} (
@@ -148,7 +178,30 @@ const char $\ast$ \hyperlink{hid_8c_a0ca67dd1130adb839438e3ae0990e952}{device\-\
 \item[{char $\ast$$\ast$}]{product\-\_\-name\-\_\-utf8}
 \end{DoxyParamCaption}
 )}}\label{hid_8c_a8231475fac4a08db9dd6da86a5355acf}
-type vendor product \-H\-I\-D\-\_\-\-I\-D=0003\-:000005\-A\-C\-:00008242
+type vendor product \-H\-I\-D\-\_\-\-I\-D=0003\-:000005\-A\-C\-:00008242\hypertarget{hid_8c_ab31adac234dbe9c0059f8d027c0333a8}{\index{hid.\-c@{hid.\-c}!register\-\_\-error@{register\-\_\-error}}
+\index{register\-\_\-error@{register\-\_\-error}!hid.c@{hid.\-c}}
+\subsubsection[{register\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf register\-\_\-error} (
+\begin{DoxyParamCaption}
+\item[{{\bf hid\-\_\-device} $\ast$}]{device, }
+\item[{const char $\ast$}]{op}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{hid_8c_ab31adac234dbe9c0059f8d027c0333a8}
+\hypertarget{hid_8c_aa8367d23a06060a60fde2dc6d9852f47}{\index{hid.\-c@{hid.\-c}!uses\-\_\-numbered\-\_\-reports@{uses\-\_\-numbered\-\_\-reports}}
+\index{uses\-\_\-numbered\-\_\-reports@{uses\-\_\-numbered\-\_\-reports}!hid.c@{hid.\-c}}
+\subsubsection[{uses\-\_\-numbered\-\_\-reports}]{\setlength{\rightskip}{0pt plus 5cm}static int {\bf uses\-\_\-numbered\-\_\-reports} (
+\begin{DoxyParamCaption}
+\item[{\-\_\-\-\_\-u8 $\ast$}]{report\-\_\-descriptor, }
+\item[{\-\_\-\-\_\-u32}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{hid_8c_aa8367d23a06060a60fde2dc6d9852f47}
+\hypertarget{hid_8c_a7159e475a48b3e88d6a5cf5ab33ed283}{\index{hid.\-c@{hid.\-c}!utf8\-\_\-to\-\_\-wchar\-\_\-t@{utf8\-\_\-to\-\_\-wchar\-\_\-t}}
+\index{utf8\-\_\-to\-\_\-wchar\-\_\-t@{utf8\-\_\-to\-\_\-wchar\-\_\-t}!hid.c@{hid.\-c}}
+\subsubsection[{utf8\-\_\-to\-\_\-wchar\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}static wchar\-\_\-t$\ast$ {\bf utf8\-\_\-to\-\_\-wchar\-\_\-t} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{utf8}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{hid_8c_a7159e475a48b3e88d6a5cf5ab33ed283}
+
 
 \subsection{\-Variable \-Documentation}
 \hypertarget{hid_8c_a0ca67dd1130adb839438e3ae0990e952}{\index{hid.\-c@{hid.\-c}!device\-\_\-string\-\_\-names@{device\-\_\-string\-\_\-names}}
@@ -162,3 +215,6 @@ type vendor product \-H\-I\-D\-\_\-\-I\-D=0003\-:000005\-A\-C\-:00008242
      "serial",
 }
 \end{DoxyCode}
+\hypertarget{hid_8c_ab1b291184dd4fab1ce3164bcd1ecc9fe}{\index{hid.\-c@{hid.\-c}!kernel\-\_\-version@{kernel\-\_\-version}}
+\index{kernel\-\_\-version@{kernel\-\_\-version}!hid.c@{hid.\-c}}
+\subsubsection[{kernel\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-u32 {\bf kernel\-\_\-version} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{hid_8c_ab1b291184dd4fab1ce3164bcd1ecc9fe}

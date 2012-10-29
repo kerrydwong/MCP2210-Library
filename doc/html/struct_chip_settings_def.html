@@ -35,7 +35,7 @@
    <div id="projectname">MCP2210 Library
    
    </div>
-   
+   <div id="projectbrief">An Open Source MCP2210 Library for Linux.</div>
   </td>
   
   
@@ -116,7 +116,9 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_chip_settings_def.html#a0e9e9123c42b18bdd6294d0ae7935582">password</a> [8]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_chip_settings_def.html#a711cd7ddde92dcfefaba6863b303ab3d">ErrorCode</a></td></tr>
 </table>
-<hr/><h2>Member Data Documentation</h2>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Chip settings definition </p>
+</div><hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="af61e2aaa5bcf3284abd4554d2be88002"></a><!-- doxytag: member="ChipSettingsDef::DedicatedFunctionInterruptPinMode" ref="af61e2aaa5bcf3284abd4554d2be88002" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -127,6 +129,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Dedicated function mode</p>
+<p>B100 - count high pulses B011 - count low pulses B010 - count rising edges B001 - count falling edges B000 - no interrupt counting </p>
 
 </div>
 </div>
@@ -153,6 +157,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>General purpose I/O pin 0...8 </p>
 
 </div>
 </div>
@@ -166,6 +171,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>NVRAM chip parameters access control</p>
+<p>0x00 - Chip settings not protected 0x01 - Chip settings protected by password access 0x80 - Chip settings permanently locked </p>
 
 </div>
 </div>
@@ -179,6 +186,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>New password charecters 0..7</p>
+<p>When the password does not need to be changed, the fields must be filled with 0. </p>
 
 </div>
 </div>
@@ -192,6 +201,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Remote wake-up enabled/disabled 0 - Disabled 1 - Enabled </p>
 
 </div>
 </div>
@@ -205,6 +215,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>SPI bus release enable</p>
+<p>0 - SPI bus is released between transfers 1 - SPI bus is not released by the MCP2210 between transfers </p>
 
 </div>
 </div>
@@ -231,7 +243,7 @@ Public Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="struct_chip_settings_def.html">ChipSettingsDef</a>      </li>
 
-    <li class="footer">Generated on Mon Oct 22 2012 19:27:47 for MCP2210 Library by
+    <li class="footer">Generated on Sun Oct 28 2012 20:27:19 for MCP2210 Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

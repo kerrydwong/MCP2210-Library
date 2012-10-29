@@ -137,30 +137,32 @@ struct SPITransferSettingsDef {
     unsigned long BitRate;
 
     /**
+     * MSB                             LSB
      * CS8 CS7 CS6 CS5 CS4 CS3 CS2 CS1 CS0
      */
     unsigned int IdleChipSelectValue;
 
     /**
+     * MSB                             LSB
      * CS8 CS7 CS6 CS5 CS4 CS3 CS2 CS1 CS0
      */
     unsigned int ActiveChipSelectValue;
 
     /**
      * Chip select to data delay
-     * x100 ns
+     * delay = value x 100 ns
      */
     unsigned int CSToDataDelay;
 
     /**
      * Last data byte to chip select (de-asserted) delay
-     * x100 ns
+     * delay = value x 100 ns
      */
     unsigned int LastDataByteToCSDelay;
 
     /**
      * Delay between subsequent data bytes
-     * x100 ns
+     * delay = value x 100 ns
      */
     unsigned int SubsequentDataByteDelay;
 
@@ -184,12 +186,55 @@ struct SPITransferSettingsDef {
     int ErrorCode;
 };
 
+/**
+ * Chip settings definition
+ */
 struct ChipSettingsDef {
+    /**
+     * General purpose I/O pin 0...8
+     */
     GPPin GP[9];
+    
+    /**
+     * Remote wake-up enabled/disabled
+     * 0 - Disabled
+     * 1 - Enabled
+     */
     unsigned int RemoteWakeUpEnabled;
+    
+    /**
+     * Dedicated function mode
+     * 
+     * B100 - count high pulses
+     * B011 - count low pulses
+     * B010 - count rising edges
+     * B001 - count falling edges
+     * B000 - no interrupt counting
+     */
     unsigned int DedicatedFunctionInterruptPinMode;
+    
+    /**
+     * SPI bus release enable
+     * 
+     * 0 - SPI bus is released between transfers
+     * 1 - SPI bus is not released by the MCP2210 between transfers
+     */
     unsigned int SPIBusReleaseMode;
+    
+    /**
+     * NVRAM chip parameters access control
+     * 
+     * 0x00 - Chip settings not protected
+     * 0x01 - Chip settings protected by password access
+     * 0x80 - Chip settings permanently locked
+     */
     unsigned int NVRamChipParamAccessControl;
+    
+    /**
+     * New password charecters 0..7
+     * 
+     * When the password does not need to be changed, the fields must be filled with 0.
+     */
     char password[8];
     int ErrorCode;
 };
@@ -231,7 +276,7 @@ struct USBKeyParametersDef {
 
     /**
      * Requested current amount from USB Host
-     * x2 mA
+     * current = value x 2 mA
      */
     unsigned int RequestedCurrentAmountFromHost;
 
@@ -276,6 +321,7 @@ struct ManufacturerProductNameDef {
 struct ChipStatusDef {
     /**
      * SPI bus release external request status
+     * 
      * 0x01: no external request for SPI bus release
      * 0x00: pending external request for SPI bus release
      */
@@ -283,6 +329,7 @@ struct ChipStatusDef {
 
     /**
      * SPI bus current owner
+     * 
      * 0x00: no owner
      * 0x01: USB bridge
      * 0x02: External master
@@ -297,6 +344,7 @@ struct ChipStatusDef {
 
     /**
      * Whether the password was guessed
+     * 
      * 0x00: password not guessed
      * 0x01: password guessed
      */
@@ -317,9 +365,9 @@ struct SPIDataTransferStatusDef {
      */
     unsigned int NumberOfBytesReceived;
 
-
     /**
      * SPI transfer engine status
+     * 
      * 0x10: SPI transfer finished, no data to send
      * 0x20: SPI transfer started, no data to receive
      * 0x30: SPI data accepted, command completed successfully

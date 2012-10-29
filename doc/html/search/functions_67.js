@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['get_5fdevice_5fstring',['get_device_string',['../hid_8c.html#acd5574d95a5e6b63f627ea60d66612cc',1,'hid.c']]],
   ['getchipsettings',['GetChipSettings',['../mcp2210_8cpp.html#a7a1ba0035d04e9e72b4db2cf5ad21220',1,'GetChipSettings(hid_device *handle, bool isVolatile):&#160;mcp2210.cpp'],['../mcp2210_8h.html#a11807ce257ba3d6bebb041e3c98a9a58',1,'GetChipSettings(hid_device *handle, bool isVolatile=true):&#160;mcp2210.cpp']]],
   ['getchipstatus',['GetChipStatus',['../mcp2210_8cpp.html#a7d64b0e934db7345efb94af6a316e487',1,'GetChipStatus(hid_device *handle):&#160;mcp2210.cpp'],['../mcp2210_8h.html#a7d64b0e934db7345efb94af6a316e487',1,'GetChipStatus(hid_device *handle):&#160;mcp2210.cpp']]],
   ['getgpiopindirection',['GetGPIOPinDirection',['../mcp2210_8cpp.html#a4fa41d03c61fe4ac4c68ab1653b7f0b4',1,'GetGPIOPinDirection(hid_device *handle):&#160;mcp2210.cpp'],['../mcp2210_8h.html#a4fa41d03c61fe4ac4c68ab1653b7f0b4',1,'GetGPIOPinDirection(hid_device *handle):&#160;mcp2210.cpp']]],

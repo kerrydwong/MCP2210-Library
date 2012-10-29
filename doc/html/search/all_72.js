@@ -1,6 +1,7 @@
 var searchData=
 [
   ['readeeprom',['ReadEEPROM',['../mcp2210_8cpp.html#a8ccc5483803201158f79ebe9b01d204d',1,'ReadEEPROM(hid_device *handle, byte addr, byte *val):&#160;mcp2210.cpp'],['../mcp2210_8h.html#a8ccc5483803201158f79ebe9b01d204d',1,'ReadEEPROM(hid_device *handle, byte addr, byte *val):&#160;mcp2210.cpp']]],
+  ['register_5ferror',['register_error',['../hid_8c.html#ab31adac234dbe9c0059f8d027c0333a8',1,'hid.c']]],
   ['release_5fnumber',['release_number',['../structhid__device__info.html#a6a832d25260f7ec17ef008e53e50e1d0',1,'hid_device_info']]],
   ['releasemcp2210',['ReleaseMCP2210',['../mcp2210_8cpp.html#afca69dafd7a0768a60da2cf80525c6b5',1,'ReleaseMCP2210(hid_device *handle):&#160;mcp2210.cpp'],['../mcp2210_8h.html#afca69dafd7a0768a60da2cf80525c6b5',1,'ReleaseMCP2210(hid_device *handle):&#160;mcp2210.cpp']]],
   ['remote_5fwakeup_5fdisabled',['REMOTE_WAKEUP_DISABLED',['../mcp2210_8h.html#abe84dfa63d6452c1c2c5419a0fee5bb5',1,'mcp2210.h']]],
