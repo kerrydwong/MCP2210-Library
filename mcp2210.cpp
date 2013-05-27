@@ -195,7 +195,7 @@ int SetChipSettings(hid_device *handle, ChipSettingsDef def, bool isVolatile) {
     cmd[12] = def.GP[8].PinDesignation;
     cmd[14] = def.GP[8].GPIOOutput;
     cmd[16] = def.GP[8].GPIODirection;
-    cmd[17] = def.RemoteWakeUpEnabled << 4 | def.DedicatedFunctionInterruptPinMode < 1 | def.SPIBusReleaseMode;
+    cmd[17] = def.RemoteWakeUpEnabled << 4 | def.DedicatedFunctionInterruptPinMode << 1 | def.SPIBusReleaseMode;
     cmd[18] = def.NVRamChipParamAccessControl;
 
     if (def.NVRamChipParamAccessControl == CHIP_SETTINGS_PROTECTED_BY_PWD) {
