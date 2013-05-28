@@ -177,7 +177,7 @@ int SetChipSettings(hid_device *handle, ChipSettingsDef def, bool isVolatile) {
     memset(rsp, 0x0, RESPONSE_BUFFER_LENGTH);
 
     if (isVolatile) {
-        cmd[1] = CMD_SET_GPIO_SETTING;
+        cmd[0] = CMD_SET_GPIO_SETTING;
     } else {
         cmd[0] = CMD_SET_NVRAM_PARAM;
         cmd[1] = CMDSUB_POWERUP_CHIP_SETTINGS;
